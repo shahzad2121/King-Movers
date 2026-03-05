@@ -6,7 +6,7 @@ import TestimonialsSectionNew from "@/components/home/TestimonialsSectionNew";
 import ThreeStepsSection from "@/components/home/ThreeStepsSection";
 import FaqSection from "@/components/home/FaqSection";
 import CtaSection from "@/components/home/CtaSection";
-
+import OurWork from "@/components/home/OurWork";
 export default function Home() {
   return (
     <main>
@@ -16,6 +16,7 @@ export default function Home() {
       {/* <ScrollingTextMarquee /> */}
       <TestimonialsSectionNew />
       <ThreeStepsSection />
+      <OurWork />
       {/* <FaqSection /> */}
       <CtaSection />
     </main>

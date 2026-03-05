@@ -53,9 +53,9 @@ export default function AboutSection() {
 
           {/* CENTER — Image (reduced height) + play badge */}
           <div className="relative order-1 lg:order-2 max-w-md mx-auto w-full">
-            <div className="rounded-2xl overflow-hidden bg-muted-foreground/10" style={{ aspectRatio: "4/3" }}>
+            <div className="rounded-2xl overflow-hidden bg-muted-foreground/10" style={{ aspectRatio: "4/4" }}>
               <img
-                src="/images/Truck-5.jpg"
+                src="/images/moving.jpg"
                 alt="Logistics worker in yellow jacket"
                 className="w-full h-full object-cover object-top"
               />
@@ -75,7 +75,7 @@ export default function AboutSection() {
           <div className="flex flex-col divide-y divide-foreground/10 order-3">
             {stats.map((stat) => (
               <div key={stat.label} className="py-4 first:pt-0">
-                <div className="font-serif text-foreground font-bold leading-none mb-1 text-3xl md:text-4xl">
+                <div className="font-serif text-foreground font-bold leading-none mb-1 text-3xl md:text-xl">
                   {stat.number}
                 </div>
                 <div className="text-sm text-muted-foreground">{stat.label}</div>
