@@ -1,82 +1,17 @@
 "use client";
 
-const services = [
-  {
-    id: 1,
-    title: "Home Shifting",
-    img: "images/service-1.jpg",
-  },
-  {
-    id: 2,
-    title: "Office & Corporate Shifting",
-    img: "images/service.jpg",
-  },
-  {
-    id: 3,
-    title: "International Relocation Shifting",
-    img: "images/service-4.jpg",
-  },
-  {
-    id: 4,
-    title: "Vehicle Transportation",
-    img: "images/Truck-4.jpg",
-  },
-  {
-    id: 5,
-    title: "Furniture Moving",
-    img: "images/service-6.jpg",
-  },
-];
-
-const ArrowIcon = () => (
-  <svg
-    viewBox="0 0 24 24"
-    className="w-4 h-4"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth={2}
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <line x1="7" y1="17" x2="17" y2="7" />
-    <polyline points="7 7 17 7 17 17" />
-  </svg>
-);
+import { services } from "@/data/services";
+import ServiceCard from "@/components/services/ServiceCard";
 
 const CARD_WIDTH = 380;
 
-const ServiceCard = ({ service }) => (
-  <div
-    className="group shrink-0 cursor-pointer"
-    style={{ width: `${CARD_WIDTH}px` }}
-  >
-    <div className="w-full h-[320px] rounded-2xl overflow-hidden mb-5">
-      <img
-        src={service.img}
-        alt={service.title}
-        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-      />
-    </div>
-    <div className="flex items-center gap-3">
-      <button className="w-11 h-11 rounded-full border border-primary/40 flex items-center justify-center shrink-0 text-primary transition-all duration-200 group-hover:bg-primary group-hover:border-primary group-hover:text-white">
-        <ArrowIcon />
-      </button>
-      <span className="text-lg font-semibold text-foreground tracking-tight">
-        {service.title}
-      </span>
-    </div>
-  </div>
-);
-
 export default function ShiftingServicesSlider() {
-  // Duplicate for infinite loop
   const doubled = [...services, ...services];
 
   return (
     <section className="bg-surface pt-20 pb-0 overflow-hidden">
       {/* Header */}
       <div className="text-center px-6 pb-14 relative">
-        {/* Star decoration */}
         <svg
           className="absolute top-0 left-20 w-16 h-16 text-primary/15"
           viewBox="0 0 100 100"
@@ -110,12 +45,12 @@ export default function ShiftingServicesSlider() {
       >
         <div
           className="flex gap-5 w-max"
-          style={{
-            animation: "slide 38s linear infinite",
-          }}
+          style={{ animation: "slide 38s linear infinite" }}
         >
           {doubled.map((service, i) => (
-            <ServiceCard key={`${service.id}-${i}`} service={service} />
+            <div key={`${service.id}-${i}`} className="shrink-0" style={{ width: `${CARD_WIDTH}px` }}>
+              <ServiceCard service={service} />
+            </div>
           ))}
         </div>
       </div>
