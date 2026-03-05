@@ -33,7 +33,7 @@ const items = [
     id: "bottom-right",
     title: "Piano Move",
     tag: "Local Shifting",
-    img: "images/piano.jpeg",
+    img: "images/Piano.jpeg",
     position: "bottom-right",
   },
 ];
