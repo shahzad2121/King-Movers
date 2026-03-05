@@ -1,12 +1,13 @@
 "use client";
 
+import Link from "next/link";
 import { services } from "@/data/services";
 import ServiceCard from "@/components/services/ServiceCard";
 
 export default function ServicesPageContent() {
   return (
     <main className="min-h-screen bg-background font-sans">
-      <div className="mx-auto max-w-7xl px-6 py-16 md:py-17">
+      <div className="mx-auto max-w-7xl px-6 py-16 md:py-24">
         {/* Page header — theme-aligned */}
         <div className="mb-14 text-center md:mb-16">
           <p className="mb-2 text-sm font-medium text-primary">
@@ -21,10 +22,16 @@ export default function ServicesPageContent() {
           </p>
         </div>
 
-        {/* 3×3 grid — same card as home section */}
+        {/* 3×3 grid — same card as home section, links to detail page */}
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
-            <ServiceCard key={service.id} service={service} className="w-full" />
+            <Link
+              key={service.id}
+              href={`/services/${service.slug}`}
+              className="block no-underline"
+            >
+              <ServiceCard service={service} className="w-full" />
+            </Link>
           ))}
         </div>
       </div>
