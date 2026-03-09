@@ -1,12 +1,91 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import Image from "next/image";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function OnlineQuote() {
+  const sectionRef = useRef(null);
+  const leftRef = useRef(null);
+  const headingRef = useRef(null);
+  const formCardRef = useRef(null);
+  const rightImageRef = useRef(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const reduceMotion =
+      typeof window !== "undefined" &&
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const ctx = gsap.context(() => {
+      const left = leftRef.current;
+      const heading = headingRef.current;
+      const formCard = formCardRef.current;
+      const right = rightImageRef.current;
+
+      gsap.set([left, right], { opacity: 1 });
+      gsap.set(heading, { opacity: 0, y: 26 });
+      gsap.set(formCard, { opacity: 0, y: 50, scale: 0.94, rotateX: 8, transformPerspective: 900, filter: "blur(6px)" });
+      if (right) {
+        gsap.set(right, { opacity: 0, y: 30, scale: 1.04 });
+      }
+
+      if (reduceMotion) {
+        gsap.set([heading, formCard, right], { opacity: 1, y: 0, scale: 1, rotateX: 0, filter: "none" });
+        return;
+      }
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+        defaults: { ease: "power4.out" },
+      });
+
+      tl.to(heading, { opacity: 1, y: 0, duration: 1.0 }, 0)
+        .to(
+          formCard,
+          { opacity: 1, y: 0, scale: 1, rotateX: 0, filter: "blur(0px)", duration: 1.2 },
+          0.15
+        );
+
+      if (right) {
+        tl.to(
+          right,
+          { opacity: 1, y: 0, scale: 1, duration: 1.1, ease: "power3.out" },
+          0.25
+        );
+
+        // subtle parallax for right image
+        gsap.to(right, {
+          y: 25,
+          ease: "none",
+          scrollTrigger: {
+            trigger: section,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 1.1,
+          },
+        });
+      }
+    }, section);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section className="relative w-full min-h-[600px] md:min-h-[640px] flex">
+    <section ref={sectionRef} className="relative w-full min-h-[600px] md:min-h-[640px] flex">
       {/* LEFT: Dark navy with world map bg */}
       <div
+        ref={leftRef}
         className="relative w-full md:w-1/2 bg-[#0d1b2a] flex flex-col justify-start pt-14 px-10 md:px-16 pb-14 md:pb-16"
         style={{
           backgroundImage:
@@ -21,7 +100,7 @@ export default function OnlineQuote() {
         <div className="absolute inset-0 bg-[#0d1b2a] opacity-20 pointer-events-none" />
 
         {/* Text */}
-        <div className="relative z-10 mb-10">
+        <div ref={headingRef} className="relative z-10 mb-10">
           <p className="text-primary font-semibold text-sm mb-3 tracking-wide">Online Quote</p>
           <h2 className="font-serif text-3xl md:text-4xl font-extrabold text-white leading-snug">
             We Create Opportunity <br /> to Reach Transport
@@ -29,7 +108,10 @@ export default function OnlineQuote() {
         </div>
 
         {/* White form card — overlaps both halves */}
-        <div className="relative z-50 bg-background shadow-2xl p-8 w-full md:w-[130%] rounded-sm">
+        <div
+          ref={formCardRef}
+          className="relative z-50 bg-background shadow-2xl p-8 w-full md:w-[130%] rounded-sm"
+        >
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             <input
               type="text"
@@ -70,7 +152,10 @@ export default function OnlineQuote() {
       </div>
 
       {/* RIGHT: Truck image */}
-      <div className="hidden md:block relative w-1/2 min-h-[600px] md:min-h-[640px]">
+      <div
+        ref={rightImageRef}
+        className="hidden md:block relative w-1/2 min-h-[600px] md:min-h-[640px]"
+      >
         <Image
           src="/images/Truck-4.jpg"
           alt="Moving truck"

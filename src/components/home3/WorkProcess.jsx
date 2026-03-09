@@ -111,31 +111,38 @@ export default function WorkProcess() {
       gsap.to(".work-process__pill", {
         opacity: 1,
         y: 0,
-        duration: 0.6,
-        ease: "power2.out",
+        duration: 0.7,
+        ease: "power3.out",
       });
       gsap.to(".work-process__title", {
         opacity: 1,
         y: 0,
-        duration: 0.6,
+        duration: 0.8,
         delay: 0.15,
-        ease: "power2.out",
+        ease: "power3.out",
       });
       gsap.to(".work-process__sub", {
         opacity: 1,
         y: 0,
-        duration: 0.6,
-        delay: 0.28,
-        ease: "power2.out",
-      });
-      gsap.to(stepEls, {
-        opacity: 1,
-        y: 0,
-        duration: 0.65,
-        stagger: 0.18,
-        delay: 0.55,
+        duration: 0.8,
+        delay: 0.3,
         ease: "power3.out",
       });
+
+      // Four-step jerk / bounce effect from top → bottom
+      gsap.fromTo(
+        stepEls,
+        { opacity: 0, y: -60, scale: 0.9 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.9,
+          stagger: 0.2,
+          delay: 0.55,
+          ease: "back.out(1.7)",
+        }
+      );
       if (path) {
         gsap.to(path, {
           strokeDashoffset: 0,

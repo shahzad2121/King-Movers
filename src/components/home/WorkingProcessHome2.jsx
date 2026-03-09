@@ -105,13 +105,20 @@ export default function WorkingProcessHome2() {
       defaults: { ease: "power3.out" },
     });
 
-    tl.fromTo(tag, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5 })
-      .fromTo(heading, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.6 }, "-=0.3")
+    tl.fromTo(tag, { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.6 })
+      .fromTo(heading, { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.8 }, "-=0.35")
       .fromTo(
         stepEls,
-        { opacity: 0, y: 32 },
-        { opacity: 1, y: 0, duration: 0.6, stagger: 0.12 },
-        "-=0.25"
+        { opacity: 0, y: -60, scale: 0.9 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: "back.out(1.7)",
+        },
+        "-=0.2"
       );
 
     return () => {
@@ -122,7 +129,7 @@ export default function WorkingProcessHome2() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative w-full py-20 px-6 md:px-16 overflow-hidden bg-gradient-to-b from-surface to-background">
+    <section ref={sectionRef} className="relative w-full py-20 px-6 md:px-16 overflow-hidden bg-linear-to-b from-surface to-background">
       {/* World map background */}
       <div
         className="absolute inset-0 bg-center bg-no-repeat bg-contain opacity-[0.07] pointer-events-none"
@@ -132,7 +139,7 @@ export default function WorkingProcessHome2() {
         }}
       />
       {/* Subtle primary tint */}
-      <div className="absolute inset-0 bg-primary/[0.02] pointer-events-none" aria-hidden />
+      <div className="absolute inset-0 bg-primary/2 pointer-events-none" aria-hidden />
 
       {/* Header */}
       <div className="relative z-10 text-center mb-16">

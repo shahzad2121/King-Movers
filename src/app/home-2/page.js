@@ -21,7 +21,7 @@ export const metadata = {
 
 export default function Home2Page() {
   return (
-    <main>
+    <main className="overflow-hidden">
       <HeroSection />
       {/* <ServicesCardsOverlay /> */}
       <AboutSection />

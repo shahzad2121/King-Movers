@@ -4,11 +4,14 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { Star } from "lucide-react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const HERO_SLIDES = [
   { img: "/images/Truck-1-for-social-media.jpg", alt: "Moving truck" },
@@ -84,48 +87,83 @@ function FloatingTestimonialCard() {
 }
 
 export default function HeroSection() {
+  const sectionRef = useRef(null);
   const headlineRef = useRef(null);
   const subtitleRef = useRef(null);
   const badgesRef = useRef(null);
   const ctaRef = useRef(null);
+  const sliderRef = useRef(null);
 
   useEffect(() => {
+    const section = sectionRef.current;
     const headline = headlineRef.current;
     const subtitle = subtitleRef.current;
     const badges = badgesRef.current;
     const cta = ctaRef.current;
+    const slider = sliderRef.current;
 
-    if (!headline) return;
+    if (!section || !headline) return;
 
-    const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
+    const reduceMotion =
+      typeof window !== "undefined" &&
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    tl.fromTo(
-      headline,
-      { opacity: 0, y: 36 },
-      { opacity: 1, y: 0, duration: 1.2 }
-    )
-      .fromTo(
-        subtitle,
-        { opacity: 0, y: 28 },
-        { opacity: 1, y: 0, duration: 1 },
-        "-=0.7"
-      )
-      .fromTo(
-        badges,
-        { opacity: 0, y: 24 },
-        { opacity: 1, y: 0, duration: 0.9 },
-        "-=0.6"
-      )
-      .fromTo(
-        cta,
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.9 },
-        "-=0.5"
-      );
+    const ctx = gsap.context(() => {
+      // Initial dramatic states
+      gsap.set(headline, { opacity: 0, y: 40 });
+      gsap.set(subtitle, { opacity: 0, y: 32 });
+      gsap.set(badges, { opacity: 0, y: 28 });
+      gsap.set(cta, { opacity: 0, y: 26, scale: 0.96 });
+      if (slider) {
+        gsap.set(slider, { opacity: 0, y: 30, scale: 1.08, filter: "blur(6px)" });
+      }
+
+      if (reduceMotion) {
+        gsap.set(
+          [headline, subtitle, badges, cta, slider],
+          { opacity: 1, y: 0, scale: 1, filter: "none" }
+        );
+        return;
+      }
+
+      // Cinematic entrance timeline
+      const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
+
+      tl.to(headline, { opacity: 1, y: 0, duration: 1.3 }, 0)
+        .to(subtitle, { opacity: 1, y: 0, duration: 1.1 }, 0.25)
+        .to(badges, { opacity: 1, y: 0, duration: 1.0 }, 0.45)
+        .to(cta, { opacity: 1, y: 0, scale: 1, duration: 1.0 }, 0.7);
+
+      if (slider) {
+        tl.to(
+          slider,
+          { opacity: 1, y: 0, scale: 1, filter: "blur(0px)", duration: 1.6, ease: "power3.out" },
+          0.2
+        );
+
+        // Smooth parallax on scroll for the slider column
+        gsap.to(slider, {
+          y: 30,
+          ease: "none",
+          scrollTrigger: {
+            trigger: section,
+            start: "top top",
+            end: "bottom top",
+            scrub: 1.2,
+          },
+        });
+      }
+    }, section);
+
+    return () => ctx.revert();
   }, []);
 
   return (
-    <section className="relative grid grid-cols-1 lg:grid-cols-2 min-h-[calc(100vh-88px)] overflow-hidden">
+    <section
+      ref={sectionRef}
+      className="relative grid grid-cols-1 lg:grid-cols-2 min-h-[calc(100vh-88px)] overflow-hidden"
+    >
       {/* Left content */}
       <div className="bg-background flex flex-col justify-center px-8 md:px-12 lg:px-16 py-16 lg:py-10">
         <h1
@@ -173,7 +211,10 @@ export default function HeroSection() {
       </div>
 
       {/* Right image slider */}
-      <div className="relative min-h-[50vw] lg:min-h-0 overflow-hidden hero-slider-wrapper">
+      <div
+        ref={sliderRef}
+        className="relative min-h-[50vw] lg:min-h-0 overflow-hidden hero-slider-wrapper"
+      >
         <Swiper
           modules={[Autoplay, Pagination, EffectFade]}
           effect="fade"
