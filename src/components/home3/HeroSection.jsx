@@ -128,24 +128,26 @@ export default function HeroSection() {
         className="absolute inset-0 w-full h-full"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1400&q=80')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+            "url('/images/hero/home-3-people-highfigh.jpeg')",
+          backgroundSize: "80%", // zoom in
+backgroundPosition: "0% 20%"
         }}
       />
       <div ref={leftOverlayRef} className="absolute inset-0 bg-black/70" />
 
       {/* RIGHT: Image — background gives full control over zoom & position */}
       <div
-        ref={rightPanelRef}
+        // ref={rightPanelRef}
         className="absolute top-0 right-0 h-full pointer-events-none"
         style={{
           width: "100%",
-          clipPath: "polygon(60% 0%, 100% 0%, 100% 100%, 85% 100%)",
-          backgroundImage: "url('/images/Truck-4.jpg')",
-          backgroundSize: "80%",
+          clipPath: "polygon(65% 0%, 100% 0%, 100% 100%, 70% 100%)",
+          backgroundImage: "url('/images/hero/hero-moving-truck.jpg')",
+          // backgroundImage: "url('/images/hero/moving-truck.jpg')",
+          backgroundSize: "52%",
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "730px -300px",
+          backgroundPosition: "134% 2%",
+          // backgroundPosition: "110% 2%",
         }}
       >
         <div ref={rightOverlayRef} className="absolute inset-0 bg-[#000000]/50" aria-hidden />
