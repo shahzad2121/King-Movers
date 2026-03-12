@@ -142,11 +142,11 @@ backgroundPosition: "0% 20%"
         style={{
           width: "100%",
           clipPath: "polygon(65% 0%, 100% 0%, 100% 100%, 70% 100%)",
-          backgroundImage: "url('/images/hero/hero-moving-truck.jpg')",
+          backgroundImage: "url('/images/Truck-4.jpg')",
           // backgroundImage: "url('/images/hero/moving-truck.jpg')",
-          backgroundSize: "52%",
+          backgroundSize: "45%",
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "134% 2%",
+          backgroundPosition: "115% 2%",
           // backgroundPosition: "110% 2%",
         }}
       >
