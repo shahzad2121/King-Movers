@@ -3,11 +3,13 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { submitFormSubmit } from "@/lib/formsubmit";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function HeroQuoteBar() {
   const [service, setService] = useState("");
+  const [submitting, setSubmitting] = useState(false);
   const sectionRef = useRef(null);
   const cardRef = useRef(null);
   const leftTextRef = useRef(null);
@@ -50,7 +52,7 @@ export default function HeroQuoteBar() {
 
       tl.to(card, { opacity: 1, y: 0, rotateX: 0, duration: 1.35 })
         .to(left, { opacity: 1, y: 0, duration: 1.05 }, "-=0.95")
-        .to(formItems, { opacity: 1, y: 0, duration: 1.0, stagger: 0.06 }, "-=0.85");
+        .to(formItems, {  opacity: 1, y: 0, duration: 1.0, stagger: 0.06 }, "-=0.85");
 
       // Gentle breathing glow (very WordPress)
       gsap.to(card, {
@@ -102,57 +104,99 @@ export default function HeroQuoteBar() {
                 </p>
               </div>
 
-              <form ref={formRef} className="w-full lg:max-w-3xl">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+              <form
+              ref={formRef}
+              action="#"
+              method="POST"
+              className="w-full lg:max-w-3xl"
+              data-formsubmit-action="https://formsubmit.co/info@kingsmovingservices.com"
+              onSubmit={async (e) => {
+                e.preventDefault();
+                const form = e.currentTarget;
+                if (submitting) return;
+                setSubmitting(true);
+                try {
+                  const ok = await submitFormSubmit(form);
+                  if (ok) setService("");
+                } finally {
+                  setSubmitting(false);
+                }
+              }}
+              >
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="text" name="_honey" style={{ display: "none" }} />
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+
                   <label className="sr-only" htmlFor="hq-name">Name</label>
                   <input
                     id="hq-name"
+                    name="name"
                     type="text"
                     placeholder="Name"
+                    required
                     className="font-hero-body w-full rounded-xl bg-white/10 border border-white/15 px-4 py-3 text-white placeholder-white/55 text-sm outline-none focus:border-accent focus:ring-2 focus:ring-accent/30 transition"
                   />
 
-                  <label className="sr-only" htmlFor="hq-phone">Phone</label>
+                  <label className="sr-only" htmlFor="hq-email">Email</label>
                   <input
-                    id="hq-phone"
-                    type="tel"
-                    placeholder="Phone"
+                    id="hq-email"
+                    name="email"
+                    type="email"
+                    placeholder="Email"
+                    required
                     className="font-hero-body w-full rounded-xl bg-white/10 border border-white/15 px-4 py-3 text-white placeholder-white/55 text-sm outline-none focus:border-accent focus:ring-2 focus:ring-accent/30 transition"
                   />
 
-                  <label className="sr-only" htmlFor="hq-date">Move date</label>
+                  <label className="sr-only" htmlFor="hq-pickup">Pickup Zip</label>
                   <input
-                    id="hq-date"
-                    type="date"
-                    className="font-hero-body w-full rounded-xl bg-white/10 border border-white/15 px-4 py-3 text-white text-sm outline-none focus:border-accent focus:ring-2 focus:ring-accent/30 transition scheme-dark"
+                    id="hq-pickup"
+                    name="pickup_zip"
+                    type="text"
+                    placeholder="Pickup Zip Code"
+                    required
+                    className="font-hero-body w-full rounded-xl bg-white/10 border border-white/15 px-4 py-3 text-white placeholder-white/55 text-sm outline-none focus:border-accent focus:ring-2 focus:ring-accent/30 transition"
+                  />
+
+                  <label className="sr-only" htmlFor="hq-destination">Destination Zip</label>
+                  <input
+                    id="hq-destination"
+                    name="destination_zip"
+                    type="text"
+                    placeholder="Destination Zip"
+                    required
+                    className="font-hero-body w-full rounded-xl bg-white/10 border border-white/15 px-4 py-3 text-white placeholder-white/55 text-sm outline-none focus:border-accent focus:ring-2 focus:ring-accent/30 transition"
                   />
 
                   <label className="sr-only" htmlFor="hq-service">Service</label>
                   <select
                     id="hq-service"
+                    name="service"
                     value={service}
                     onChange={(e) => setService(e.target.value)}
+                    required
                     className="font-hero-body w-full rounded-xl bg-white/10 border border-white/15 px-4 py-3 text-white text-sm outline-none focus:border-accent focus:ring-2 focus:ring-accent/30 transition appearance-none cursor-pointer [&>option]:bg-foreground [&>option]:text-white"
                   >
                     <option value="" disabled>
-                      Service
+                      Select Service
                     </option>
-                    <option value="local">Local Moving</option>
-                    <option value="long">Long Distance</option>
-                    <option value="commercial">Commercial</option>
-                    <option value="packing">Packing Only</option>
+                    <option value="local">Local</option>
+                    <option value="long_distance">Long Distance</option>
+                    <option value="corporate">Corporate</option>
+                    <option value="house">House</option>
+                    <option value="apartment">Apartment</option>
                   </select>
 
                   <button
                     type="submit"
-                    className="font-hero-body rounded-xl bg-accent hover:bg-accent/90 text-foreground font-bold text-sm px-5 py-3 transition-colors shadow-[0_10px_24px_rgba(254,195,77,0.25)]"
+                    disabled={submitting}
+                    className="font-hero-body rounded-xl bg-accent hover:bg-accent/90 text-foreground font-bold text-sm px-5 py-3 transition-colors shadow-[0_10px_24px_rgba(254,195,77,0.25)] disabled:opacity-70 disabled:cursor-not-allowed"
                   >
-                    Request Quote
+                    {submitting ? "Sending…" : "Get an estimate"}
                   </button>
                 </div>
 
                 <p className="font-hero-body text-white/60 text-xs mt-3">
-                  No spam. We’ll only use your details to contact you about your move.
+                  We’ll contact you with your moving quote.
                 </p>
               </form>
             </div>

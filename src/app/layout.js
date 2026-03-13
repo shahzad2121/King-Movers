@@ -3,6 +3,7 @@ import "./globals.css";
 import NavbarWrapper from "../components/layout/NavbarWrapper";
 import Footer from "../components/layout/Footer";
 import FloatingStickyButtons from "../components/layout/FloatingStickyButtons";
+import ToastProvider from "../components/ui/ToastProvider";
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -40,6 +41,7 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
         <Footer />
         <FloatingStickyButtons />
+        <ToastProvider />
       </body>
     </html>
   );
