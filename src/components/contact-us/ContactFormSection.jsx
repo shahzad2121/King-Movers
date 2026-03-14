@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import { submitFormSubmit } from "@/lib/formsubmit";
 
 const contactSlides = [
   {
@@ -63,15 +64,20 @@ export default function ContactSection() {
               </p>
 
               <form
+                action="#"
+                method="POST"
+                data-formsubmit-action="https://formsubmit.co/info@kingsmovingservices.com"
                 onSubmit={async (e) => {
                   e.preventDefault();
                   if (submitting) return;
                   setSubmitting(true);
                   setSubmitted(false);
                   try {
-                    await new Promise((r) => setTimeout(r, 1200));
-                    setSubmitted(true);
-                    e.currentTarget?.reset?.();
+                    const ok = await submitFormSubmit(e.currentTarget);
+                    if (ok) {
+                      setSubmitted(true);
+                      e.currentTarget?.reset?.();
+                    }
                   } finally {
                     setSubmitting(false);
                   }
@@ -80,6 +86,8 @@ export default function ContactSection() {
                 aria-labelledby={headingId}
                 aria-describedby={descriptionId}
               >
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="text" name="_honey" style={{ display: "none" }} />
                 {/* Row 1 */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
