@@ -198,9 +198,9 @@ export default function AboutUs() {
 
             {/* Heading (bigger + more stretched) */}
             <h2 ref={headingRef} className="font-hero-heading text-[clamp(30px,3.9vw,52px)] font-semibold leading-[1.12] text-foreground mb-5">
-              A trusted moving team for
-              <span className="text-primary"> homes</span> and
-              <span className="text-primary"> businesses</span>
+              A Trusted Moving Team for
+              <span className="text-primary"> Homes</span> and
+              <span className="text-primary"> Businesses</span>
             </h2>
 
             {/* Description */}

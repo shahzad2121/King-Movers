@@ -9,7 +9,7 @@ import { Facebook, Linkedin, Mail, Phone } from "lucide-react";
 const SCROLL_THRESHOLD = 50;
 
 const NAV_LINKS = [
-  { label: "Home", href: "/home-2" },
+  { label: "Home", href: "/" },
   { label: "About", href: "/#about" },
   { label: "Services", href: "/services" },
   { label: "Movers & Packers", href: "/services" },

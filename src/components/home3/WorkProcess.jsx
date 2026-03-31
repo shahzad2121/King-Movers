@@ -339,7 +339,7 @@ export default function WorkProcess() {
             ref={workersSubRef}
             className="text-muted-foreground text-sm md:text-base leading-relaxed max-w-2xl mx-auto mt-3"
           >
-            Real photos from King Moving jobs across Seattle—packing, loading, and moving your belongings safely.
+            Real photos from King Moving jobs in the field—packing, loading, and moving your belongings safely.
           </p>
         </div>
 

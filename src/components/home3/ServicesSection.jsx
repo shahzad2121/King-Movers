@@ -14,7 +14,7 @@ const services = [
     image: "/images/service-4.jpg",
     imageAlt: "Long distance moving",
     description:
-      "Reliable long-distance moves across Seattle and beyond. We handle interstate and cross-country relocations with care and professionalism.",
+      "Reliable long-distance moves across the country and beyond. We handle interstate and cross-country relocations with care and professionalism.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 2C12 2 5 7 5 13a7 7 0 0 0 14 0c0-6-7-11-7-11z" />
@@ -29,7 +29,7 @@ const services = [
     image: "/images/service-1.jpg",
     imageAlt: "Local moving services",
     description:
-      "Stress-free local moves throughout Seattle and the surrounding area. Same-day and scheduled moves for homes and apartments.",
+      "Stress-free local moves in your community and the surrounding area. Same-day and scheduled moves for homes and apartments.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
@@ -200,7 +200,7 @@ export default function ServicesSection() {
         </div>
 
         <h2 ref={titleRef} className="font-serif text-4xl md:text-5xl font-extrabold text-white text-center leading-tight mb-14 tracking-tight">
-          King Movers <span className="text-primary">Moving Services</span>
+          King Movers <span className="text-primary bg-amber-300 p-2 rounded-sm">Moving Services</span>
         </h2>
 
         {/* Cards grid — each card links to service detail page */}
@@ -241,7 +241,7 @@ export default function ServicesSection() {
                   {service.icon}
                 </div>
 
-                <h3 className="font-serif text-xl font-bold text-white uppercase tracking-wide mb-2.5">
+                <h3 className="font-serif text-2xl font-bold text-white uppercase tracking-wide mb-2.5">
                   {service.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-white/65">

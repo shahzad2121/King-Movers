@@ -19,7 +19,7 @@ const services = [
     image: "/images/service-4.jpg",
     imageAlt: "Long distance moving",
     description:
-      "Reliable long-distance moves across Seattle and beyond. We handle interstate and cross-country relocations with care and professionalism.",
+      "Reliable long-distance moves across the country and beyond. We handle interstate and cross-country relocations with care and professionalism.",
   },
   {
     icon: (
@@ -32,7 +32,7 @@ const services = [
     image: "/images/service-1.jpg",
     imageAlt: "Local moving services",
     description:
-      "Stress-free local moves throughout Seattle and the surrounding area. Same-day and scheduled moves for homes and apartments.",
+      "Stress-free local moves in your community and the surrounding area. Same-day and scheduled moves for homes and apartments.",
   },
   {
     icon: (

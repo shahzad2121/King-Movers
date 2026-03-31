@@ -174,7 +174,7 @@ export default function HeroSection() {
             letterSpacing: "-0.02em",
           }}
         >
-          Trusted Seattle
+          Trusted Local
           <br />
           Moving for Families
           <br />
@@ -182,7 +182,7 @@ export default function HeroSection() {
         </h1>
 
         <p ref={subtitleRef} className="font-hero-body text-muted-foreground text-base leading-relaxed max-w-[380px] mb-8">
-          Stress-free, affordable moves across Seattle and beyond.
+          Stress-free, affordable moves in your area and beyond.
         </p>
 
         {/* Trust badges - no card, larger for credibility */}

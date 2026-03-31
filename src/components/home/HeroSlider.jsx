@@ -64,7 +64,7 @@ export default function HeroSlider() {
       <div className="absolute inset-0 z-[2] flex items-center justify-center pointer-events-none">
         <div className="max-w-4xl mx-auto px-6 text-center pointer-events-auto">
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight mb-4">
-            Trusted Seattle Moving for Families &amp; Businesses
+            Trusted Local Moving for Families &amp; Businesses
           </h1>
           <p className="text-white/90 text-lg sm:text-xl mb-8">
             We carry the weight so you can focus on what matters.

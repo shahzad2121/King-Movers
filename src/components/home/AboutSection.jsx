@@ -138,7 +138,7 @@ export default function AboutSection() {
               />
               <div>
                 <p className="font-bold text-foreground text-base">Our Team</p>
-                <p className="text-muted-foreground text-sm">Trusted Seattle Movers</p>
+                <p className="text-muted-foreground text-sm">Trusted Local Movers</p>
               </div>
             </div> */}
           </div>
