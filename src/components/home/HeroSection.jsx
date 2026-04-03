@@ -187,7 +187,7 @@ export default function HeroSection() {
           <br />
           Moving for Families
           <br />
-          &amp; Businesses
+          &amp; Corporate
         </h1>
 
         <p ref={subtitleRef} className="font-hero-body text-muted-foreground text-base leading-relaxed max-w-[460px] mb-8">
