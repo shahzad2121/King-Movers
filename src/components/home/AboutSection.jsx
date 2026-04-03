@@ -52,6 +52,7 @@ export default function AboutSection() {
     <section
       ref={sectionRef}
       className="w-full bg-linear-to-b from-[#1b102b] via-[#140b22] to-[#0b0715] py-16 px-6 md:px-16"
+      aria-label="About King Moving Services professional movers and relocation company"
     >
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
         {/* LEFT: Stacked Images */}
@@ -64,7 +65,7 @@ export default function AboutSection() {
             <div className="relative w-full h-full">
               <Image
                 src="/images/service-6.jpg"
-                alt="International moving and logistics"
+                alt="International and long-distance moving services with King Moving Services"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 45vw"
@@ -77,7 +78,7 @@ export default function AboutSection() {
             <div className="relative w-full h-full">
               <Image
                 src="/images/service-5.jpg"
-                alt="Moving truck and fleet"
+                alt="King Moving Services fleet and moving trucks for residential and commercial moves"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 45vw"
@@ -94,27 +95,31 @@ export default function AboutSection() {
           {/* Tag */}
           <p
             ref={tagRef}
-            className="inline-flex items-center rounded-full bg-primary px-4 py-1 text-xs font-semibold tracking-wide text-accent mb-4"
+            className="inline-flex items-center rounded-full bg-primary px-4 py-1 text-xs font-semibold tracking-wide text-accent mb-4 uppercase"
           >
-            About King Moving
+            Licensed Professional Movers
           </p>
 
           {/* Heading */}
           <h2 ref={headingRef} className="font-serif text-4xl md:text-5xl font-extrabold text-white leading-tight mb-5">
-            Trusted Moving &amp; <br />
-            Logistics for{" "}
-            <span className="inline-block rounded-sm bg-accent px-2.5 py-0.5 text-primary">
-              Your Move
-            </span>
+            Trusted Arizona Movers
           </h2>
 
-          {/* Description — traditional about copy */}
+          {/* Description — SEO-friendly about copy */}
           <div ref={descRef} className="text-white/80 text-base leading-relaxed max-w-xl space-y-5 mb-8">
             <p>
-              King Moving Services has been helping families and businesses move with confidence for years. We handle everything from local apartment moves to full-house relocations, office moves, and long-distance and international moves. Our team is trained, insured, and focused on treating your belongings with care from the first box to the final walkthrough.
+              As an experienced <strong className="font-semibold text-white/95">moving company</strong>, King Moving
+              Services helps families and businesses with{" "}
+              <strong className="font-semibold text-white/95">local moving</strong>,{" "}
+              <strong className="font-semibold text-white/95">long-distance relocation</strong>, and{" "}
+              <strong className="font-semibold text-white/95">office and commercial moving</strong> throughout Scottsdale
+              and across Arizona. Our crews are trained and insured, with careful packing, loading, and delivery from
+              the first box to the final walkthrough.
             </p>
             <p>
-              Whether you need packing help, a dedicated crew, or a full-service move, we work with you to plan every detail and stick to transparent pricing. We are proud to be a trusted name for residential and commercial moving. Get in touch for a free estimate and see why so many choose King Moving.
+              Choose full-service packing and unpacking, dedicated moving crews, or a customized plan that fits your
+              budget. We focus on transparent pricing, on-time delivery, and customer satisfaction for every interstate
+              move and in-state relocation. Contact us for a <strong className="font-semibold text-white/95">free moving quote</strong> and see why customers trust King Moving Services for stress-free relocation.
             </p>
           </div>
 
@@ -123,8 +128,9 @@ export default function AboutSection() {
             <a
               href="/about"
               className="inline-flex items-center bg-accent text-foreground font-bold px-10 py-4 text-base transition-colors duration-200 hover:bg-accent/90 rounded-lg"
+              aria-label="Learn more about King Moving Services movers and moving company"
             >
-              About Us
+              About Our Moving Company
             </a>
 
             {/* Team / Leadership */}

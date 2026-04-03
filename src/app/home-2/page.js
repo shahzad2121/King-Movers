@@ -1,38 +1,67 @@
-import HeroSlider from "@/components/home/HeroSlider";
-import ServicesCardsOverlay from "@/components/home/ServicesCardsOverlay";
-import ServicesSectionHome2 from "@/components/home/ServicesSectionHome2";
-import AboutSection from "@/components/home/AboutSection";
-import ScrollingTextMarquee from "@/components/home/ScrollingTextMarquee";
+import HeroSection from "@/components/home3/HeroSection";
+import HeroQuoteBar from "@/components/home3/HeroQuoteBar";
+import FeaturesSection from "@/components/home3/FeaturesSection";
+import AboutUs from "@/components/home3/AboutUs";
+import ServicesSection from "@/components/home3/ServicesSection";
+import CounterSection from "@/components/home3/CounterSection";
+import WorkProcess from "@/components/home3/WorkProcess";
+import QuoteForm from "@/components/home3/QuoteForm";
 import TestimonialsSectionHome2 from "@/components/home/TestimonialsSectionHome2";
-import WorkingProcessHome2 from "@/components/home/WorkingProcessHome2";
-import OnlineQuote from "@/components/home/OnlineQuote";
-import ThreeStepsSection from "@/components/home/ThreeStepsSection";
-import OurWork from "@/components/home/OurWork";
-import CtaSection from "@/components/home/CtaSection";
-import MovingServices from "@/components/home/ServicesSectionHome2";
-import CounterSection from "@/components/home/CounterSection";
 import TrustBadgesSection from "@/components/home/TrustBadgesSection";
-import HeroSection from "@/components/home/HeroSection";
+import { Libre_Baskerville, Playfair_Display } from "next/font/google";
 
-export const metadata = {
-  title: "Home 2 | King Moving Services",
-  description: "King Moving Services — alternate homepage",
-};
+// Single source of truth for the Home page heading font.
+const homeHeadingFont = Playfair_Display({
+  weight: ["400", "600", "700"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-home-heading",
+});
 
-export default function Home2Page() {
+// Single source of truth for Home page supporting text.
+const homeBodyFont = Libre_Baskerville({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-home-body",
+});
+
+export default function Home() {
   return (
-    <main className="overflow-hidden">
+    <main className={`${homeHeadingFont.variable} ${homeBodyFont.variable} home-heading-font overflow-hidden`}>
       <HeroSection />
-      {/* <ServicesCardsOverlay /> */}
-      <AboutSection />
-      <MovingServices />
+      <HeroQuoteBar />
+      <FeaturesSection />
       <CounterSection />
+      <AboutUs />
+      <ServicesSection />
       <TrustBadgesSection />
-      {/* <ScrollingTextMarquee /> */}
+      <WorkProcess />
       <TestimonialsSectionHome2 />
-      <WorkingProcessHome2 />
-      <OnlineQuote />
-      
+      <QuoteForm />
+
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+            .home-heading-font h1,
+            .home-heading-font h2,
+            .home-heading-font h3,
+            .home-heading-font h4,
+            .home-heading-font h5,
+            .home-heading-font h6 {
+              font-family: var(--font-home-heading), serif;
+            }
+
+            .home-heading-font p,
+            .home-heading-font span,
+            .home-heading-font small,
+            .home-heading-font li,
+            .home-heading-font label {
+              font-family: var(--font-home-body), serif;
+            }
+          `,
+        }}
+      />
     </main>
   );
 }

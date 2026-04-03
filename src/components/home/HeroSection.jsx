@@ -14,11 +14,20 @@ import "swiper/css/pagination";
 gsap.registerPlugin(ScrollTrigger);
 
 const HERO_SLIDES = [
-  { img: "/images/Truck-1-for-social-media.jpg", alt: "Moving truck" },
-  { img: "/images/hero/Kingsmovinging-service.jpg", alt: "King Moving Services" },
-  { img: "/images/service.jpg", alt: "Moving and logistics" },
+  {
+    img: "/images/Truck-1-for-social-media.jpg",
+    alt: "King Moving Services professional movers and moving truck for local and long-distance relocation",
+  },
+  {
+    img: "/images/hero/Kingsmovinging-service.jpg",
+    alt: "King Moving Services licensed residential and commercial moving company crew",
+  },
+  {
+    img: "/images/service.jpg",
+    alt: "Full-service packing loading and moving logistics for homes and businesses",
+  },
 ];
-const CTA_LABEL = "Get Your Free Estimate Today";
+const CTA_LABEL = "Get Your Free Moving Quote";
 
 const HERO_BADGES = [
   { src: "/images/angi-kings-moving.png", alt: "Angi Certified" },
@@ -28,17 +37,17 @@ const HERO_BADGES = [
 
 const HERO_TESTIMONIALS = [
   {
-    text: "Best moving experience ever. Professional, on time, and took great care of our belongings.",
+    text: "Best professional movers we have hired—on time, careful with furniture, and clear communication from quote to delivery.",
     name: "Sarah M.",
     rating: 5,
   },
   {
-    text: "They made our cross-town move stress-free. Highly recommend King Moving!",
+    text: "Our local move was stress-free. This moving company handled packing and loading with care—highly recommend King Moving Services.",
     name: "James K.",
     rating: 5,
   },
   {
-    text: "Fast, reliable, and affordable. Will definitely use them again for our next move.",
+    text: "Reliable long-distance relocation at a fair price. We will book them again for our next residential move.",
     name: "Lisa T.",
     rating: 5,
   },
@@ -168,10 +177,10 @@ export default function HeroSection() {
       <div className="bg-background flex flex-col justify-center px-8 md:px-12 lg:px-16 py-16 lg:py-10">
         <h1
           ref={headlineRef}
-          className="font-hero-heading text-foreground font-semibold leading-[1.15] mb-7"
+          className="font-hero-heading text-foreground font-semibold leading-[1.12] mb-7"
           style={{
-            fontSize: "clamp(32px, 3.2vw, 50px)",
-            letterSpacing: "-0.02em",
+            fontSize: "clamp(36px, 4vw, 56px)",
+            letterSpacing: "-0.03em",
           }}
         >
           Trusted Local
@@ -181,8 +190,11 @@ export default function HeroSection() {
           &amp; Businesses
         </h1>
 
-        <p ref={subtitleRef} className="font-hero-body text-muted-foreground text-base leading-relaxed max-w-[380px] mb-8">
-          Stress-free, affordable moves in your area and beyond.
+        <p ref={subtitleRef} className="font-hero-body text-muted-foreground text-base leading-relaxed max-w-[460px] mb-8">
+          King Moving Services is a licensed, insured moving company for{" "}
+          <strong className="font-semibold text-foreground/90">local moving</strong>,{" "}
+          <strong className="font-semibold text-foreground/90">interstate relocation</strong>, office moving, packing
+          services, and storage support. Request your free moving estimate today.
         </p>
 
         {/* Trust badges - no card, larger for credibility */}
@@ -202,7 +214,7 @@ export default function HeroSection() {
 
         <a
           ref={ctaRef}
-          href="#"
+          href="/contact-us"
           className="font-hero-body inline-flex items-center bg-primary text-white text-base font-medium px-8 py-4 rounded-full w-fit hover:bg-primary/90 transition-all hover:-translate-y-0.5"
           style={{ letterSpacing: "-0.01em" }}
         >
