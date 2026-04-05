@@ -10,20 +10,6 @@ const services = [
   {
     icon: (
       <svg className="w-7 h-7 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2C12 2 5 7 5 13a7 7 0 0 0 14 0c0-6-7-11-7-11z" />
-        <path d="M12 8v5" />
-        <path d="M9 11l3 3 3-3" />
-      </svg>
-    ),
-    title: "Long Distance",
-    image: "/images/service-4.jpg",
-    imageAlt: "Long distance moving",
-    description:
-      "Reliable long-distance moves across the country and beyond. We handle interstate and cross-country relocations with care and professionalism.",
-  },
-  {
-    icon: (
-      <svg className="w-7 h-7 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
         <circle cx="12" cy="9" r="2.5" />
       </svg>
@@ -32,7 +18,21 @@ const services = [
     image: "/images/service-1.jpg",
     imageAlt: "Local moving services",
     description:
-      "Stress-free local moves in your community and the surrounding area. Same-day and scheduled moves for homes and apartments.",
+      "Stress-free local moves in your community and surrounding area. Same-day and scheduled moves for homes and apartments — no hidden fees, ever.",
+  },
+  {
+    icon: (
+      <svg className="w-7 h-7 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 2C12 2 5 7 5 13a7 7 0 0 0 14 0c0-6-7-11-7-11z" />
+        <path d="M12 8v5" />
+        <path d="M9 11l3 3 3-3" />
+      </svg>
+    ),
+    title: "Long-Distance Moving",
+    image: "/images/service-4.jpg",
+    imageAlt: "Long distance moving",
+    description:
+      "Reliable interstate and cross-country relocations handled with care. Transparent pricing from quote to delivery — we keep you informed every mile.",
   },
   {
     icon: (
@@ -45,7 +45,7 @@ const services = [
     image: "/images/service.jpg",
     imageAlt: "Commercial and office moving",
     description:
-      "Office and corporate relocations with minimal downtime. We coordinate with your team for a smooth transition.",
+      "Office and corporate relocations with minimal downtime. We work around your schedule to ensure a smooth transition with zero disruption to your business.",
   },
 ];
 
@@ -96,10 +96,10 @@ export default function MovingServices() {
       {/* Header */}
       <div ref={headerRef} className="text-center max-w-3xl mx-auto mb-12 md:mb-14">
         <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground tracking-tight mb-3">
-          King Movers <span className="text-primary">Moving Services</span>
+          Everything You Need <span className="text-primary">for a Smooth Move</span>
         </h2>
         <p className="text-muted-foreground text-base leading-relaxed">
-          Explore our range of reliable moving and relocation services for homes, offices, and beyond.
+          From local apartment moves to cross-country relocations — we handle every detail so you don&apos;t have to.
         </p>
       </div>
 

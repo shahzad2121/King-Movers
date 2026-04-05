@@ -2,14 +2,14 @@
 
 :root {
   /* Base colors from brand neutrals */
-  --background: #ffffff; /* primary page background */
-  --foreground: #0f0f14; /* dark text */
-  --muted-foreground: #a1a1aa; /* muted text */
-  --surface: #f8f8fa; /* light panels / nav background */
+  --background: #ffffff;
+  --foreground: #0f0f14;
+  --muted-foreground: #a1a1aa;
+  --surface: #f8f8fa;
 
   /* Brand accents */
-  --primary: #561a8c; /* brand purple */
-  --accent: #FEC34D; /* accent yellow – pairs with primary purple */
+  --primary: #561a8c;
+  --accent: #FEC34D;
 }
 
 html,
@@ -25,17 +25,45 @@ body {
   --color-primary: var(--primary);
   --color-accent: var(--accent);
 
-  /* Map Tailwind font tokens to our custom Next fonts */
   --font-sans: var(--font-body);
   --font-serif: var(--font-heading);
 }
 
+/* ── Global typography ───────────────────────────────────────────────── */
 body {
   background: var(--background);
   color: var(--foreground);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
 }
 
-/* About CTA: WhatsApp green — not in @theme; arbitrary Tailwind bg can fail to emit */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Utility aliases used across components — now point to the same two fonts */
+.font-hero-heading {
+  font-family: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
+}
+.font-hero-body {
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Footer — same centralized fonts */
+.footer-premium-fonts .footer-brand-title,
+.footer-premium-fonts .footer-col-heading {
+  font-family: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
+}
+.footer-premium-fonts .footer-brand-body,
+.footer-premium-fonts .footer-brand-body a,
+.footer-premium-fonts ul,
+.footer-premium-fonts li,
+.footer-premium-fonts .footer-map-caption,
+.footer-premium-fonts .footer-social-link,
+.footer-premium-fonts .footer-bottom-bar a {
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* About CTA: WhatsApp green */
 a.about-page-cta-whatsapp {
   background-color: #25d366;
   color: #fff;
@@ -48,33 +76,35 @@ a.about-page-cta-whatsapp:focus-visible {
   outline-offset: 2px;
 }
 
-/* Hero 2 & 3: Work Sans (headers) + Roboto (body) */
-.font-hero-heading {
-  font-family: var(--font-hero-heading), sans-serif;
-}
-.font-hero-body {
-  font-family: var(--font-hero-body), sans-serif;
-}
-
+/* ── Animations ──────────────────────────────────────────────────────── */
 @keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 @keyframes trustBadgesScroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
-/* Hero slider pagination - small dots at bottom */
+@keyframes heroTruckMove {
+  0%   { transform: translateX(-120%); }
+  100% { transform: translateX(calc(100vw + 120%)); }
+}
+
+@keyframes wiggle-horizontal {
+  0%, 100% { transform: translateX(0); }
+  20%       { transform: translateX(-2px); }
+  40%       { transform: translateX(2px); }
+  60%       { transform: translateX(-2px); }
+  80%       { transform: translateX(1px); }
+}
+
+.animate-wiggle-horizontal {
+  animation: wiggle-horizontal 1.4s ease-in-out infinite;
+}
+
+/* ── Hero slider pagination ──────────────────────────────────────────── */
 .hero-slider-wrapper .swiper-pagination {
   bottom: 1.5rem !important;
   left: 50% !important;
@@ -97,52 +127,4 @@ a.about-page-cta-whatsapp:focus-visible {
 .hero-slider-wrapper .swiper-pagination-bullet-active {
   background: white;
   transform: scale(1.2);
-}
-
-/* Hero truck animation - moves left to right at bottom */
-@keyframes heroTruckMove {
-  0% {
-    transform: translateX(-120%);
-  }
-  100% {
-    transform: translateX(calc(100vw + 120%));
-  }
-}
-
-@keyframes wiggle-horizontal {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  20% {
-    transform: translateX(-2px);
-  }
-  40% {
-    transform: translateX(2px);
-  }
-  60% {
-    transform: translateX(-2px);
-  }
-  80% {
-    transform: translateX(1px);
-  }
-}
-
-.animate-wiggle-horizontal {
-  animation: wiggle-horizontal 1.4s ease-in-out infinite;
-}
-
-/* Footer: Playfair + Libre (colors unchanged in component) */
-.footer-premium-fonts .footer-brand-title,
-.footer-premium-fonts .footer-col-heading {
-  font-family: var(--font-footer-heading), serif;
-}
-.footer-premium-fonts .footer-brand-body,
-.footer-premium-fonts .footer-brand-body a,
-.footer-premium-fonts ul,
-.footer-premium-fonts li,
-.footer-premium-fonts .footer-map-caption,
-.footer-premium-fonts .footer-social-link,
-.footer-premium-fonts .footer-bottom-bar a {
-  font-family: var(--font-footer-body), serif;
 }

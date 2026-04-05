@@ -1,50 +1,22 @@
-import {
-  Plus_Jakarta_Sans,
-  Open_Sans,
-  Work_Sans,
-  Roboto,
-  Playfair_Display,
-  Libre_Baskerville,
-} from "next/font/google";
+import { Montserrat, Open_Sans } from "next/font/google";
 import "./globals.css";
 import NavbarWrapper from "../components/layout/NavbarWrapper";
 import Footer from "../components/layout/Footer";
 import FloatingStickyButtons from "../components/layout/FloatingStickyButtons";
 import ToastProvider from "../components/ui/ToastProvider";
 
-const plusJakarta = Plus_Jakarta_Sans({
+const montserrat = Montserrat({
+  weight: ["400", "600", "700", "800"],
   subsets: ["latin"],
+  display: "swap",
   variable: "--font-heading",
 });
 
 const openSans = Open_Sans({
-  subsets: ["latin"],
-  variable: "--font-body",
-});
-
-const workSans = Work_Sans({
-  subsets: ["latin"],
-  variable: "--font-hero-heading",
-});
-
-const roboto = Roboto({
-  weight: ["400", "500", "700"],
-  subsets: ["latin"],
-  variable: "--font-hero-body",
-});
-
-const footerHeadingFont = Playfair_Display({
   weight: ["400", "600", "700"],
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-footer-heading",
-});
-
-const footerBodyFont = Libre_Baskerville({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-footer-body",
+  variable: "--font-body",
 });
 
 export const metadata = {
@@ -56,7 +28,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${plusJakarta.variable} ${openSans.variable} ${workSans.variable} ${roboto.variable} ${footerHeadingFont.variable} ${footerBodyFont.variable} antialiased bg-background text-foreground overflow-x-hidden`}
+        className={`${montserrat.variable} ${openSans.variable} antialiased bg-background text-foreground overflow-x-hidden`}
       >
         <NavbarWrapper />
         <main>{children}</main>
@@ -67,4 +39,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-

@@ -27,7 +27,8 @@ const HERO_SLIDES = [
     alt: "Full-service packing loading and moving logistics for homes and businesses",
   },
 ];
-const CTA_LABEL = "Get Your Free Moving Quote";
+const CTA_LABEL = "Get a Free Quote";
+const PHONE = "480-447-1200";
 
 const HERO_BADGES = [
   { src: "/images/angi-kings-moving.png", alt: "Angi Certified" },
@@ -183,18 +184,18 @@ export default function HeroSection() {
             letterSpacing: "-0.03em",
           }}
         >
-          Trusted Local
+          Stress-Free Moving
           <br />
-          Moving for Families
+          Services You Can
           <br />
-          &amp; Corporate
+          Trust
         </h1>
 
         <p ref={subtitleRef} className="font-hero-body text-muted-foreground text-base leading-relaxed max-w-[460px] mb-8">
-          King Moving Services is a licensed, insured moving company for{" "}
-          <strong className="font-semibold text-foreground/90">local moving</strong>,{" "}
-          <strong className="font-semibold text-foreground/90">interstate relocation</strong>, office moving, packing
-          services, and storage support. Request your free moving estimate today.
+          Local &amp; long-distance moves with{" "}
+          <strong className="font-semibold text-foreground/90">transparent pricing</strong> and{" "}
+          <strong className="font-semibold text-foreground/90">professional crews</strong>. Licensed, insured, and
+          trusted by thousands of families and businesses across Arizona.
         </p>
 
         {/* Trust badges - no card, larger for credibility */}
@@ -212,14 +213,24 @@ export default function HeroSection() {
           ))}
         </div>
 
-        <a
-          ref={ctaRef}
-          href="/contact-us"
-          className="font-hero-body inline-flex items-center bg-primary text-white text-base font-medium px-8 py-4 rounded-full w-fit hover:bg-primary/90 transition-all hover:-translate-y-0.5"
-          style={{ letterSpacing: "-0.01em" }}
-        >
-          {CTA_LABEL}
-        </a>
+        <div ref={ctaRef} className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <a
+            href="/contact-us"
+            className="font-hero-body inline-flex items-center bg-primary text-white text-base font-medium px-8 py-4 rounded-full w-fit hover:bg-primary/90 transition-all hover:-translate-y-0.5"
+            style={{ letterSpacing: "-0.01em" }}
+          >
+            {CTA_LABEL}
+          </a>
+          <a
+            href={`tel:${PHONE}`}
+            className="font-hero-body inline-flex items-center gap-2 text-foreground font-semibold text-base hover:text-primary transition-colors"
+          >
+            <svg className="w-5 h-5 text-primary shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z" />
+            </svg>
+            {PHONE}
+          </a>
+        </div>
       </div>
 
       {/* Right image slider */}

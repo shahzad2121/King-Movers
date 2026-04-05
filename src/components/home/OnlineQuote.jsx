@@ -101,9 +101,9 @@ export default function OnlineQuote() {
 
         {/* Text */}
         <div ref={headingRef} className="relative z-10 mb-10">
-          <p className="text-primary font-semibold text-sm mb-3 tracking-wide">Online Quote</p>
+          <p className="text-primary font-semibold text-sm mb-3 tracking-wide">Free Moving Quote</p>
           <h2 className="font-serif text-3xl md:text-4xl font-extrabold text-white leading-snug">
-            We Create Opportunity <br /> to Reach Transport
+            Book Your Move <br /> in Minutes
           </h2>
         </div>
 
@@ -119,34 +119,48 @@ export default function OnlineQuote() {
               className="bg-surface text-foreground placeholder-muted-foreground text-sm px-4 py-4 outline-none focus:ring-2 focus:ring-primary transition"
             />
             <input
-              type="email"
-              placeholder="Email"
+              type="tel"
+              placeholder="Phone number"
               className="bg-surface text-foreground placeholder-muted-foreground text-sm px-4 py-4 outline-none focus:ring-2 focus:ring-primary transition"
             />
             <input
               type="text"
-              placeholder="Weight Kg"
+              placeholder="Moving from (city, state)"
               className="bg-surface text-foreground placeholder-muted-foreground text-sm px-4 py-4 outline-none focus:ring-2 focus:ring-primary transition"
             />
             <input
               type="text"
-              placeholder="Distance Km"
+              placeholder="Moving to (city, state)"
               className="bg-surface text-foreground placeholder-muted-foreground text-sm px-4 py-4 outline-none focus:ring-2 focus:ring-primary transition"
             />
+            <input
+              type="date"
+              placeholder="Move date"
+              className="bg-surface text-foreground placeholder-muted-foreground text-sm px-4 py-4 outline-none focus:ring-2 focus:ring-primary transition"
+            />
+            <select className="bg-surface text-muted-foreground text-sm px-4 py-4 outline-none focus:ring-2 focus:ring-primary transition appearance-none cursor-pointer">
+              <option value="" disabled selected>Home size</option>
+              <option>Studio / 1-Bedroom</option>
+              <option>2-Bedroom</option>
+              <option>3-Bedroom</option>
+              <option>4+ Bedroom</option>
+              <option>Office / Commercial</option>
+            </select>
           </div>
 
           {/* Full width select */}
           <select className="w-full bg-surface text-muted-foreground text-sm px-4 py-4 outline-none focus:ring-2 focus:ring-primary transition mb-6 appearance-none cursor-pointer">
-            <option value="" disabled selected>Select Service</option>
-            <option>Home Shifting</option>
-            <option>Office & Corporate</option>
-            <option>International Relocation</option>
-            <option>Vehicle Transportation</option>
+            <option value="" disabled selected>Select service type</option>
+            <option>Local Moving</option>
+            <option>Long-Distance Moving</option>
+            <option>Packing &amp; Unpacking</option>
+            <option>Commercial / Office Move</option>
+            <option>Storage Solutions</option>
           </select>
 
           {/* CTA Button */}
           <button className="bg-primary hover:bg-primary/90 text-white font-bold text-sm px-10 py-4 transition-colors duration-200 tracking-wide">
-            Free Quote!
+            Get My Free Quote
           </button>
         </div>
       </div>
