@@ -6,7 +6,7 @@ import { Mail, MapPin, Phone, Clock3 } from "lucide-react";
 import AboutCtaSection from "@/components/about/sections/AboutCtaSection";
 
 import { submitFormSubmit } from "@/lib/formsubmit";
-import { CONTACT_INFO } from "@/components/contact-us/contactData";
+import { CONTACT_INFO, FORMSUBMIT_ACTION } from "@/components/contact-us/contactData";
 
 function InfoCard({ icon: Icon, title, children }) {
   return (
@@ -201,14 +201,17 @@ export default function ContactPageClient() {
               action="#"
               method="POST"
               className="mt-6 space-y-4"
-              data-formsubmit-action="https://formsubmit.co/info@kingsmovingservices.com"
+              data-formsubmit-action={FORMSUBMIT_ACTION}
               onSubmit={async (e) => {
                 e.preventDefault();
                 if (submitting) return;
                 setSubmitting(true);
                 setSubmitted(false);
                 try {
-                  const ok = await submitFormSubmit(e.currentTarget);
+                  const ok = await submitFormSubmit(e.currentTarget, {
+                    successMessage:
+                      "Thanks! Your message has been sent. We will contact you shortly.",
+                  });
                   if (ok) setSubmitted(true);
                 } finally {
                   setSubmitting(false);
@@ -216,7 +219,8 @@ export default function ContactPageClient() {
               }}
             >
               <input type="hidden" name="_captcha" value="false" />
-              <input type="text" name="_honey" style={{ display: "none" }} />
+              <input type="hidden" name="_subject" value="King Moving — Contact form" />
+              <input type="text" name="_honey" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
 
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <label className="block">
