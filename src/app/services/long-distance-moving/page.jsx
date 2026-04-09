@@ -18,36 +18,36 @@ const HERO_BG_IMAGE = "/images/hero/Kingsmovinging-service.jpg";
 
 const faqs = [
   {
-    q: "How far in advance should I book a long distance move?",
-    a: "We recommend booking at least 4–8 weeks in advance for long distance moves, especially during peak summer months (May–September). Last-minute bookings may be accommodated based on availability, but early scheduling ensures you get your preferred date and the most competitive rate.",
+    q: "How far in advance should I book a long-distance move?",
+    a: "We recommend booking 4–6 weeks in advance, especially for summer moves (May–September) when demand peaks. Booking early gets you the best date, the most accurate quote, and gives us time to plan your move properly. That said, we do accommodate shorter timelines when availability allows — call us and we'll be honest about what we can do.",
   },
   {
-    q: "How is the cost of a long distance move calculated?",
-    a: "Long distance moving costs are typically based on the total weight of your shipment and the distance traveled. Additional factors include the number of movers required, packing services, specialty item handling (pianos, antiques, safes), and any storage needs along the way. We provide free, no-obligation estimates.",
+    q: "How is the cost of a long-distance move calculated?",
+    a: "Long-distance moves are typically priced based on the weight of your shipment and the distance traveled. We also factor in crew size, packing services, specialty items (pianos, antiques, large safes), and any storage needs. You get a free, binding quote upfront — no hourly surprises, no vague estimates.",
   },
   {
     q: "Will my belongings be on a shared or dedicated truck?",
-    a: "We offer both options. Dedicated truck service means your belongings travel exclusively on one truck with no other customers' items. Shared (consolidated) service can reduce costs for smaller loads. Our team will recommend the best fit based on your shipment size and budget.",
+    a: "We offer both. A dedicated truck means your belongings travel alone — no mixing with other customers' items, no extra stops. Consolidated (shared) service is a cost-effective option for smaller shipments. We'll recommend the right fit for your move size and budget during your free consultation.",
   },
   {
-    q: "How do you protect my furniture and fragile items during transit?",
-    a: "Every item is wrapped in heavy-duty moving blankets, shrink wrap, and custom padding. Fragile items receive double-boxing and foam inserts. Our trucks are equipped with air-ride suspension systems to minimize road vibration. You can also opt for full-value protection insurance for complete peace of mind.",
+    q: "How do you protect my furniture and fragile items during a long-distance move?",
+    a: "Everything gets wrapped in heavy-duty moving blankets and shrink wrap. Fragile items are double-boxed with foam inserts. Our trucks are well-maintained and fully equipped. We take the safe delivery of your belongings seriously — and we're fully insured so you have full peace of mind throughout transit.",
   },
   {
-    q: "Can I track my shipment during transit?",
-    a: "Yes. All long distance moves come with real-time GPS tracking through our customer portal. You'll receive automated status updates and can contact your dedicated move coordinator at any time for updates on your delivery window.",
+    q: "Can I stay updated on my shipment while it's in transit?",
+    a: "Absolutely. You'll have a dedicated move coordinator as your single point of contact from booking to delivery. They'll keep you updated throughout the journey and are easy to reach by phone or message — no call centers, no being passed around.",
   },
   {
-    q: "What items cannot be transported across state lines?",
-    a: "Hazardous materials including propane tanks, paint, cleaning solvents, and ammunition cannot be transported. Perishable food, plants, and pets also require special arrangements. Our moving consultants will provide you with a full list and help you plan accordingly before your move date.",
+    q: "What items can't be transported across state lines?",
+    a: "Hazardous materials (propane, paint, cleaning solvents, ammunition) and perishable items can't be transported. Pets and plants require separate arrangements. We'll walk you through the full list during your consultation and help you plan what to do with restricted items before move day.",
   },
   {
-    q: "Do you offer packing and unpacking services?",
-    a: "Absolutely. We offer full-service packing where our team handles every item from kitchenware to artwork, partial packing for specific rooms, and unpacking at your new home. All packing materials — boxes, tape, bubble wrap — are included when you choose our packing service.",
+    q: "Do you offer packing and unpacking for long-distance moves?",
+    a: "Yes — full-service packing, partial packing for specific rooms, and unpacking at your destination are all available. Our team handles everything carefully using quality materials. All packing supplies are included when you choose our packing service. You don't have to lift a finger.",
   },
   {
-    q: "What happens if my delivery date changes?",
-    a: "We understand plans shift. If your delivery window needs to change, contact us as soon as possible. For dedicated truck moves, we can often accommodate reschedules with minimal disruption. For consolidated moves, changes may affect delivery timing. Storage-in-transit is available at our secure facilities if needed.",
+    q: "What if my delivery window needs to change?",
+    a: "Plans change — we get it. Contact us as soon as you know about the change and we'll do our best to accommodate. For dedicated truck moves, reschedules are usually straightforward. We also offer secure, climate-controlled storage-in-transit if there's a gap between your move-out and move-in dates.",
   },
 ];
 
@@ -93,39 +93,39 @@ const IconStar = () => (
 );
 
 const whyUs = [
-  { Icon: IconTrophy, title: "Licensed & Fully Insured", desc: "We are fully licensed by the FMCSA and carry comprehensive cargo and liability insurance on every long distance move we perform." },
-  { Icon: IconBox, title: "Professional Packing Crew", desc: "Our trained packing specialists use industry-grade materials to protect everything from everyday dishes to irreplaceable heirlooms." },
-  { Icon: IconTruck, title: "Modern Fleet", desc: "Our late-model trucks feature air-ride suspension, GPS tracking, and climate-controlled options to keep your belongings safe on the road." },
-  { Icon: IconMapPin, title: "Dedicated Move Coordinator", desc: "From your first call to final delivery, one coordinator manages your entire move — no getting passed from agent to agent." },
-  { Icon: IconDollar, title: "Transparent, Flat-Rate Pricing", desc: "No surprise fees. We provide binding estimates so the price we quote is the price you pay, guaranteed." },
-  { Icon: IconStar, title: "Thousands of 5-Star Reviews", desc: "Our reputation is built on results. Thousands of families have trusted us with their most important moves across the country." },
+  { Icon: IconTrophy, title: "Licensed, Insured & Accountable", desc: "We're fully licensed and carry comprehensive cargo and liability insurance on every long-distance move. Your belongings are protected throughout the entire journey — from the first box to final delivery at your new home." },
+  { Icon: IconBox, title: "Careful, Professional Packing", desc: "Our trained crew uses industry-grade blankets, shrink wrap, double-boxing, and foam inserts to protect everything — everyday furniture, fragile items, and irreplaceable pieces alike. We treat your belongings like they're our own." },
+  { Icon: IconTruck, title: "On-Time Delivery, Guaranteed", desc: "We plan every long-distance route carefully and communicate your delivery window clearly. Reliable transit, punctual delivery, and a crew that respects your timeline — because your life can't wait on a late truck." },
+  { Icon: IconMapPin, title: "One Coordinator, Start to Finish", desc: "You get a dedicated move coordinator from the first call to final delivery. One person, one number — no call centers, no getting passed around, no confusion. Just a reliable point of contact who knows your move inside out." },
+  { Icon: IconDollar, title: "Transparent Pricing — No Hidden Fees", desc: "The price we quote is the price you pay. No weight adjustments on delivery day, no surprise fuel charges, no add-ons buried in fine print. Just a clear, honest estimate before we ever touch a single box." },
+  { Icon: IconStar, title: "Trusted by Thousands of Families", desc: "We've helped thousands of families make successful long-distance moves from Arizona to destinations across the country. Our 5-star reviews reflect a consistent track record of safe, reliable, and stress-free relocations." },
 ];
 
 const steps = [
   {
     num: "01",
-    title: "Free In-Home or Virtual Estimate",
-    desc: "A move consultant surveys your home — in person or via video call — to create a precise inventory and binding quote.",
+    title: "Free Binding Quote — In Person or by Phone",
+    desc: "We survey your home and inventory everything — in person or by phone. You'll receive a clear, honest, binding quote. No vague estimates, no pressure to commit.",
   },
   {
     num: "02",
-    title: "Custom Move Plan Created",
-    desc: "We build a detailed move plan including packing schedule, truck assignment, route, and delivery window tailored to your timeline.",
+    title: "A Custom Move Plan Built Around You",
+    desc: "We map out your entire move: packing schedule, crew assignment, route, and a realistic delivery window. You'll know exactly what's happening and when — no guesswork.",
   },
   {
     num: "03",
     title: "Professional Packing Day",
-    desc: "Our crew arrives with all materials and methodically packs, labels, and loads every item with care and precision.",
+    desc: "Our trained crew arrives with all materials and carefully packs, wraps, labels, and loads every item. Fragile pieces get extra attention. Nothing gets tossed in a box without care.",
   },
   {
     num: "04",
-    title: "Tracked Transit to Your Destination",
-    desc: "Your belongings travel on a GPS-tracked truck. Your coordinator keeps you updated throughout the journey.",
+    title: "Safe, Reliable Transit to Your New Home",
+    desc: "Your belongings travel on a well-maintained, fully insured truck. Your dedicated coordinator stays in contact throughout the journey so you always know where your move stands.",
   },
   {
     num: "05",
-    title: "Delivery & Setup",
-    desc: "We unload, reassemble furniture, and place items exactly where you want them. Nothing is left in the driveway.",
+    title: "Delivery, Reassembly & You're Done",
+    desc: "We unload, reassemble every piece of furniture, and place items exactly where you want them. We don't leave until you're happy. Nothing is left in a driveway or dumped in a hallway.",
   },
 ];
 
@@ -309,11 +309,10 @@ export default function LongDistanceMovingPage() {
             <span className="text-white font-semibold">Long Distance Moving</span>
           </nav>
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight tracking-tight mb-6">
-            Long Distance Moving Services
+            Long-Distance Moving Services from Arizona
           </h1>
           <p className="text-white/90 text-lg md:text-xl max-w-3xl leading-relaxed mb-8">
-            Trusted, fully insured long distance movers serving families and businesses across the country. Whether you're
-            moving 300 miles or 3,000 miles, we handle every detail from first box to final placement.
+            Reliable, insured long-distance movers trusted by Arizona families. Whether you're moving 300 miles or across the country, we plan every detail, protect every item, and deliver on time — with a firm price you can count on from day one.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a
@@ -323,7 +322,7 @@ export default function LongDistanceMovingPage() {
               Get a Free Quote
             </a>
             <a
-              href="tel:18005551234"
+              href="tel:+14804471200"
               className="inline-block px-8 py-4 text-lg font-semibold rounded-lg border-2 border-white text-white hover:bg-white/10 transition-colors font-sans"
             >
               📞 480-447-1200
@@ -360,27 +359,19 @@ export default function LongDistanceMovingPage() {
               Long Distance Moving
             </span>
             <h2 data-anim-item className="font-serif text-4xl font-bold leading-tight mb-5 text-foreground">
-              Moving Across the Country Shouldn't Feel Like a Gamble
+              Your Long-Distance Move Deserves More Than a Wish and a Prayer
             </h2>
             <p data-anim-item className="text-lg text-muted-foreground leading-relaxed mb-4">
-              Long distance moving is one of the biggest transitions a person or family can make. The distance, the
-              logistics, the cost, the timeline — it can all feel overwhelming. That's exactly why we built our long
-              distance moving service around one core promise: <strong>complete reliability from start to finish.</strong>
+              Moving across state lines is one of the biggest transitions you'll make. The distance alone makes it intimidating — and too many moving companies make it worse by being vague about pricing, unreliable on timing, and careless with your belongings. <strong>We built King Movers to be the opposite of that.</strong>
             </p>
             <p data-anim-item className="text-lg text-muted-foreground leading-relaxed mb-4">
-              Unlike local moves that wrap up in a day, long distance relocations require careful planning, secure
-              loading procedures, real-time communication during transit, and a delivery team on the other end that
-              treats your belongings with the same care as when they were packed.
+              We're a fully licensed, fully insured long-distance moving company based in Arizona. Our crew is professional and trained — not contractors hired for the day. We give you a binding quote before we ever start, so there are no price surprises when your truck pulls up at the destination. And you get a dedicated coordinator who knows your move and is actually reachable throughout the whole process.
             </p>
             <p data-anim-item className="text-lg text-muted-foreground leading-relaxed mb-4">
-              We've been moving families, individuals, and businesses across state lines for over two decades. In that
-              time, we've refined every step of the process — from how we wrap your furniture to how we route our trucks
-              — so that your move arrives on time, intact, and exactly as expected.
+              Long-distance moves require careful planning, secure loading, and a reliable delivery on the other end. We've refined every part of this process over hundreds of successful cross-country relocations — and we put that experience to work on every move we take, big or small.
             </p>
             <p data-anim-item className="text-lg text-muted-foreground leading-relaxed">
-              Whether you're relocating for a new job, downsizing, moving closer to family, or starting fresh in a new
-              city, our team is here to make the journey as smooth as possible. <strong>You focus on the new chapter —
-              we'll handle everything else.</strong>
+              Whether you're moving for a new job, downsizing, reuniting with family, or starting fresh somewhere new — we're here to make the journey safe, reliable, and as stress-free as possible. <strong>You focus on your next chapter. We'll handle everything from the first box to the final placement.</strong>
             </p>
           </div>
         </div>
@@ -388,21 +379,21 @@ export default function LongDistanceMovingPage() {
         {/* ── WHAT'S INCLUDED ─────────────────────────────────────── */}
         <div data-anim-section className="rounded-2xl p-10 mb-20 bg-surface border-2 border-foreground/10">
           <h2 data-anim-item className="font-serif text-3xl font-bold mb-2 text-foreground">
-            What's Included in Our Long Distance Moving Service
+            Everything Included — Spelled Out Before You Book
           </h2>
           <p data-anim-item className="text-muted-foreground mb-8 text-lg font-sans">
-            Every long distance move includes the following as standard — no hidden add-ons, no surprise charges.
+            No fine print, no surprise add-ons at the destination. Here's exactly what's included in every long-distance move we do.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
-              ["Free Binding Estimate", "We survey your home and provide a written, binding price — the number we quote is the number you pay."],
-              ["Full-Service Packing Option", "Our crews can pack your entire home using professional-grade materials, or handle specific rooms as needed."],
-              ["Furniture Disassembly & Reassembly", "All beds, shelving units, and large furniture are disassembled before loading and reassembled at your new home."],
-              ["Protective Wrapping & Padding", "Every piece of furniture is wrapped in heavy blankets and shrink wrap before being secured on the truck."],
-              ["GPS-Tracked Transportation", "Your belongings travel on a late-model, GPS-tracked truck. Monitor transit progress through our customer portal."],
-              ["Dedicated Move Coordinator", "One point of contact manages your move from booking to delivery. No call centers, no runaround."],
-              ["Storage-in-Transit Available", "Need a gap between move-out and move-in? We offer secure climate-controlled storage at our facilities."],
-              ["Specialty Item Handling", "Pianos, artwork, antiques, and other high-value items receive custom crating and specialized transport."],
+              ["Free Binding Quote — No Price Surprises", "We assess your home and give you a written, binding price. What we quote is what you pay — guaranteed. No weight adjustments at delivery, no mystery fees."],
+              ["Careful Packing by Trained Professionals", "Our crew packs your entire home — or specific rooms — using heavy-duty blankets, double-boxing for fragiles, and proper labeling by room. Full-service packing means you don't touch a single box."],
+              ["Furniture Disassembly & Reassembly", "All beds, shelving, and large furniture are safely disassembled before loading and fully reassembled at your new home. We bring the tools — you don't need to worry about a thing."],
+              ["Protective Wrapping on Every Piece", "Every item of furniture is wrapped in heavy moving blankets and secured with shrink wrap before going on the truck. Fragile and high-value items get extra padding and custom care."],
+              ["Dedicated Move Coordinator", "One real person manages your move from booking to delivery. They know your inventory, your timeline, and your concerns — and they're reachable throughout the entire process."],
+              ["Reliable, On-Time Delivery", "We plan your route and delivery window carefully and communicate it clearly. If anything changes, we'll tell you immediately. We don't leave you wondering where your belongings are."],
+              ["Storage-in-Transit Available", "Gap between your move-out and move-in dates? We offer secure, clean storage at our facilities — short or long term — so your belongings stay safe until you're ready."],
+              ["Specialty Item Handling", "Pianos, large artwork, antiques, safes, and high-value items get individual attention, custom crating where needed, and careful handling by movers who know how to do it right."],
             ].map(([title, desc]) => (
               <div data-anim-item key={title} className="flex gap-4 items-start">
                 <div className="shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-bold font-sans bg-primary mt-0.5">
@@ -420,9 +411,9 @@ export default function LongDistanceMovingPage() {
         {/* ── HOW IT WORKS ────────────────────────────────────────── */}
         <div data-anim-section className="mb-20">
           <div className="text-center mb-10">
-            <h2 data-anim-item className="font-serif text-4xl font-bold text-foreground">How Our Long Distance Moving Process Works</h2>
+            <h2 data-anim-item className="font-serif text-4xl font-bold text-foreground">How a King Movers Long-Distance Move Works</h2>
             <p data-anim-item className="text-muted-foreground mt-3 text-lg font-sans max-w-2xl mx-auto">
-              A clear, structured process so you always know what to expect — and when.
+              A clear, simple process from start to finish — so you're never left guessing, and nothing falls through the cracks.
             </p>
           </div>
           <div className="flex flex-col gap-0">
@@ -458,8 +449,7 @@ export default function LongDistanceMovingPage() {
               data-anim-item
               className="text-muted-foreground mt-3 text-base md:text-lg font-sans max-w-2xl mx-auto"
             >
-              Image placeholders are used here. Replace these with real photos of your long distance
-              moves to showcase trucks, crews, and packed homes.
+              Our fleet and crew ready for the road — safely moving your belongings from Arizona to any destination across the country.
             </p>
           </div>
           <div data-anim-item className="relative overflow-hidden">
@@ -506,26 +496,19 @@ export default function LongDistanceMovingPage() {
           </div>
           <div className="w-full lg:w-7/12">
             <h2 data-anim-item className="font-serif text-4xl font-bold leading-tight mb-5 text-foreground">
-              The Difference Between a Good Move and a Great One Is Preparation
+              Safe Delivery Hundreds of Miles Away Starts With How We Pack Here
             </h2>
             <p data-anim-item className="text-lg text-muted-foreground leading-relaxed mb-4">
-              Most moving horror stories share a common cause: poor preparation. Boxes that weren't reinforced. Furniture
-              that wasn't properly wrapped. A truck that was overloaded. A delivery window that was missed. These aren't
-              accidents — they're the result of cutting corners, and they're completely avoidable.
+              Long-distance moves fail at the packing stage. A box that isn't reinforced won't survive 600 miles. Furniture that isn't wrapped tight arrives scratched or broken. A missing inventory means you don't know what you're missing until it's too late. These aren't freak accidents — they're the result of a crew that cut corners, and it's completely avoidable.
             </p>
             <p data-anim-item className="text-lg text-muted-foreground leading-relaxed mb-4">
-              Our moving teams follow a strict packing and loading protocol developed over 20 years of cross-country
-              moves. Every item is inventoried. Every box is labeled. Every piece of furniture is photographed before
-              loading. When your shipment arrives, we check each item against the inventory list before unloading begins.
+              Our teams follow a strict packing and loading protocol on every long-distance job. Every item is inventoried and labeled. Every box is properly reinforced and marked by room. Every piece of furniture is wrapped in heavy blankets and secured with straps. Nothing gets thrown on the truck carelessly — because it has hundreds of miles to travel.
             </p>
             <p data-anim-item className="text-lg text-muted-foreground leading-relaxed mb-4">
-              We also invest heavily in our equipment. Our trucks feature air-ride suspension — a suspension system
-              that dramatically reduces road vibration and is especially important for fragile items like electronics,
-              mirrors, and fine art. Our straps, pads, and dollies are inspected and replaced on a regular schedule.
+              We maintain our trucks and equipment to a high standard. Clean, well-maintained vehicles mean fewer breakdowns and more reliable delivery windows. Our crews inspect their equipment before every job — straps, pads, dollies, all of it.
             </p>
             <p data-anim-item className="text-lg text-muted-foreground leading-relaxed">
-              The result? A move-day experience that feels surprisingly calm, and a delivery that feels like a relief
-              instead of a reckoning.
+              The result is a move that arrives exactly as it left — safe, intact, and on time. <strong>That's not luck. That's a process built and refined on hundreds of successful long-distance relocations.</strong>
             </p>
           </div>
         </div>
@@ -533,9 +516,9 @@ export default function LongDistanceMovingPage() {
         {/* ── WHY CHOOSE US ────────────────────────────────────────── */}
         <div data-anim-section className="mb-20">
           <div className="text-center mb-10">
-            <h2 data-anim-item className="font-serif text-4xl font-bold text-foreground">Why Thousands Choose Us for Long Distance Moves</h2>
+            <h2 data-anim-item className="font-serif text-4xl font-bold text-foreground">Why Arizona Families Choose King Movers for Long-Distance Moves</h2>
             <p data-anim-item className="text-muted-foreground mt-3 text-lg font-sans max-w-2xl mx-auto">
-              We're not the cheapest option — we're the most dependable one. Here's what sets us apart.
+              Long-distance moving is a big decision. Here's why thousands of families trust us with it — and why so many refer us to friends and family afterwards.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -557,9 +540,12 @@ export default function LongDistanceMovingPage() {
 
         {/* ── SERVICES WE COVER ────────────────────────────────────── */}
         <div data-anim-section className="rounded-2xl p-10 mb-20 bg-primary text-white">
-          <h2 data-anim-item className="font-serif text-3xl font-bold mb-3">We Move You <span className=" bg-white/10 px-2 py-1 rounded-md">  Anywhere </span> in the Country</h2>
-          <p data-anim-item className="text-white/80 text-lg font-sans">
-            Our long distance moving service covers all 50 states. 
+          <h2 data-anim-item className="font-serif text-3xl font-bold mb-3">Moving from Arizona to <span className="bg-white/10 px-2 py-1 rounded-md">Anywhere</span> in the Country</h2>
+          <p data-anim-item className="text-white/80 mb-6 text-lg font-sans">
+            Our long-distance moving service covers all 50 states. Whether you're heading to California, Texas, Colorado, Florida, or the Pacific Northwest — we plan the route, pack everything carefully, and deliver on time. You'll have one dedicated coordinator throughout, transparent pricing locked in upfront, and full insurance coverage for the entire journey.
+          </p>
+          <p data-anim-item className="text-white/70 text-sm font-sans">
+            Ready to get started? Call us at 480-447-1200 or request a free quote below — we'll build your move plan and give you a binding price with zero pressure.
           </p>
           {/* <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 font-sans">
             {[
@@ -594,10 +580,10 @@ export default function LongDistanceMovingPage() {
         <div data-anim-section className="mb-20">
           <div className="text-center mb-10">
             <h2 data-anim-item className="font-serif text-4xl font-bold text-foreground">
-              Frequently Asked Questions About Long Distance Moving
+              Long-Distance Moving FAQs — Answered Honestly
             </h2>
             <p data-anim-item className="text-muted-foreground mt-3 text-lg font-sans max-w-2xl mx-auto">
-              Got questions? We've answered the most common ones below. If you don't find what you need, call us any time.
+              We know a long-distance move raises a lot of questions. Here are the most common ones we hear — answered straight, no fluff.
             </p>
           </div>
           <div className="flex flex-col gap-3">
@@ -644,28 +630,27 @@ export default function LongDistanceMovingPage() {
       >
         <div className="mx-auto max-w-3xl px-6 text-center">
           <h2 data-anim-item className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Plan Your Long Distance Move?
+            Ready to Make Your Long-Distance Move? Get a Free Quote Today.
           </h2>
           <p data-anim-item className="text-white/90 text-lg md:text-xl mb-8 font-sans leading-relaxed">
-            Get a free, no-obligation binding estimate from our team. We'll walk you through every detail and give you a
-            firm price — no guesswork, no surprises.
+            Reliable, insured, and transparent — we make long-distance moves simple. Get your free binding estimate today. We'll walk you through everything, lock in a firm price, and build a plan around your timeline. No pressure, no hidden costs.
           </p>
           <div data-anim-item className="flex flex-wrap gap-4 justify-center">
             <Link
-              href="/contact"
+              href="/contact-us"
               className="inline-block px-10 py-4 text-lg font-bold rounded-lg font-sans bg-accent text-foreground hover:opacity-90 transition-opacity"
             >
               Request a Free Estimate
             </Link>
             <a
-              href="tel:18005551234"
+              href="tel:+14804471200"
               className="inline-block px-10 py-4 text-lg font-bold border-2 border-white text-white rounded-lg font-sans hover:bg-white/10 transition-colors"
             >
               📞 Call 480-447-1200
             </a>
           </div>
           <p data-anim-item className="text-white/70 mt-6 text-sm font-sans">
-            Available Monday–Saturday, 8AM–8PM · No pressure, no obligation
+            Available Mon–Sun, 8AM–8PM · No pressure, no obligation
           </p>
         </div>
       </section>

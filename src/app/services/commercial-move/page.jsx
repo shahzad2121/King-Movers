@@ -19,35 +19,35 @@ const HERO_BG_IMAGE = "/images/hero/Kingsmovinging-service.jpg";
 const faqs = [
   {
     q: "How far in advance should I book a commercial move?",
-    a: "We recommend booking at least 2–4 weeks in advance for commercial moves so we can coordinate with your IT team, plan after-hours or weekend slots, and secure the right crew size. Rush moves can often be accommodated depending on availability.",
+    a: "We recommend booking 2–4 weeks ahead so we can coordinate after-hours or weekend slots, arrange the right crew size, and work with your IT or facilities team. Need to move sooner? Call us — we accommodate rush commercial moves when our schedule allows.",
   },
   {
     q: "Do you offer after-hours or weekend office moves?",
-    a: "Yes. We routinely schedule moves outside business hours and on weekends to minimize disruption. We'll work with you to choose a window that keeps your business running while we relocate your office.",
+    a: "Yes, and most of our commercial clients prefer it. We routinely schedule office moves outside business hours and on weekends to keep your operations running and minimize disruption to your team. Tell us your constraints — we'll build around them.",
   },
   {
     q: "How do you handle IT equipment and sensitive documents?",
-    a: "We treat IT equipment and confidential materials with extra care. We coordinate with your IT team for disconnection and reconnection, use appropriate packing and labeling, and can arrange dedicated handling for servers and sensitive files. All crews are background-checked and trained in office moves.",
+    a: "We work directly with your IT team for disconnection and reconnection. Equipment is packed carefully using appropriate materials and labeled clearly for easy reassembly. Sensitive files and documents are handled confidentially — all our crews are trained and background-checked.",
   },
   {
     q: "Can you do a phased move for a large office?",
-    a: "Yes. For larger offices we can move in phases — by department, floor, or timeline — so you don't have to shut down entirely. We'll create a move plan that fits your schedule and budget.",
+    a: "Absolutely. For larger offices we can move by department, floor, or timeline — so your business never has to go dark entirely. We'll create a detailed phased move plan that works with your schedule and minimizes disruption to daily operations.",
   },
   {
-    q: "What is included in a commercial moving quote?",
-    a: "Your quote includes labor, trucks, standard packing materials, disassembly and reassembly of office furniture, and basic insurance. We'll outline any extras (e.g. specialty crating, IT coordination, storage) upfront so there are no surprises.",
+    q: "What's included in a commercial moving quote?",
+    a: "Labor, trucks, standard packing materials, disassembly and reassembly of office furniture, and insurance are all included. Any extras — specialty crating, IT coordination, storage — are outlined clearly upfront. The quote we give you is binding. No surprise charges on delivery day.",
   },
   {
     q: "Are you insured for commercial moves?",
-    a: "Yes. We carry comprehensive liability and cargo insurance. We can provide certificates of insurance for your building management or procurement team upon request.",
+    a: "Yes. We carry comprehensive liability and cargo insurance on all commercial moves. We can provide a certificate of insurance for your building management, landlord, or procurement team upon request — no delays.",
   },
   {
     q: "Do you move specialty equipment like medical or lab gear?",
-    a: "We have experience moving office furniture, workstations, and standard equipment. For highly specialized or regulated equipment (e.g. medical, lab, manufacturing), we can coordinate with certified specialists as part of your move plan.",
+    a: "We handle office furniture, workstations, filing systems, and standard commercial equipment. For highly regulated or specialized equipment (medical devices, lab machinery), we can coordinate with certified specialists as part of your overall move plan.",
   },
   {
-    q: "Who will be our point of contact during the move?",
-    a: "You'll have a dedicated move coordinator from the first call to final setup. They'll handle scheduling, crew assignment, and communication so you have one point of contact — no call centers or runaround.",
+    q: "Who is our point of contact during the move?",
+    a: "You get a dedicated move coordinator from your first call through final setup — one person, one number. They manage scheduling, crew assignment, and any changes. No call centers, no getting passed around. Just a reliable, responsive point of contact who knows your move inside out.",
   },
 ];
 
@@ -93,39 +93,39 @@ const IconStar = () => (
 );
 
 const whyUs = [
-  { Icon: IconTrophy, title: "Licensed & Fully Insured", desc: "We are fully licensed and carry comprehensive liability and cargo insurance on every commercial move. We can provide certificates for your building or procurement team." },
-  { Icon: IconBox, title: "Office & Equipment Experts", desc: "Our crews are trained to handle desks, workstations, filing cabinets, and office furniture with care. We use proper packing and labeling so setup at your new space is smooth." },
-  { Icon: IconTruck, title: "Modern Fleet", desc: "Our trucks are equipped to handle office moves efficiently. We schedule the right vehicle and crew size so your move stays on time and on budget." },
-  { Icon: IconMapPin, title: "Dedicated Move Coordinator", desc: "From your first call to final setup, one coordinator manages your entire commercial move — no getting passed from agent to agent." },
-  { Icon: IconDollar, title: "Transparent Pricing", desc: "No surprise fees. We provide clear, binding estimates so the price we quote is the price you pay. Ideal for budgeting and procurement." },
-  { Icon: IconStar, title: "Trusted by Businesses", desc: "Our reputation is built on results. Hundreds of businesses have trusted us with their office and commercial relocations." },
+  { Icon: IconTrophy, title: "Licensed, Insured & Accountable", desc: "We're fully licensed and carry comprehensive liability and cargo insurance on every commercial job. Certificates of insurance available upon request for your building management or procurement team. You're covered — completely." },
+  { Icon: IconBox, title: "Trained Crews Who Handle Offices Right", desc: "Our movers are trained — not random day-laborers. They know how to move desks, workstations, filing systems, and fragile equipment carefully and efficiently. Proper packing, proper labeling, and a clean setup at your new location." },
+  { Icon: IconTruck, title: "Minimal Downtime, Maximum Reliability", desc: "We schedule after-hours and weekend moves to keep your business running. Our crews are punctual, efficient, and experienced — so your office is back up and operational as fast as possible." },
+  { Icon: IconMapPin, title: "One Dedicated Coordinator Throughout", desc: "From first call to final setup, you have one point of contact who manages your entire commercial relocation. No call centers, no being passed around. Just a responsive, reliable coordinator who knows your move and makes it happen." },
+  { Icon: IconDollar, title: "Transparent Pricing — No Surprises on Invoice", desc: "Commercial budgets don't have room for surprise charges. We provide a clear, binding quote before we start — labor, trucks, materials, everything. The number we quote is the number on your invoice. Period." },
+  { Icon: IconStar, title: "Trusted by Businesses Across Arizona", desc: "We've successfully relocated corporate offices, medical practices, retail spaces, law firms, restaurants, and more. Our clients trust us because we deliver — on time, under budget, and with zero drama." },
 ];
 
 const steps = [
   {
     num: "01",
-    title: "Free Site Survey or Virtual Walkthrough",
-    desc: "We survey your office — in person or via video — to assess inventory, access, and special requirements, then provide a detailed, binding quote.",
+    title: "Free Site Survey & Binding Quote",
+    desc: "We survey your office — in person or by video — to assess inventory, access requirements, and any special equipment. You get a detailed, binding quote. No vague estimates, no hidden charges.",
   },
   {
     num: "02",
-    title: "Custom Move Plan",
-    desc: "We build a move plan that fits your schedule: after-hours or weekend slots, phased moves if needed, and coordination with IT or facilities.",
+    title: "A Custom Move Plan Around Your Business Hours",
+    desc: "We build a plan that minimizes your downtime: after-hours or weekend slots, phased moves for larger offices, and full coordination with your IT and facilities teams.",
   },
   {
     num: "03",
-    title: "Packing, Disassembly & Load-Out",
-    desc: "Our crew packs, labels, and disassembles furniture as needed. We load everything with care and leave your old space clean.",
+    title: "Professional Packing, Labeling & Load-Out",
+    desc: "Our trained crew packs everything carefully, labels by department or room, and disassembles furniture as needed. We load efficiently and leave your old space clean and ready for handover.",
   },
   {
     num: "04",
-    title: "Transport to Your New Location",
-    desc: "Your office contents travel on our trucks to the new site. Your coordinator keeps you updated so you know when to expect delivery.",
+    title: "Reliable Transport to Your New Location",
+    desc: "Your office contents travel safely on our insured trucks to the new site. Your coordinator keeps you updated at every stage — you'll always know exactly when to expect delivery.",
   },
   {
     num: "05",
-    title: "Delivery, Reassembly & Setup",
-    desc: "We unload, reassemble furniture, and place items according to your plan. We work until everything is in place and you're ready to open for business.",
+    title: "Delivery, Reassembly & Ready to Open",
+    desc: "We unload, reassemble all furniture, and set everything up exactly according to your floor plan. We stay until every desk is in place, every cable is run, and you're ready to open for business.",
   },
 ];
 
@@ -290,11 +290,10 @@ export default function CommercialMovePage() {
             <span className="text-white font-semibold">Commercial Move</span>
           </nav>
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight tracking-tight mb-6">
-            Commercial Moving Services
+            Commercial &amp; Office Moving Services in Arizona
           </h1>
           <p className="text-white/90 text-lg md:text-xl max-w-3xl leading-relaxed mb-8">
-            Trusted office and commercial movers. We minimize downtime with after-hours moves, dedicated coordinators, and
-            careful handling of desks, IT equipment, and files so your business is back up quickly.
+            Reliable, insured commercial movers that keep your business running. We plan every relocation around your schedule — after-hours, weekends, or phased — with careful handling, transparent pricing, and a dedicated coordinator so your team is back to work fast.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a
@@ -304,7 +303,7 @@ export default function CommercialMovePage() {
               Get a Free Quote
             </a>
             <a
-              href="tel:18005551234"
+              href="tel:+14804471200"
               className="inline-block px-8 py-4 text-lg font-semibold rounded-lg border-2 border-white text-white hover:bg-white/10 transition-colors font-sans"
             >
               📞 480-447-1200
@@ -341,25 +340,19 @@ export default function CommercialMovePage() {
               Commercial Moving
             </span>
             <h2 data-anim-item className="font-serif text-4xl font-bold leading-tight mb-5 text-foreground">
-              Office Relocation Without the Headaches
+              Your Business Can't Afford a Botched Move — So We Don't Do Botched Moves
             </h2>
             <p data-anim-item className="text-lg text-muted-foreground leading-relaxed mb-4">
-              Moving your office or business is a major undertaking. Downtime costs money, and your team needs to get back
-              to work quickly. That's why we built our commercial moving service around one core promise: <strong>minimal
-              disruption and a smooth, predictable move from start to finish.</strong>
+              Every hour your office is down costs money. A disorganized move — missing furniture, damaged equipment, cables nowhere near the right desks — can set your business back days. We've built our commercial moving service around one non-negotiable goal: <strong>get your office moved and back up and running as fast as possible, with zero surprises.</strong>
             </p>
             <p data-anim-item className="text-lg text-muted-foreground leading-relaxed mb-4">
-              We plan every office move in detail. We work after hours or on weekends when needed, coordinate with your
-              IT and facilities teams, and use experienced crews who know how to handle desks, workstations, and sensitive
-              equipment. From the first survey to final setup, you have a single point of contact.
+              We plan every detail before we ever show up. We work after hours and on weekends to avoid disrupting your team during business hours. We coordinate with your IT department for careful equipment handling, and we provide a dedicated move coordinator who's reachable throughout the entire process — not a call center agent who doesn't know your job.
             </p>
             <p data-anim-item className="text-lg text-muted-foreground leading-relaxed mb-4">
-              We've relocated offices of all sizes — from small suites to multi-floor moves. In that time, we've refined
-              our process so your move stays on schedule, on budget, and with minimal impact on your operations.
+              We're fully licensed and insured, and we can provide certificates of insurance for your building management or procurement team on request. Our crews are trained professionals — not temp workers — who understand how to handle office environments carefully, confidentially, and efficiently.
             </p>
             <p data-anim-item className="text-lg text-muted-foreground leading-relaxed">
-              Whether you're expanding, consolidating, or moving to a better location, our team is here to make the
-              transition as smooth as possible. <strong>You focus on running your business — we'll handle the move.</strong>
+              Whether you're expanding, downsizing, or moving to a better location, our team makes the transition smooth, reliable, and predictable. <strong>You run your business. We handle everything else.</strong>
             </p>
           </div>
         </div>
@@ -367,21 +360,21 @@ export default function CommercialMovePage() {
         {/* ── WHAT'S INCLUDED ─────────────────────────────────────── */}
         <div data-anim-section className="rounded-2xl p-10 mb-20 bg-surface border-2 border-foreground/10">
           <h2 data-anim-item className="font-serif text-3xl font-bold mb-2 text-foreground">
-            What's Included in Our Commercial Moving Service
+            Everything Included — Transparent Pricing, No Invoice Surprises
           </h2>
           <p data-anim-item className="text-muted-foreground mb-8 text-lg font-sans">
-            Every commercial move includes the following as standard — no hidden add-ons, no surprise charges.
+            Here's exactly what's included in every commercial move we do — all itemized upfront so your finance or procurement team knows precisely what to expect.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
-              ["Free Site Survey & Quote", "We survey your office and provide a written, binding price — the number we quote is the number you pay."],
-              ["After-Hours & Weekend Moves", "We schedule moves outside business hours so your operations stay on track."],
-              ["Furniture Disassembly & Reassembly", "Desks, workstations, shelving, and conference tables are disassembled before loading and reassembled at your new space."],
-              ["Protective Wrapping & Padding", "Office furniture and equipment are wrapped and padded to prevent damage during transport."],
-              ["Dedicated Move Coordinator", "One point of contact from booking to final setup. No call centers, no runaround."],
-              ["IT & Equipment Coordination", "We coordinate with your IT team for disconnection, transport, and reconnection of workstations and equipment."],
-              ["Phased Move Options", "For larger offices, we can move in phases by department or floor to fit your timeline."],
-              ["Secure Handling of Files & Assets", "Filing cabinets, sensitive documents, and office assets are handled with care and confidentiality."],
+              ["Free Binding Quote & Site Survey", "We survey your office and provide a written, binding quote. The price we give you is the price on your invoice — no last-minute labor charges or fuel surcharges added on the day."],
+              ["After-Hours & Weekend Scheduling", "We build your move schedule around your business hours — evenings, weekends, or split across multiple nights if needed. Minimal disruption to your team and your clients."],
+              ["Professional Packing & Careful Labeling", "Every item is packed properly and labeled by department or room. Nothing gets tossed into an unlabeled box. Setup at your new location is fast and organized because everything arrives where it's supposed to."],
+              ["Furniture Disassembly & Full Reassembly", "Desks, workstations, conference tables, and shelving are disassembled safely before loading and fully reassembled at your new space — according to your floor plan."],
+              ["IT & Equipment Coordination", "We coordinate directly with your IT team for safe disconnection and reconnection of workstations, monitors, and equipment. Careful packing, clear labeling, and zero damage."],
+              ["Dedicated Move Coordinator — One Number", "One person manages your entire relocation from survey to final setup. Reachable, responsive, and fully briefed on your move. No call centers, no being bounced around."],
+              ["Phased Moves for Large Offices", "Too large to move in one go? We can move by floor, department, or timeline. Keep your business partially operational throughout and move at a pace that works for you."],
+              ["Insured, Licensed & Fully Accountable", "We carry comprehensive liability and cargo insurance on every commercial job. Certificates of insurance are available on request. If something goes wrong, you're covered — fully."],
             ].map(([title, desc]) => (
               <div data-anim-item key={title} className="flex gap-4 items-start">
                 <div className="shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-bold font-sans bg-primary mt-0.5">
@@ -399,9 +392,9 @@ export default function CommercialMovePage() {
         {/* ── HOW IT WORKS ────────────────────────────────────────── */}
         <div data-anim-section className="mb-20">
           <div className="text-center mb-10">
-            <h2 data-anim-item className="font-serif text-4xl font-bold text-foreground">How Our Commercial Moving Process Works</h2>
+            <h2 data-anim-item className="font-serif text-4xl font-bold text-foreground">How a King Movers Commercial Move Works</h2>
             <p data-anim-item className="text-muted-foreground mt-3 text-lg font-sans max-w-2xl mx-auto">
-              A clear, structured process so you always know what to expect — and when.
+              Structured, predictable, and built around your business schedule — here's exactly what to expect from start to finish.
             </p>
           </div>
           <div className="flex flex-col gap-0">
@@ -437,8 +430,7 @@ export default function CommercialMovePage() {
               data-anim-item
               className="text-muted-foreground mt-3 text-base md:text-lg font-sans max-w-2xl mx-auto"
             >
-              Image placeholders are used here. Replace these with real photos of your office and commercial
-              relocations to highlight your crews, equipment, and finished setups.
+              Our team handling office and commercial relocations — professional packing, careful loading, and a clean setup at your new location.
             </p>
           </div>
           <div data-anim-item className="relative overflow-hidden">
@@ -485,26 +477,19 @@ export default function CommercialMovePage() {
           </div>
           <div className="w-full lg:w-7/12">
             <h2 data-anim-item className="font-serif text-4xl font-bold leading-tight mb-5 text-foreground">
-              The Difference Between a Good Move and a Great One Is Preparation
+              The Fastest Way to Get Your Business Back Up and Running
             </h2>
             <p data-anim-item className="text-lg text-muted-foreground leading-relaxed mb-4">
-              Most moving horror stories share a common cause: poor preparation. Boxes that weren't reinforced. Furniture
-              that wasn't properly wrapped. A truck that was overloaded. A delivery window that was missed. These aren't
-              accidents — they're the result of cutting corners, and they're completely avoidable.
+              A disorganized commercial move doesn't just cause chaos on move day — it costs your business real money in lost productivity the days that follow. Unlabeled boxes. Missing equipment. Furniture in the wrong rooms. A team that can't work because nobody knows where anything went. We've seen it. We prevent it.
             </p>
             <p data-anim-item className="text-lg text-muted-foreground leading-relaxed mb-4">
-              Our moving teams follow a strict packing and loading protocol developed over years of office moves. Every
-              item is inventoried and labeled. Furniture is disassembled and wrapped before loading. When we arrive at
-              your new space, we check each item against the inventory and set up according to your plan.
+              Every commercial move we do starts with a detailed inventory and a floor plan for your new space. Every box is labeled by department and destination. Every piece of furniture is disassembled, wrapped, and loaded carefully. When we arrive at your new location, we work directly from your layout — so your team walks in and starts working, not searching.
             </p>
             <p data-anim-item className="text-lg text-muted-foreground leading-relaxed mb-4">
-              We also invest heavily in our equipment. Our trucks feature air-ride suspension — a suspension system
-              that dramatically reduces road vibration and is especially important for fragile items like electronics,
-              mirrors, and fine art. Our straps, pads, and dollies are inspected and replaced on a regular schedule.
+              We coordinate with your IT team, respect your confidentiality requirements, and keep the entire process quiet and professional. Our crews are background-checked, trained, and experienced in commercial environments — they work efficiently and take care of your equipment and your space.
             </p>
             <p data-anim-item className="text-lg text-muted-foreground leading-relaxed">
-              The result? A move-day experience that feels surprisingly calm, and a delivery that feels like a relief
-              instead of a reckoning.
+              The goal isn't just to move your office. <strong>It's to move it so well that your team shows up Monday morning, sits down, and gets straight back to work — like the move happened overnight.</strong> That's what we deliver.
             </p>
           </div>
         </div>
@@ -512,9 +497,9 @@ export default function CommercialMovePage() {
         {/* ── WHY CHOOSE US ────────────────────────────────────────── */}
         <div data-anim-section className="mb-20">
           <div className="text-center mb-10">
-            <h2 data-anim-item className="font-serif text-4xl font-bold text-foreground">Why Businesses Choose Us for Commercial Moves</h2>
+            <h2 data-anim-item className="font-serif text-4xl font-bold text-foreground">Why Arizona Businesses Choose King Movers</h2>
             <p data-anim-item className="text-muted-foreground mt-3 text-lg font-sans max-w-2xl mx-auto">
-              We're not the cheapest option — we're the most dependable one. Here's what sets us apart.
+              We're not the cheapest option — we're the most reliable one. Here's what separates us from other commercial movers.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -536,9 +521,9 @@ export default function CommercialMovePage() {
 
         {/* ── TYPES WE COVER ───────────────────────────────────────── */}
         <div data-anim-section className="rounded-2xl p-10 mb-20 bg-primary text-white">
-          <h2 data-anim-item className="font-serif text-3xl font-bold mb-3">We Relocate Businesses of All Sizes</h2>
+          <h2 data-anim-item className="font-serif text-3xl font-bold mb-3">We Relocate Businesses of Every Type &amp; Size</h2>
           <p data-anim-item className="text-white/80 mb-8 text-lg font-sans">
-            Our commercial moving service covers offices, retail spaces, and businesses of every size. We routinely handle:
+            From a two-person startup to a multi-floor corporate office — our commercial moving team has the experience, the crew, and the systems to handle it. Here's the range of businesses we work with regularly:
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 font-sans">
             {[
@@ -565,7 +550,7 @@ export default function CommercialMovePage() {
             ))}
           </div>
           <p data-anim-item className="text-white/70 mt-6 font-sans text-sm">
-            Have a different type of business? We can help. Contact us for a custom quote.
+            Don't see your business type? We work with all commercial clients — call 480-447-1200 for a custom quote tailored to your move.
           </p>
         </div>
 
@@ -573,10 +558,10 @@ export default function CommercialMovePage() {
         <div data-anim-section className="mb-20">
           <div className="text-center mb-10">
             <h2 data-anim-item className="font-serif text-4xl font-bold text-foreground">
-              Frequently Asked Questions About Commercial Moving
+              Commercial Moving FAQs — Straight Answers for Busy Businesses
             </h2>
             <p data-anim-item className="text-muted-foreground mt-3 text-lg font-sans max-w-2xl mx-auto">
-              Got questions? We've answered the most common ones below. If you don't find what you need, call us any time.
+              We know business owners and office managers have specific concerns. Here are the most common questions we get — answered directly.
             </p>
           </div>
           <div className="flex flex-col gap-3">
@@ -623,28 +608,27 @@ export default function CommercialMovePage() {
       >
         <div className="mx-auto max-w-3xl px-6 text-center">
           <h2 data-anim-item className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Plan Your Commercial Move?
+            Let's Get Your Business Moved — the Right Way
           </h2>
           <p data-anim-item className="text-white/90 text-lg md:text-xl mb-8 font-sans leading-relaxed">
-            Get a free, no-obligation binding estimate from our team. We'll walk you through every detail and give you a
-            firm price — no guesswork, no surprises.
+            Reliable, insured, and transparent — we take commercial moves seriously because your business depends on it. Get your free, binding estimate today. We'll survey your office, answer every question, and build a move plan around your schedule with zero pressure.
           </p>
           <div data-anim-item className="flex flex-wrap gap-4 justify-center">
             <Link
-              href="/contact"
+              href="/contact-us"
               className="inline-block px-10 py-4 text-lg font-bold rounded-lg font-sans bg-accent text-foreground hover:opacity-90 transition-opacity"
             >
               Request a Free Estimate
             </Link>
             <a
-              href="tel:18005551234"
+              href="tel:+14804471200"
               className="inline-block px-10 py-4 text-lg font-bold border-2 border-white text-white rounded-lg font-sans hover:bg-white/10 transition-colors"
             >
               📞 Call 480-447-1200
             </a>
           </div>
           <p data-anim-item className="text-white/70 mt-6 text-sm font-sans">
-            Available Monday–Saturday, 8AM–8PM · No pressure, no obligation
+            Available Mon–Sun, 8AM–8PM · No pressure, no obligation
           </p>
         </div>
       </section>

@@ -150,10 +150,10 @@ export default function BlogPostPageClient({ post }) {
               Request a free quote and get a clear plan for packing, loading, and delivery.
             </p>
             <Link
-              href="/contact-us"
+              href="/#quote"
               className="blog-body-link mt-4 inline-flex rounded-lg bg-primary px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-primary/90"
             >
-              Contact Us
+              Get a Free Quote
             </Link>
           </div>
         </div>

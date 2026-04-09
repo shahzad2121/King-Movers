@@ -215,7 +215,7 @@ export default function HeroSection() {
 
         <div ref={ctaRef} className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
           <a
-            href="/contact-us"
+            href="#quote"
             className="font-hero-body inline-flex items-center bg-primary text-white text-base font-medium px-8 py-4 rounded-full w-fit hover:bg-primary/90 transition-all hover:-translate-y-0.5"
             style={{ letterSpacing: "-0.01em" }}
           >

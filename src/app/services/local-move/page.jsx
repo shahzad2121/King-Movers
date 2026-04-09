@@ -19,35 +19,35 @@ const HERO_BG_IMAGE = "/images/hero/Kingsmovinging-service.jpg";
 const faqs = [
   {
     q: "How far in advance should I book a local move?",
-    a: "We recommend booking at least one to two weeks in advance for local moves, especially during busy seasons. Same-day and next-day moves can often be arranged subject to availability — call us to check.",
+    a: "We recommend booking at least 1–2 weeks ahead, especially during weekends and peak summer months. That said, we often accommodate same-day and next-day moves — call us and we'll do everything we can to make it work.",
   },
   {
     q: "How is the cost of a local move calculated?",
-    a: "Local moves are typically based on the time required (hours) and the number of movers and trucks needed. We provide transparent, binding quotes after a quick survey — in person or by phone — so you know the cost upfront.",
+    a: "We give you a clear, binding quote based on home size, distance, crew needed, and any add-ons like packing. No hourly guessing games — you know the price before we ever show up.",
   },
   {
     q: "Do you offer same-day or last-minute local moves?",
-    a: "Yes. When our schedule allows, we can often accommodate same-day or next-day local moves. Contact us as early as possible and we'll do our best to fit you in.",
+    a: "Yes. We keep flexible slots for short-notice moves. Call us as early as possible and we'll confirm availability the same day. We've helped plenty of families get moved on 24 hours' notice.",
   },
   {
-    q: "How do you protect my furniture and belongings during a local move?",
-    a: "We use moving blankets, shrink wrap, and padding on all furniture. Fragile items are packed with care. Our crews are trained to handle everything from sofas to dishes with the same care we'd use in our own homes.",
+    q: "How do you protect my furniture and belongings?",
+    a: "Every piece of furniture is wrapped in heavy moving blankets and secured with shrink wrap. Fragile items get extra padding and careful box placement. Our crews are trained to treat your belongings the way they'd treat their own — with care.",
   },
   {
     q: "Do you provide packing materials and packing services?",
-    a: "Yes. We can supply boxes, tape, and packing materials, or offer full-service packing where our crew packs your entire home. You can also choose partial packing for specific rooms. We'll outline options when you get your quote.",
+    a: "Yes — we offer full-service packing, partial packing for specific rooms, or just supplies if you want to pack yourself. All options are available when you book. Just tell us how much help you want.",
   },
   {
     q: "What areas do you serve for local moves?",
-    a: "We serve the greater metro area and surrounding communities for local moves. Contact us with your pickup and delivery addresses and we'll confirm we can serve you and provide an accurate quote.",
+    a: "We serve Scottsdale, Phoenix, Tempe, Mesa, Chandler, Gilbert, Glendale, Peoria, Paradise Valley, Fountain Hills, and all surrounding Greater Phoenix communities. Not sure if we cover your route? Give us a call — we'll confirm in seconds.",
   },
   {
     q: "Can you help with moves into or out of apartments?",
-    a: "Absolutely. We regularly handle apartment moves, including buildings with elevators or walk-ups. We'll assess access at both locations when we quote and bring the right equipment and crew size.",
+    a: "Absolutely. Elevators, narrow stairwells, tight parking — we've handled it all. We assess access at both addresses during your quote so we bring the right crew and equipment. No surprises on move day.",
   },
   {
     q: "What if I only need help loading or unloading?",
-    a: "We offer labor-only options for customers who have their own truck or need help with just one end of the move. Tell us what you need when you call and we'll tailor the service.",
+    a: "We offer labor-only services too. If you have a truck and just need strong, reliable help for a few hours, we can do that. Tell us what you need and we'll tailor the service exactly.",
   },
 ];
 
@@ -93,39 +93,39 @@ const IconStar = () => (
 );
 
 const whyUs = [
-  { Icon: IconTrophy, title: "Licensed & Insured", desc: "We are fully licensed and carry liability and cargo insurance on every local move. Your belongings and your property are protected." },
-  { Icon: IconBox, title: "Professional Packing", desc: "Our crews use quality materials to protect everything from everyday dishes to fragile items. Full-service packing is available so you don't have to lift a finger." },
-  { Icon: IconTruck, title: "Right-Sized Trucks & Crews", desc: "We send the right truck and crew size for your move so we work efficiently and your quote stays fair. No overkill, no understaffing." },
-  { Icon: IconMapPin, title: "Local Experts", desc: "We know the area — traffic, building access, and parking. We plan the route and timing so your local move runs smoothly from start to finish." },
-  { Icon: IconDollar, title: "Transparent, Binding Quotes", desc: "No surprise fees. We give you a clear, binding quote so the price we quote is the price you pay. No hourly games or last-minute add-ons." },
-  { Icon: IconStar, title: "Thousands of 5-Star Reviews", desc: "Our reputation is built on results. Thousands of families have trusted us with their local moves — from apartments to single-family homes." },
+  { Icon: IconTrophy, title: "Licensed & Fully Insured", desc: "We're fully licensed and carry comprehensive liability and cargo insurance on every move. Your belongings, your furniture, and your property are protected — period. You're in safe hands from the first box to the last." },
+  { Icon: IconBox, title: "Careful, Professional Packing", desc: "Our trained crews use quality moving blankets, shrink wrap, and packing materials to protect everything — from everyday furniture to fragile keepsakes. Full-service packing is available so you don't have to lift a finger." },
+  { Icon: IconTruck, title: "On-Time, Every Time", desc: "We show up when we say we will. Our crews are reliable, punctual, and work efficiently so your move day runs on schedule. No waiting around — we respect your time." },
+  { Icon: IconMapPin, title: "Local Arizona Experts", desc: "We know Scottsdale and Greater Phoenix inside out — traffic patterns, building access, parking restrictions, and the fastest routes. Local knowledge means your move runs smoothly start to finish." },
+  { Icon: IconDollar, title: "Transparent Pricing — No Hidden Fees", desc: "The price we quote is the price you pay. No surprise charges on move day, no hourly games, no fuel surcharges buried in the fine print. Just a clear, honest quote you can trust." },
+  { Icon: IconStar, title: "Thousands of Happy Families", desc: "We've helped thousands of Arizona families and individuals move safely and stress-free. Our 5-star reputation is built on real results — reliable service, careful handling, and a crew that goes the extra mile." },
 ];
 
 const steps = [
   {
     num: "01",
-    title: "Free Quote — In Person or by Phone",
-    desc: "We quickly assess your home and move details (in person or by phone) and provide a clear, binding quote. No obligation.",
+    title: "Get Your Free Binding Quote",
+    desc: "Call us or fill out the quick form and we'll assess your home and move details — in person or by phone. You'll get a clear, honest price with no hidden fees and no pressure to book.",
   },
   {
     num: "02",
-    title: "Pick Your Date & Time",
-    desc: "We schedule your move for the date and window that works for you. Same-day and next-day options are often available.",
+    title: "Pick Your Date — We'll Be There",
+    desc: "Choose the date and time that works for your schedule. We confirm your slot and show up on time — same-day and next-day options are often available for local moves.",
   },
   {
     num: "03",
-    title: "Packing & Load-Out",
-    desc: "Our crew arrives with materials (if you've chosen packing help), packs and loads everything with care, and secures the truck.",
+    title: "Our Crew Arrives Ready to Work",
+    desc: "Our professional, background-checked movers arrive on time with all the materials needed — blankets, wrap, boxes, and tools. Everything is carefully packed, wrapped, and loaded with care.",
   },
   {
     num: "04",
-    title: "Transport to Your New Home",
-    desc: "We drive your belongings to your new address. For local moves, we often complete load and delivery in the same day.",
+    title: "Safe, Reliable Transport",
+    desc: "Your belongings travel safely to your new address on one of our well-maintained trucks. For most local moves in the Greater Phoenix area, we complete pickup and delivery the same day.",
   },
   {
     num: "05",
-    title: "Unload & Setup",
-    desc: "We unload, reassemble furniture as needed, and place items where you want them. We leave your new space ready so you can settle in.",
+    title: "Delivery, Reassembly & You're Done",
+    desc: "We unload, reassemble furniture, and place everything exactly where you want it. You don't lift a finger — we leave your new home set up and ready so you can start living in it.",
   },
 ];
 
@@ -290,11 +290,10 @@ export default function LocalMovePage() {
             <span className="text-white font-semibold">Local Move</span>
           </nav>
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight tracking-tight mb-6">
-            Local Moving Services
+            Local Moving Services in Scottsdale &amp; Phoenix, AZ
           </h1>
           <p className="text-white/90 text-lg md:text-xl max-w-3xl leading-relaxed mb-8">
-            Stress-free local moves for homes and apartments. Same-day and scheduled moves, transparent pricing, and
-            a crew that treats your belongings with care — from first box to final placement.
+            Reliable, insured local movers you can actually trust. We move homes and apartments across the Greater Phoenix area with careful handling, transparent pricing, and crews that show up on time — every single time.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a
@@ -304,7 +303,7 @@ export default function LocalMovePage() {
               Get a Free Quote
             </a>
             <a
-              href="tel:18005551234"
+              href="tel:+14804471200"
               className="inline-block px-8 py-4 text-lg font-semibold rounded-lg border-2 border-white text-white hover:bg-white/10 transition-colors font-sans"
             >
               📞 480-447-1200
@@ -341,25 +340,19 @@ export default function LocalMovePage() {
               Local Moving
             </span>
             <h2 data-anim-item className="font-serif text-4xl font-bold leading-tight mb-5 text-foreground">
-              Local Moving That's Actually Stress-Free
+              Safe, Stress-Free Local Moves Across the Greater Phoenix Area
             </h2>
             <p data-anim-item className="text-lg text-muted-foreground leading-relaxed mb-4">
-              Moving across town or to the next neighborhood can still be a big undertaking. Packing, lifting, driving,
-              and unpacking add up. That's why we built our local moving service around one core promise: <strong>reliable,
-              straightforward service from start to finish — so you can focus on settling in, not on the heavy lifting.</strong>
+              A local move sounds simple — until you're surrounded by boxes, a truck that's too small, and a crew that doesn't show up. We built King Movers to be different. <strong>Our promise is simple: reliable service, careful handling, and a price that doesn't change on move day.</strong> No hidden fees. No excuses. Just a smooth, stress-free move.
             </p>
             <p data-anim-item className="text-lg text-muted-foreground leading-relaxed mb-4">
-              We offer same-day and scheduled local moves for apartments, condos, and houses. Our crews show up on time,
-              work efficiently, and treat your belongings with care. We give you a clear, binding quote so there are no
-              surprises on move day.
+              We're fully licensed and insured, serving Scottsdale, Phoenix, Tempe, Mesa, Chandler, Gilbert, and all surrounding communities. Our professional crews arrive on time, equipped with everything needed — moving blankets, shrink wrap, dollies, and the right-sized truck for your home. Apartments, condos, single-family homes — we handle them all.
             </p>
             <p data-anim-item className="text-lg text-muted-foreground leading-relaxed mb-4">
-              We've been helping families and individuals with local moves for years. We know the area, we plan the
-              route, and we bring the right truck and crew size so your move stays on schedule and on budget.
+              Every move is backed by a transparent, binding quote so you know exactly what you're paying before we show up. We walk you through the process, answer every question, and treat your belongings with the same care we'd want for our own families.
             </p>
             <p data-anim-item className="text-lg text-muted-foreground leading-relaxed">
-              Whether you're upgrading to a bigger place, downsizing, or just relocating within the area, our team is
-              here to make the day go smoothly. <strong>You focus on your new home — we'll handle the move.</strong>
+              Whether you're upgrading to a bigger space, downsizing, or just moving down the street, our team is here to make move day feel easy. <strong>You focus on your fresh start — we'll handle every box, every piece of furniture, every detail.</strong>
             </p>
           </div>
         </div>
@@ -367,21 +360,21 @@ export default function LocalMovePage() {
         {/* ── WHAT'S INCLUDED ─────────────────────────────────────── */}
         <div data-anim-section className="rounded-2xl p-10 mb-20 bg-surface border-2 border-foreground/10">
           <h2 data-anim-item className="font-serif text-3xl font-bold mb-2 text-foreground">
-            What's Included in Our Local Moving Service
+            Everything Included — No Surprise Charges
           </h2>
           <p data-anim-item className="text-muted-foreground mb-8 text-lg font-sans">
-            Every local move includes the following as standard — no hidden add-ons, no surprise charges.
+            Every local move comes with a full suite of services as standard. Here's exactly what you're getting — all spelled out upfront so there are zero surprises on move day.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
-              ["Free Binding Quote", "We assess your move and give you a clear, binding price — the number we quote is the number you pay."],
-              ["Full-Service Packing Option", "Our crews can pack your entire home or specific rooms using quality materials. Optional add-on when you book."],
-              ["Furniture Disassembly & Reassembly", "Beds, tables, shelving, and large furniture are disassembled for transport and reassembled at your new place."],
-              ["Protective Wrapping & Padding", "Furniture is wrapped in moving blankets and shrink wrap to prevent scratches and damage."],
-              ["Right-Sized Truck & Crew", "We send the right truck and crew for your move so we work efficiently and your quote stays fair."],
-              ["Same-Day & Scheduled Moves", "We offer both same-day/next-day and scheduled local moves. Book the option that fits your timeline."],
-              ["Apartment & House Moves", "We handle walk-ups, elevators, and tight access. We'll assess both addresses when we quote."],
-              ["Labor-Only Options", "Need help only loading or unloading? We can tailor the service to what you need."],
+              ["Free Binding Quote — Upfront & Honest", "We assess your home and give you a clear, binding price. The number we quote is the number you pay — no last-minute add-ons, no surprise fees."],
+              ["Careful Packing by Trained Professionals", "Our crews pack your home using quality boxes, heavy blankets, bubble wrap, and shrink wrap. Every item is handled carefully — from dishes to flat-screen TVs."],
+              ["Furniture Disassembly & Reassembly", "Beds, desks, shelving units, and large furniture are taken apart safely for transport and fully reassembled at your new home. You don't need to lift a tool."],
+              ["Damage Protection on Every Move", "We wrap and pad all furniture to prevent scratches and damage. We're fully insured, and we take full responsibility for the safe delivery of your belongings."],
+              ["Right-Sized Truck & Trained Crew", "We match the right truck and crew size to your move — no overcrowding, no under-staffing. Efficient work means your move stays on schedule and your quote stays fair."],
+              ["Same-Day & Scheduled Moves Available", "Need to move this weekend? We offer same-day and next-day local moves when our schedule allows, plus fully scheduled moves for maximum flexibility."],
+              ["Apartments, Condos & Houses", "Elevators, walk-ups, narrow hallways, gated communities — we've handled every type of access. We assess both addresses at quote time so move day is smooth."],
+              ["Friendly, Responsive Customer Support", "Questions before, during, or after your move? Our team is easy to reach, quick to respond, and genuinely happy to help. We don't pass you around or leave you on hold."],
             ].map(([title, desc]) => (
               <div data-anim-item key={title} className="flex gap-4 items-start">
                 <div className="shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-bold font-sans bg-primary mt-0.5">
@@ -399,9 +392,9 @@ export default function LocalMovePage() {
         {/* ── HOW IT WORKS ────────────────────────────────────────── */}
         <div data-anim-section className="mb-20">
           <div className="text-center mb-10">
-            <h2 data-anim-item className="font-serif text-4xl font-bold text-foreground">How Our Local Moving Process Works</h2>
+            <h2 data-anim-item className="font-serif text-4xl font-bold text-foreground">How a King Movers Local Move Works</h2>
             <p data-anim-item className="text-muted-foreground mt-3 text-lg font-sans max-w-2xl mx-auto">
-              A clear, structured process so you always know what to expect — and when.
+              Five simple steps — and we handle all the hard parts. You'll always know what's happening and what's next.
             </p>
           </div>
           <div className="flex flex-col gap-0">
@@ -437,8 +430,7 @@ export default function LocalMovePage() {
               data-anim-item
               className="text-muted-foreground mt-3 text-base md:text-lg font-sans max-w-2xl mx-auto"
             >
-              Image placeholders are used here. Replace these with real photos of your local moves to show
-              trucks, crews, and happy customers in the neighborhood.
+              A look at our crew in action — careful packing, professional loading, and safe delivery to your new home.
             </p>
           </div>
           <div data-anim-item className="relative overflow-hidden">
@@ -485,26 +477,19 @@ export default function LocalMovePage() {
           </div>
           <div className="w-full lg:w-7/12">
             <h2 data-anim-item className="font-serif text-4xl font-bold leading-tight mb-5 text-foreground">
-              The Difference Between a Good Move and a Great One Is Preparation
+              Why "Careful" Isn't Just a Word We Use — It's How We Work
             </h2>
             <p data-anim-item className="text-lg text-muted-foreground leading-relaxed mb-4">
-              Most moving horror stories share a common cause: poor preparation. Boxes that weren't reinforced. Furniture
-              that wasn't properly wrapped. A truck that was overloaded. A delivery window that was missed. These aren't
-              accidents — they're the result of cutting corners, and they're completely avoidable.
+              Most bad moves come down to one thing: a crew that rushed, cut corners, and didn't treat your belongings like they mattered. Broken furniture. Missing boxes. A sofa left in the rain. We've heard the horror stories — and we've built our entire operation to make sure none of that happens to you.
             </p>
             <p data-anim-item className="text-lg text-muted-foreground leading-relaxed mb-4">
-              Our moving teams follow a clear packing and loading process so nothing is missed. We label boxes by room,
-              wrap and protect furniture, and load the truck efficiently. When we arrive at your new home, we unload and
-              place items where you want them so you can settle in without the chaos.
+              Our crews are trained professionals — not day laborers hired off a list. They follow a consistent loading and packing process: furniture is wrapped before it's moved, boxes are labeled by room, heavy items are loaded first, and fragile things get extra care. Every step is deliberate. Nothing is rushed.
             </p>
             <p data-anim-item className="text-lg text-muted-foreground leading-relaxed mb-4">
-              We also invest heavily in our equipment. Our trucks feature air-ride suspension — a suspension system
-              that dramatically reduces road vibration and is especially important for fragile items like electronics,
-              mirrors, and fine art. Our straps, pads, and dollies are inspected and replaced on a regular schedule.
+              We're fully licensed and insured, which means if anything does go wrong, you're covered. But more importantly — our track record speaks for itself. Thousands of safe, successful moves across Scottsdale and Phoenix, and a team that takes pride in doing the job right.
             </p>
             <p data-anim-item className="text-lg text-muted-foreground leading-relaxed">
-              The result? A move-day experience that feels surprisingly calm, and a delivery that feels like a relief
-              instead of a reckoning.
+              We understand this is your home, your memories, and your stuff. We don't take that lightly. <strong>Every move we do gets the same level of care and attention — whether it's a studio apartment or a 5-bedroom house.</strong>
             </p>
           </div>
         </div>
@@ -512,9 +497,9 @@ export default function LocalMovePage() {
         {/* ── WHY CHOOSE US ────────────────────────────────────────── */}
         <div data-anim-section className="mb-20">
           <div className="text-center mb-10">
-            <h2 data-anim-item className="font-serif text-4xl font-bold text-foreground">Why Thousands Choose Us for Local Moves</h2>
+            <h2 data-anim-item className="font-serif text-4xl font-bold text-foreground">Why Arizona Families Trust King Movers</h2>
             <p data-anim-item className="text-muted-foreground mt-3 text-lg font-sans max-w-2xl mx-auto">
-              We're not the cheapest option — we're the most dependable one. Here's what sets us apart.
+              There are plenty of moving companies. Here's why thousands of families in Scottsdale and Phoenix choose us — and come back every time they move.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -536,24 +521,24 @@ export default function LocalMovePage() {
 
         {/* ── AREAS WE SERVE ───────────────────────────────────────── */}
         <div data-anim-section className="rounded-2xl p-10 mb-20 bg-primary text-white">
-          <h2 data-anim-item className="font-serif text-3xl font-bold mb-3">We Serve the Greater Metro Area</h2>
+          <h2 data-anim-item className="font-serif text-3xl font-bold mb-3">Proudly Serving Scottsdale, Phoenix &amp; All of Greater Arizona</h2>
           <p data-anim-item className="text-white/80 mb-8 text-lg font-sans">
-            Our local moving service covers the metro area and surrounding communities. We handle moves within the region — same-day and scheduled.
+            Based in Scottsdale, we serve the entire Greater Phoenix metro area. Whether you're moving down the street or across the valley, we've got the crew, the truck, and the experience to do it right.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 font-sans">
             {[
-              "Apartments & condos",
-              "Single-family homes",
-              "Same-day moves",
-              "Next-day moves",
-              "Packing included",
-              "Labor-only options",
-              "Walk-ups & elevators",
-              "Short notice welcome",
-              "Transparent pricing",
-              "No hidden fees",
-              "Licensed & insured",
-              "5-star rated",
+              "Scottsdale",
+              "Phoenix",
+              "Tempe",
+              "Mesa",
+              "Chandler",
+              "Gilbert",
+              "Glendale",
+              "Peoria",
+              "Paradise Valley",
+              "Fountain Hills",
+              "Cave Creek",
+              "Goodyear",
             ].map((item) => (
               <div
                 key={item}
@@ -565,7 +550,7 @@ export default function LocalMovePage() {
             ))}
           </div>
           <p data-anim-item className="text-white/70 mt-6 font-sans text-sm">
-            Not sure if we serve your area? Contact us with your pickup and delivery addresses for a quick confirmation and quote.
+            Not sure if we cover your area? Call us at 480-447-1200 — we'll confirm in seconds and get you a free quote on the spot.
           </p>
         </div>
 
@@ -573,10 +558,10 @@ export default function LocalMovePage() {
         <div data-anim-section className="mb-20">
           <div className="text-center mb-10">
             <h2 data-anim-item className="font-serif text-4xl font-bold text-foreground">
-              Frequently Asked Questions About Local Moving
+              Your Local Moving Questions, Answered
             </h2>
             <p data-anim-item className="text-muted-foreground mt-3 text-lg font-sans max-w-2xl mx-auto">
-              Got questions? We've answered the most common ones below. If you don't find what you need, call us any time.
+              We know choosing a mover is a big decision. Here are the questions we hear most often — answered honestly and simply.
             </p>
           </div>
           <div className="flex flex-col gap-3">
@@ -623,28 +608,27 @@ export default function LocalMovePage() {
       >
         <div className="mx-auto max-w-3xl px-6 text-center">
           <h2 data-anim-item className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Plan Your Local Move?
+            Get Your Free Local Moving Quote Today
           </h2>
           <p data-anim-item className="text-white/90 text-lg md:text-xl mb-8 font-sans leading-relaxed">
-            Get a free, no-obligation binding estimate from our team. We'll walk you through every detail and give you a
-            firm price — no guesswork, no surprises.
+            Reliable movers, transparent pricing, and a crew that actually cares. Get your free, no-obligation quote in minutes — we'll walk you through everything and give you a firm price with zero pressure.
           </p>
           <div data-anim-item className="flex flex-wrap gap-4 justify-center">
             <Link
-              href="/contact"
+              href="/contact-us"
               className="inline-block px-10 py-4 text-lg font-bold rounded-lg font-sans bg-accent text-foreground hover:opacity-90 transition-opacity"
             >
               Request a Free Estimate
             </Link>
             <a
-              href="tel:18005551234"
+              href="tel:+14804471200"
               className="inline-block px-10 py-4 text-lg font-bold border-2 border-white text-white rounded-lg font-sans hover:bg-white/10 transition-colors"
             >
               📞 Call 480-447-1200
             </a>
           </div>
           <p data-anim-item className="text-white/70 mt-6 text-sm font-sans">
-            Available Monday–Saturday, 8AM–8PM · No pressure, no obligation
+            Available Mon–Sun, 8AM–8PM · No pressure, no obligation
           </p>
         </div>
       </section>
