@@ -88,7 +88,7 @@ export default function OnlineQuote() {
   return (
     <section
       ref={sectionRef}
-      id="contact"
+      id="quote"
       className="relative w-full min-h-[600px] md:min-h-[640px] flex scroll-mt-[88px]"
     >
       {/* LEFT: Dark navy with world map bg */}

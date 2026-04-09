@@ -41,7 +41,8 @@ export default function QuoteForm() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full py-24 px-4 sm:px-6 md:px-12 overflow-hidden"
+      id="quote"
+      className="relative w-full py-24 px-4 sm:px-6 md:px-12 overflow-hidden scroll-mt-[88px]"
     >
       {/* Background image */}
       <div

@@ -132,7 +132,7 @@ export default function MovingServices() {
                 View Service
               </button>
               <a
-                href="#"
+                href="#quote"
                 className="text-primary font-semibold text-sm hover:underline flex items-center gap-1"
               >
                 Get a Free Quote

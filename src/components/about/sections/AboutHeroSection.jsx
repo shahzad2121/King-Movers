@@ -62,7 +62,7 @@ export default function AboutHeroSection({ sectionRef, bgRef, contentRef }) {
 
           <div className="flex flex-wrap pb-4 gap-4">
             <Link
-              href="/#contact"
+              href="/#quote"
               className="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-foreground font-bold px-8 py-3.5 rounded text-sm transition-colors shadow-lg shadow-accent/20"
             >
               Get a Free Quote

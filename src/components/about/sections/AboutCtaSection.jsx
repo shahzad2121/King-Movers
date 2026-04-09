@@ -73,7 +73,7 @@ export default function AboutCtaSection({ sectionRef, contentRef }) {
           </a>
 
           <Link
-            href="/#contact"
+            href="/#quote"
             className={`${btnLayout} bg-accent text-foreground shadow-accent/25 hover:opacity-95`}
           >
             <QuoteDocIcon className="h-6 w-6 shrink-0 md:h-7 md:w-7 text-foreground" />

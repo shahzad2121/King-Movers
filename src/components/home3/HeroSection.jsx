@@ -180,9 +180,13 @@ backgroundPosition: "0% 20%"
             </h1>
           </div>
 
-          <button ref={ctaRef} className="font-hero-body bg-primary hover:bg-primary/90 text-white font-semibold text-sm px-8 py-3.5 transition-colors duration-200 w-fit rounded-sm">
+          <a
+            ref={ctaRef}
+            href="#quote"
+            className="font-hero-body inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white font-semibold text-sm px-8 py-3.5 transition-colors duration-200 w-fit rounded-sm no-underline"
+          >
             Get a Free Quote
-          </button>
+          </a>
         </div>
 
         {/* Bottom-left: badges — below button, at left edge near divider */}

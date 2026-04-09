@@ -144,7 +144,7 @@ export default function ContactPageClient() {
               Let&apos;s make your move simple, fast, and stress-free.
             </p>
             <a
-              href="/#contact"
+              href="/#quote"
               className="mt-8 inline-flex items-center gap-2 rounded-lg bg-accent px-8 py-3.5 text-sm font-bold text-foreground transition-colors hover:bg-accent/90"
             >
               Get a Free Quote
