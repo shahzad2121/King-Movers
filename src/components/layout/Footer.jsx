@@ -19,8 +19,8 @@ const aboutLinks = [
 const usefulLinks = [
   { label: "Contact Us", href: "/contact-us" },
   { label: "Get Instant Quote", href: "#contact" },
-  { label: "Terms & Conditions", href: "#" },
-  { label: "Privacy Policy", href: "#" },
+  { label: "Terms & Conditions", href: "/terms" },
+  { label: "Privacy Policy", href: "/privacy" },
 ];
 
 const socialLinks = [
@@ -221,10 +221,10 @@ export default function Footer() {
         <div className="footer-bottom-bar flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm text-white/75">© {new Date().getFullYear()} {CONTACT_INFO.company}</p>
           <div className="flex flex-wrap items-center gap-4 sm:justify-end">
-            <Link href="#" className="text-sm text-white/80 underline-offset-2 hover:underline">
+            <Link href="/terms" className="text-sm text-white/80 underline-offset-2 hover:underline">
               Terms & Conditions
             </Link>
-            <Link href="#" className="text-sm text-white/80 underline-offset-2 hover:underline">
+            <Link href="/privacy" className="text-sm text-white/80 underline-offset-2 hover:underline">
               Privacy Policy
             </Link>
             <Link

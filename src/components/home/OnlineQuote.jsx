@@ -1,13 +1,17 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { submitFormSubmit } from "@/lib/formsubmit";
+import { FORMSUBMIT_ACTION } from "@/components/contact-us/contactData";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function OnlineQuote() {
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
   const sectionRef = useRef(null);
   const leftRef = useRef(null);
   const headingRef = useRef(null);
@@ -82,7 +86,11 @@ export default function OnlineQuote() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative w-full min-h-[600px] md:min-h-[640px] flex">
+    <section
+      ref={sectionRef}
+      id="contact"
+      className="relative w-full min-h-[600px] md:min-h-[640px] flex scroll-mt-[88px]"
+    >
       {/* LEFT: Dark navy with world map bg */}
       <div
         ref={leftRef}
@@ -112,56 +120,120 @@ export default function OnlineQuote() {
           ref={formCardRef}
           className="relative z-50 bg-background shadow-2xl p-8 w-full md:w-[130%] rounded-sm"
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-            <input
-              type="text"
-              placeholder="Your name"
-              className="bg-surface text-foreground placeholder-muted-foreground text-sm px-4 py-4 outline-none focus:ring-2 focus:ring-primary transition"
-            />
-            <input
-              type="tel"
-              placeholder="Phone number"
-              className="bg-surface text-foreground placeholder-muted-foreground text-sm px-4 py-4 outline-none focus:ring-2 focus:ring-primary transition"
-            />
-            <input
-              type="text"
-              placeholder="Moving from (city, state)"
-              className="bg-surface text-foreground placeholder-muted-foreground text-sm px-4 py-4 outline-none focus:ring-2 focus:ring-primary transition"
-            />
-            <input
-              type="text"
-              placeholder="Moving to (city, state)"
-              className="bg-surface text-foreground placeholder-muted-foreground text-sm px-4 py-4 outline-none focus:ring-2 focus:ring-primary transition"
-            />
-            <input
-              type="date"
-              placeholder="Move date"
-              className="bg-surface text-foreground placeholder-muted-foreground text-sm px-4 py-4 outline-none focus:ring-2 focus:ring-primary transition"
-            />
-            <select className="bg-surface text-muted-foreground text-sm px-4 py-4 outline-none focus:ring-2 focus:ring-primary transition appearance-none cursor-pointer">
-              <option value="" disabled selected>Home size</option>
-              <option>Studio / 1-Bedroom</option>
-              <option>2-Bedroom</option>
-              <option>3-Bedroom</option>
-              <option>4+ Bedroom</option>
-              <option>Office / Commercial</option>
+          <form
+            action="#"
+            method="POST"
+            className="space-y-4"
+            data-formsubmit-action={FORMSUBMIT_ACTION}
+            onSubmit={async (e) => {
+              e.preventDefault();
+              if (submitting) return;
+              setSubmitting(true);
+              setSubmitted(false);
+              try {
+                const ok = await submitFormSubmit(e.currentTarget, {
+                  successMessage:
+                    "Thanks! Your quote request was sent. We'll contact you shortly.",
+                });
+                if (ok) setSubmitted(true);
+              } finally {
+                setSubmitting(false);
+              }
+            }}
+          >
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_subject" value="King Moving — Free quote (homepage)" />
+            <input type="text" name="_honey" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <input
+                type="text"
+                name="name"
+                required
+                placeholder="Your name"
+                className="bg-surface text-foreground placeholder-muted-foreground text-sm px-4 py-4 outline-none focus:ring-2 focus:ring-primary transition"
+              />
+              <input
+                type="tel"
+                name="phone"
+                required
+                placeholder="Phone number"
+                className="bg-surface text-foreground placeholder-muted-foreground text-sm px-4 py-4 outline-none focus:ring-2 focus:ring-primary transition"
+              />
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="Email"
+                className="bg-surface text-foreground placeholder-muted-foreground text-sm px-4 py-4 outline-none focus:ring-2 focus:ring-primary transition sm:col-span-2"
+              />
+              <input
+                type="text"
+                name="moving_from"
+                required
+                placeholder="Moving from (city, state)"
+                className="bg-surface text-foreground placeholder-muted-foreground text-sm px-4 py-4 outline-none focus:ring-2 focus:ring-primary transition"
+              />
+              <input
+                type="text"
+                name="moving_to"
+                required
+                placeholder="Moving to (city, state)"
+                className="bg-surface text-foreground placeholder-muted-foreground text-sm px-4 py-4 outline-none focus:ring-2 focus:ring-primary transition"
+              />
+              <input
+                type="date"
+                name="move_date"
+                required
+                className="bg-surface text-foreground placeholder-muted-foreground text-sm px-4 py-4 outline-none focus:ring-2 focus:ring-primary transition"
+              />
+              <select
+                name="home_size"
+                required
+                defaultValue=""
+                className="bg-surface text-muted-foreground text-sm px-4 py-4 outline-none focus:ring-2 focus:ring-primary transition appearance-none cursor-pointer"
+              >
+                <option value="" disabled>
+                  Home size
+                </option>
+                <option value="Studio / 1-Bedroom">Studio / 1-Bedroom</option>
+                <option value="2-Bedroom">2-Bedroom</option>
+                <option value="3-Bedroom">3-Bedroom</option>
+                <option value="4+ Bedroom">4+ Bedroom</option>
+                <option value="Office / Commercial">Office / Commercial</option>
+              </select>
+            </div>
+
+            <select
+              name="service_type"
+              required
+              defaultValue=""
+              className="w-full bg-surface text-muted-foreground text-sm px-4 py-4 outline-none focus:ring-2 focus:ring-primary transition appearance-none cursor-pointer"
+            >
+              <option value="" disabled>
+                Select service type
+              </option>
+              <option value="Local Moving">Local Moving</option>
+              <option value="Long-Distance Moving">Long-Distance Moving</option>
+              <option value="Packing & Unpacking">Packing &amp; Unpacking</option>
+              <option value="Commercial / Office Move">Commercial / Office Move</option>
+              <option value="Storage Solutions">Storage Solutions</option>
             </select>
-          </div>
 
-          {/* Full width select */}
-          <select className="w-full bg-surface text-muted-foreground text-sm px-4 py-4 outline-none focus:ring-2 focus:ring-primary transition mb-6 appearance-none cursor-pointer">
-            <option value="" disabled selected>Select service type</option>
-            <option>Local Moving</option>
-            <option>Long-Distance Moving</option>
-            <option>Packing &amp; Unpacking</option>
-            <option>Commercial / Office Move</option>
-            <option>Storage Solutions</option>
-          </select>
+            {submitted && (
+              <p className="text-sm text-foreground border border-primary/20 bg-primary/5 px-4 py-3">
+                Thanks! Your quote request has been sent. We will contact you shortly.
+              </p>
+            )}
 
-          {/* CTA Button */}
-          <button className="bg-primary hover:bg-primary/90 text-white font-bold text-sm px-10 py-4 transition-colors duration-200 tracking-wide">
-            Get My Free Quote
-          </button>
+            <button
+              type="submit"
+              disabled={submitting}
+              className="bg-primary hover:bg-primary/90 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold text-sm px-10 py-4 transition-colors duration-200 tracking-wide"
+            >
+              {submitting ? "Sending..." : "Get My Free Quote"}
+            </button>
+          </form>
         </div>
       </div>
 
@@ -180,7 +252,10 @@ export default function OnlineQuote() {
 
         {/* Play button overlay */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <button className="w-20 h-20 rounded-full bg-white/90 flex items-center justify-center shadow-2xl hover:scale-105 transition-transform duration-200">
+          <button
+            type="button"
+            className="w-20 h-20 rounded-full bg-white/90 flex items-center justify-center shadow-2xl hover:scale-105 transition-transform duration-200"
+          >
             <svg className="w-8 h-8 text-primary ml-1" fill="currentColor" viewBox="0 0 24 24">
               <path d="M8 5v14l11-7z" />
             </svg>

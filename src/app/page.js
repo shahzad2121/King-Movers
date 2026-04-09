@@ -7,6 +7,9 @@ import CounterSection from "@/components/home/CounterSection";
 import TrustBadgesSection from "@/components/home/TrustBadgesSection";
 import HeroSection from "@/components/home/HeroSection";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
+import HeroQuoteBar from "@/components/home3/HeroQuoteBar";
+import ServiceAreaSection from "@/components/home/ServiceAreaSection";
+
 export const metadata = {
   title: "Home | King Moving Services",
   description: "King Moving Services — alternate homepage",
@@ -16,15 +19,15 @@ export default function Home2Page() {
   return (
     <main className="overflow-hidden">
       <HeroSection />
-      {/* <ServicesCardsOverlay /> */}
+      <HeroQuoteBar />
       <AboutSection />
       <MovingServices />
       <WhyChooseUs />
       <CounterSection />
       <TrustBadgesSection />
-      {/* <ScrollingTextMarquee /> */}
       <TestimonialsSectionHome2 />
       <WorkingProcessHome2 />
+      <ServiceAreaSection />
       <OnlineQuote />
     </main>
   );
