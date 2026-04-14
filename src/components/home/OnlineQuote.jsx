@@ -251,7 +251,7 @@ export default function OnlineQuote() {
         />
 
         {/* Play button overlay */}
-        <div className="absolute inset-0 flex items-center justify-center">
+        {/* <div className="absolute inset-0 flex items-center justify-center">
           <button
             type="button"
             className="w-20 h-20 rounded-full bg-white/90 flex items-center justify-center shadow-2xl hover:scale-105 transition-transform duration-200"
@@ -260,7 +260,7 @@ export default function OnlineQuote() {
               <path d="M8 5v14l11-7z" />
             </svg>
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );
