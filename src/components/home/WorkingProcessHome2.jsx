@@ -20,7 +20,7 @@ const steps = [
     description:
       "Our team packs your belongings safely using quality materials. We handle fragile items with care and label everything clearly.",
     offset: "mt-16",
-    image: "/images/Packing!.webp",
+    image: "/images/professional_pack.webp",
     imageAlt: "Professional packing",
   },
   {
@@ -182,7 +182,7 @@ export default function WorkingProcessHome2() {
                     <img
                       src={step.image}
                       alt={step.imageAlt ?? step.title}
-                      className="w-32 h-32 rounded-full object-cover"
+                      className="w-32 h-32 rounded-full object-contain"
                       loading="lazy"
                     />
                   )}
