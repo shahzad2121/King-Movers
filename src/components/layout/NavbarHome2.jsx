@@ -52,6 +52,13 @@ export default function NavbarHome2() {
       const y = window.scrollY || 0;
       setIsScrolled(y > SCROLL_THRESHOLD);
 
+      // On smaller screens we keep the navbar always visible.
+      if (window.innerWidth < 1024) {
+        setShowHeader(true);
+        lastScrollYRef.current = y;
+        return;
+      }
+
       // Always show near the top or while mobile menu is open
       if (y <= SCROLL_THRESHOLD || menuOpenRef.current) {
         setShowHeader(true);
@@ -89,9 +96,11 @@ export default function NavbarHome2() {
 
   return (
     <>
+      {/* Spacer so fixed mobile header doesn't overlap content */}
+      <div className="h-[88px] md:hidden" aria-hidden />
       <header
-        className={`sticky top-0 z-90 shrink-0 bg-background border-b border-foreground/8 transition-transform duration-300 ease-out will-change-transform ${
-          showHeader ? "translate-y-0" : "-translate-y-full"
+        className={`fixed top-0 inset-x-0 md:sticky z-50 shrink-0 bg-background border-b border-foreground/8 transition-transform duration-300 ease-out will-change-transform translate-y-0 ${
+          showHeader ? "lg:translate-y-0" : "lg:-translate-y-full"
         }`}
       >
         <div className=" mx-auto pl-10">

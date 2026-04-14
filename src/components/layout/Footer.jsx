@@ -143,7 +143,7 @@ export default function Footer() {
                 </span>
                 <span className="inline-flex items-center gap-2 rounded-full border border-accent/50 bg-accent/20 px-3 py-1 text-[11px] font-medium text-accent">
                   <span className="h-1.5 w-1.5 rounded-full bg-white" />
-                  10+ Years Experience
+                  7+ Years Experience
                 </span>
                 <span className="inline-flex items-center gap-2 rounded-full border border-primary/50 bg-primary/20 px-3 py-1 text-[11px] font-medium text-primary">
                   <span className="h-1.5 w-1.5 rounded-full bg-accent" />

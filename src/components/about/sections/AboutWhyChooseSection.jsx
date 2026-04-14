@@ -42,16 +42,13 @@ export default function WhyTamamMovers() {
     <section className="w-full bg-background py-16 px-12">
       <div className=" mx-auto flex flex-col lg:flex-row items-center gap-12">
 
-        {/* LEFT — circular truck image with orange ring */}
+        {/* LEFT — circular image with orange ring */}
         <div className="shrink-0 flex items-center justify-center">
           <div
-            className="rounded-full p-[6px]"
+            className="rounded-full p-[6px] border-4 sm:border-[5px] border-accent w-[min(420px,86vw)] h-[min(420px,86vw)]"
             style={{
               background: "transparent",
-              border: "5px solid var(--accent)",
               borderRadius: "50%",
-              width: 420,
-              height: 420,
             }}
           >
             <div

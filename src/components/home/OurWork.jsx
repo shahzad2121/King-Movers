@@ -19,21 +19,21 @@ const items = [
     id: "top-right",
     title: "Table Move",
     tag: "Table Move",
-    img: "images/international-move2.jpg",
+    img: "/images/international-move2.jpg",
     position: "top-right",
   },
   {
     id: "bottom-left",
     title: "Blanketed Move",
     tag: "Furniture Move",
-    img: "images/Blanketed.jpg",
+    img: "/images/Blanketed.jpg",
     position: "bottom-left",
   },
   {
     id: "bottom-right",
     title: "Piano Move",
     tag: "Local Shifting",
-    img: "images/Piano.jpeg",
+    img: "/images/Piano.jpeg",
     position: "bottom-right",
   },
 ];
@@ -66,16 +66,12 @@ export default function WorkGallery() {
 
         {/* Mosaic Grid — fixed row height = side card (280 + caption) so no gap between top/bottom items */}
         <div
-          className="grid gap-3 md:gap-4"
-          style={{
-            gridTemplateColumns: "1fr 1.9fr 1fr",
-            gridTemplateRows: "324px 324px",
-          }}
+          className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-5 md:gap-4 md:grid-cols-[1fr_1.9fr_1fr] md:grid-rows-[324px_324px]"
         >
 
           {/* TOP LEFT */}
-          <div className="group flex flex-col" style={{ gridColumn: 1, gridRow: 1 }}>
-            <div className="rounded-2xl overflow-hidden h-[280px]">
+          <div className="group flex flex-col md:col-1 md:row-1">
+            <div className="rounded-2xl overflow-hidden h-[220px] sm:h-[240px] md:h-[280px]">
               <img src={topLeft.img} alt={topLeft.title}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"/>
             </div>
@@ -83,10 +79,9 @@ export default function WorkGallery() {
           </div>
 
           {/* CENTER — spans 2 rows (324 + gap + 324) so it aligns with side columns */}
-          <div className="group flex flex-col" style={{ gridColumn: 2, gridRow: "1 / 3" }}>
+          <div className="group flex flex-col sm:col-span-2 md:col-2 md:row-[1/3]">
             <div
-              className="rounded-2xl overflow-hidden"
-              style={{ height: "calc(100% - 44px)", minHeight: "620px" }}
+              className="rounded-2xl overflow-hidden h-[260px] sm:h-[360px] md:min-h-[620px] md:h-[calc(100%-44px)]"
             >
               <img src={center.img} alt={center.title}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"/>
@@ -95,8 +90,8 @@ export default function WorkGallery() {
           </div>
 
           {/* TOP RIGHT */}
-          <div className="group flex flex-col" style={{ gridColumn: 3, gridRow: 1 }}>
-            <div className="rounded-2xl overflow-hidden h-[280px]">
+          <div className="group flex flex-col md:col-3 md:row-1">
+            <div className="rounded-2xl overflow-hidden h-[220px] sm:h-[240px] md:h-[280px]">
               <img src={topRight.img} alt={topRight.title}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"/>
             </div>
@@ -104,8 +99,8 @@ export default function WorkGallery() {
           </div>
 
           {/* BOTTOM LEFT */}
-          <div className="group flex flex-col" style={{ gridColumn: 1, gridRow: 2 }}>
-            <div className="rounded-2xl overflow-hidden h-[280px]">
+          <div className="group flex flex-col md:col-1 md:row-2">
+            <div className="rounded-2xl overflow-hidden h-[220px] sm:h-[240px] md:h-[280px]">
               <img src={bottomLeft.img} alt={bottomLeft.title}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"/>
             </div>
@@ -113,8 +108,8 @@ export default function WorkGallery() {
           </div>
 
           {/* BOTTOM RIGHT */}
-          <div className="group flex flex-col" style={{ gridColumn: 3, gridRow: 2 }}>
-            <div className="rounded-2xl overflow-hidden h-[280px]">
+          <div className="group flex flex-col md:col-3 md:row-2">
+            <div className="rounded-2xl overflow-hidden h-[220px] sm:h-[240px] md:h-[280px]">
               <img src={bottomRight.img} alt={bottomRight.title}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"/>
             </div>
