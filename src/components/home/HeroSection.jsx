@@ -85,7 +85,7 @@ function FloatingTestimonialCard() {
         </div>
         <div className="flex-1 min-w-0">
           <p
-            className="font-hero-body text-foreground text-sm leading-relaxed transition-opacity duration-700 ease-in-out"
+            className="font-hero-body text-gray-800 text-sm leading-relaxed transition-opacity duration-700 ease-in-out"
             style={{ opacity: textOpacity }}
           >
             &ldquo;{review.text}&rdquo; — {review.name}
@@ -174,69 +174,10 @@ export default function HeroSection() {
       ref={sectionRef}
       className="relative grid grid-cols-1 lg:grid-cols-2 min-h-[calc(100vh-88px)] overflow-hidden"
     >
-      {/* Left content */}
-      <div className="bg-background flex flex-col justify-center px-8 md:px-12 lg:px-16 py-16 lg:py-10">
-        <h1
-          ref={headlineRef}
-          className="font-hero-heading text-foreground font-semibold leading-[1.12] mb-7"
-          style={{
-            fontSize: "clamp(36px, 4vw, 56px)",
-            letterSpacing: "-0.03em",
-          }}
-        >
-          Stress-Free Moving
-          <br />
-          Services You Can
-          <br />
-          Trust
-        </h1>
-
-        <p ref={subtitleRef} className="font-hero-body text-muted-foreground text-base leading-relaxed max-w-[460px] mb-8">
-          Local &amp; long-distance moves with{" "}
-          <strong className="font-semibold text-foreground/90">transparent pricing</strong> and{" "}
-          <strong className="font-semibold text-foreground/90">professional crews</strong>. Licensed, insured, and
-          trusted by thousands of families and businesses across Arizona.
-        </p>
-
-        {/* Trust badges - no card, larger for credibility */}
-        <div ref={badgesRef} className="flex flex-wrap gap-4 mb-10">
-          {HERO_BADGES.map((badge) => (
-            <div key={badge.alt} className="relative w-36 h-24 shrink-0">
-              <Image
-                src={badge.src}
-                alt={badge.alt}
-                fill
-                className="object-contain"
-                sizes="144px"
-              />
-            </div>
-          ))}
-        </div>
-
-        <div ref={ctaRef} className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-          <a
-            href="#quote"
-            className="font-hero-body inline-flex items-center bg-primary text-white text-base font-medium px-8 py-4 rounded-full w-fit hover:bg-primary/90 transition-all hover:-translate-y-0.5"
-            style={{ letterSpacing: "-0.01em" }}
-          >
-            {CTA_LABEL}
-          </a>
-          <a
-            href={`tel:${PHONE}`}
-            className="font-hero-body inline-flex items-center gap-2 text-foreground font-semibold text-base hover:text-primary transition-colors"
-          >
-            <svg className="w-5 h-5 text-primary shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z" />
-            </svg>
-            {PHONE}
-          </a>
-        </div>
-      </div>
-
-      {/* Right image slider */}
+      {/* Image slider — overlaps content cell on mobile (background), own column on desktop */}
       <div
         ref={sliderRef}
-        className="relative min-h-[50vw] lg:min-h-0 overflow-hidden hero-slider-wrapper"
+        className="row-start-1 col-start-1 lg:col-start-2 relative min-h-[calc(100vh-88px)] lg:min-h-0 overflow-hidden hero-slider-wrapper"
       >
         <Swiper
           modules={[Autoplay, Pagination, EffectFade]}
@@ -246,10 +187,10 @@ export default function HeroSection() {
           autoplay={{ delay: 6000, disableOnInteraction: false }}
           speed={1200}
           pagination={{ clickable: true }}
-          className="!absolute inset-0 w-full h-full"
+          className="absolute! inset-0 w-full h-full"
         >
           {HERO_SLIDES.map((slide, i) => (
-            <SwiperSlide key={i} className="!h-full">
+            <SwiperSlide key={i} className="h-full!">
               <img
                 src={slide.img}
                 alt={slide.alt}
@@ -258,11 +199,75 @@ export default function HeroSection() {
             </SwiperSlide>
           ))}
         </Swiper>
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent z-[1]" aria-hidden />
+        <div className="absolute inset-0 bg-linear-to-t from-black/40 via-black/10 to-transparent z-1" aria-hidden />
       </div>
 
-      {/* Floating testimonial card - between columns */}
+      {/* Left content — overlaps slider cell on mobile (foreground), own column on desktop */}
+      <div className="row-start-1 col-start-1 lg:col-start-1 relative z-10 flex flex-col justify-center px-6 sm:px-8 md:px-12 lg:px-16 py-14 sm:py-16 lg:py-10 lg:bg-background">
+        {/* Mobile dark scrim so text stays readable over the slider */}
+        <div
+          className="absolute inset-0 bg-linear-to-b from-black/70 via-black/60 to-black/50 lg:hidden pointer-events-none"
+          aria-hidden
+        />
+
+        <div className="relative">
+          <h1
+            ref={headlineRef}
+            className="font-hero-heading text-white lg:text-foreground font-semibold leading-[1.12] mb-6 sm:mb-7 tracking-[-0.03em] text-[clamp(28px,8vw,42px)] sm:text-[clamp(32px,6vw,48px)] lg:text-[clamp(36px,4vw,56px)]"
+          >
+            Stress-Free Moving
+            <br />
+            Services You Can
+            <br />
+            Trust
+          </h1>
+
+          <p
+            ref={subtitleRef}
+            className="font-hero-body text-white/80 lg:text-muted-foreground text-sm sm:text-base leading-relaxed max-w-[460px] mb-7 sm:mb-8 text-justify hyphens-auto"
+          >
+            <strong className="font-semibold text-white lg:text-foreground/90">Local &amp; long-distance moves with{" "} transparent pricing and{" "}</strong>
+            <strong className="font-semibold text-white lg:text-foreground/90">professional crews. Licensed, insured, and
+            trusted by thousands of families and businesses across Arizona.</strong>
+          </p>
+
+          {/* Trust badges */}
+          <div ref={badgesRef} className="flex flex-nowrap gap-3 sm:gap-4 mb-8 sm:mb-10">
+            {HERO_BADGES.map((badge) => (
+              <div key={badge.alt} className="relative w-24 h-16 sm:w-28 sm:h-20 md:w-32 md:h-20 lg:w-36 lg:h-24 shrink-0">
+                <Image
+                  src={badge.src}
+                  alt={badge.alt}
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, (max-width: 1024px) 128px, 144px"
+                />
+              </div>
+            ))}
+          </div>
+
+          <div ref={ctaRef} className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            <a
+              href="#quote"
+              className="font-hero-body inline-flex items-center bg-primary text-white text-sm sm:text-base font-medium px-6 sm:px-8 py-3.5 sm:py-4 rounded-full w-fit hover:bg-primary/90 transition-all hover:-translate-y-0.5"
+              style={{ letterSpacing: "-0.01em" }}
+            >
+              {CTA_LABEL}
+            </a>
+            <a
+              href={`tel:${PHONE}`}
+              className="font-hero-body inline-flex items-center gap-2 text-white lg:text-foreground font-semibold text-sm sm:text-base hover:text-accent lg:hover:text-primary transition-colors"
+            >
+              <svg className="w-5 h-5 text-accent lg:text-primary shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z" />
+              </svg>
+              {PHONE}
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Floating testimonial card - desktop only */}
       <div className="hidden lg:block">
         <FloatingTestimonialCard />
       </div>

@@ -20,6 +20,8 @@ const steps = [
     description:
       "Our team packs your belongings safely using quality materials. We handle fragile items with care and label everything clearly.",
     offset: "mt-16",
+    image: "/images/Packing!.webp",
+    imageAlt: "Professional packing",
   },
   {
     number: "03",
@@ -27,6 +29,8 @@ const steps = [
     description:
       "We move your items in our well-maintained trucks. Local or long-distance, we ensure your belongings arrive safely on time.",
     offset: "mt-0",
+    image: "/images/Truck-4.jpg",
+    imageAlt: "Moving truck",
   },
   {
     number: "04",
@@ -34,10 +38,12 @@ const steps = [
     description:
       "We deliver to your new location and can help with unpacking and reassembling. Your move, our priority from start to finish.",
     offset: "mt-16",
+    image: "/images/moving.jpg",
+    imageAlt: "Moving crew unloading items",
   },
 ];
 
-const iconClass = "w-10 h-10 text-primary shrink-0";
+const iconClass = "w-12 h-12 text-primary shrink-0";
 
 function QuoteIcon() {
   return (
@@ -163,20 +169,29 @@ export default function WorkingProcessHome2() {
             <div className="relative mb-6">
               {/* Dashed outer ring — stronger primary */}
               <div
-                className="w-28 h-28 rounded-full flex items-center justify-center border-2 border-dashed border-primary bg-primary/10 shadow-[0_0_0_1px_rgba(86,26,140,0.1)]"
+                className="w-36 h-36 rounded-full flex items-center justify-center border-2 border-dashed border-primary bg-primary/10 shadow-[0_0_0_1px_rgba(86,26,140,0.1)]"
               >
                 {/* Inner circle — white with primary ring, icons in primary */}
-                <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow-md ring-2 ring-primary/20">
-                  {(() => {
-                    const Icon = STEP_ICONS[i];
-                    return <Icon />;
-                  })()}
+                <div className="w-32 h-32 rounded-full bg-white flex items-center justify-center shadow-md ring-2 ring-primary/20">
+                  {i === 0 ? (
+                    (() => {
+                      const Icon = STEP_ICONS[i];
+                      return <Icon />;
+                    })()
+                  ) : (
+                    <img
+                      src={step.image}
+                      alt={step.imageAlt ?? step.title}
+                      className="w-32 h-32 rounded-full object-cover"
+                      loading="lazy"
+                    />
+                  )}
                 </div>
               </div>
 
               {/* Number badge — accent for pop */}
-              <div className="absolute -top-1 -right-1 w-9 h-9 rounded-full bg-accent flex items-center justify-center shadow-lg ring-2 ring-white">
-                <span className="text-foreground text-xs font-extrabold tracking-wide">
+              <div className="absolute -top-1 -right-1 w-10 h-10 rounded-full bg-accent flex items-center justify-center shadow-lg ring-2 ring-white">
+                <span className="text-foreground text-sm font-extrabold tracking-wide">
                   {step.number}
                 </span>
               </div>

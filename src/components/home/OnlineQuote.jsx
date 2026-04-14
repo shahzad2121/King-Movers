@@ -89,12 +89,12 @@ export default function OnlineQuote() {
     <section
       ref={sectionRef}
       id="quote"
-      className="relative w-full min-h-[600px] md:min-h-[640px] flex scroll-mt-[88px]"
+      className="relative w-full min-h-[560px] sm:min-h-[600px] md:min-h-[640px] flex scroll-mt-[88px]"
     >
       {/* LEFT: Dark navy with world map bg */}
       <div
         ref={leftRef}
-        className="relative w-full md:w-1/2 bg-[#0d1b2a] flex flex-col justify-start pt-14 px-10 md:px-16 pb-14 md:pb-16"
+        className="relative w-full md:w-1/2 bg-[#0d1b2a] flex flex-col justify-start pt-10 sm:pt-12 md:pt-14 px-5 sm:px-7 md:px-16 pb-10 sm:pb-12 md:pb-16"
         style={{
           backgroundImage:
             "url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/World_map_-_low_resolution.svg/1280px-World_map_-_low_resolution.svg.png')",
@@ -118,12 +118,12 @@ export default function OnlineQuote() {
         {/* White form card — overlaps both halves */}
         <div
           ref={formCardRef}
-          className="relative z-50 bg-background shadow-2xl p-8 w-full md:w-[130%] rounded-sm"
+          className="relative z-50 bg-background shadow-2xl p-5 sm:p-7 md:p-8 w-full md:w-[130%] rounded-sm"
         >
           <form
             action="#"
             method="POST"
-            className="space-y-4"
+            className="space-y-3 sm:space-y-4"
             data-formsubmit-action={FORMSUBMIT_ACTION}
             onSubmit={async (e) => {
               e.preventDefault();
@@ -145,53 +145,53 @@ export default function OnlineQuote() {
             <input type="hidden" name="_subject" value="King Moving — Free quote (homepage)" />
             <input type="text" name="_honey" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               <input
                 type="text"
                 name="name"
                 required
                 placeholder="Your name"
-                className="bg-surface text-foreground placeholder-muted-foreground text-sm px-4 py-4 outline-none focus:ring-2 focus:ring-primary transition"
+                className="bg-surface text-foreground placeholder-muted-foreground text-sm px-4 py-3.5 sm:py-4 outline-none focus:ring-2 focus:ring-primary transition"
               />
               <input
                 type="tel"
                 name="phone"
                 required
                 placeholder="Phone number"
-                className="bg-surface text-foreground placeholder-muted-foreground text-sm px-4 py-4 outline-none focus:ring-2 focus:ring-primary transition"
+                className="bg-surface text-foreground placeholder-muted-foreground text-sm px-4 py-3.5 sm:py-4 outline-none focus:ring-2 focus:ring-primary transition"
               />
               <input
                 type="email"
                 name="email"
                 required
                 placeholder="Email"
-                className="bg-surface text-foreground placeholder-muted-foreground text-sm px-4 py-4 outline-none focus:ring-2 focus:ring-primary transition sm:col-span-2"
+                className="bg-surface text-foreground placeholder-muted-foreground text-sm px-4 py-3.5 sm:py-4 outline-none focus:ring-2 focus:ring-primary transition sm:col-span-2"
               />
               <input
                 type="text"
                 name="moving_from"
                 required
                 placeholder="Moving from (city, state)"
-                className="bg-surface text-foreground placeholder-muted-foreground text-sm px-4 py-4 outline-none focus:ring-2 focus:ring-primary transition"
+                className="bg-surface text-foreground placeholder-muted-foreground text-sm px-4 py-3.5 sm:py-4 outline-none focus:ring-2 focus:ring-primary transition"
               />
               <input
                 type="text"
                 name="moving_to"
                 required
                 placeholder="Moving to (city, state)"
-                className="bg-surface text-foreground placeholder-muted-foreground text-sm px-4 py-4 outline-none focus:ring-2 focus:ring-primary transition"
+                className="bg-surface text-foreground placeholder-muted-foreground text-sm px-4 py-3.5 sm:py-4 outline-none focus:ring-2 focus:ring-primary transition"
               />
               <input
                 type="date"
                 name="move_date"
                 required
-                className="bg-surface text-foreground placeholder-muted-foreground text-sm px-4 py-4 outline-none focus:ring-2 focus:ring-primary transition"
+                className="bg-surface text-foreground placeholder-muted-foreground text-sm px-4 py-3.5 sm:py-4 outline-none focus:ring-2 focus:ring-primary transition"
               />
               <select
                 name="home_size"
                 required
                 defaultValue=""
-                className="bg-surface text-muted-foreground text-sm px-4 py-4 outline-none focus:ring-2 focus:ring-primary transition appearance-none cursor-pointer"
+                className="bg-surface text-muted-foreground text-sm px-4 py-3.5 sm:py-4 outline-none focus:ring-2 focus:ring-primary transition appearance-none cursor-pointer"
               >
                 <option value="" disabled>
                   Home size
@@ -208,7 +208,7 @@ export default function OnlineQuote() {
               name="service_type"
               required
               defaultValue=""
-              className="w-full bg-surface text-muted-foreground text-sm px-4 py-4 outline-none focus:ring-2 focus:ring-primary transition appearance-none cursor-pointer"
+              className="w-full bg-surface text-muted-foreground text-sm px-4 py-3.5 sm:py-4 outline-none focus:ring-2 focus:ring-primary transition appearance-none cursor-pointer"
             >
               <option value="" disabled>
                 Select service type
@@ -229,7 +229,7 @@ export default function OnlineQuote() {
             <button
               type="submit"
               disabled={submitting}
-              className="bg-primary hover:bg-primary/90 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold text-sm px-10 py-4 transition-colors duration-200 tracking-wide"
+              className="w-full sm:w-auto bg-primary hover:bg-primary/90 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold text-sm px-8 sm:px-10 py-3.5 sm:py-4 transition-colors duration-200 tracking-wide"
             >
               {submitting ? "Sending..." : "Get My Free Quote"}
             </button>

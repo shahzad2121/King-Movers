@@ -91,16 +91,33 @@ function ReviewCard({ review }) {
   );
 }
 
-const CARD_WIDTH = 420;
-const GAP = 16;
-const STEP = CARD_WIDTH + GAP;
+const DESKTOP_CARD_WIDTH = 420;
+const DESKTOP_GAP = 16;
+const MOBILE_GAP = 12;
 const START_INDEX = reviews.length;
 
 export default function TestimonialsSectionHome2() {
   const [index, setIndex] = useState(START_INDEX);
   const [animated, setAnimated] = useState(true);
+  const [layout, setLayout] = useState({ cardWidth: DESKTOP_CARD_WIDTH, gap: DESKTOP_GAP });
   const indexRef = useRef(START_INDEX);
   const timerRef = useRef(null);
+
+  useEffect(() => {
+    const computeLayout = () => {
+      const w = typeof window !== "undefined" ? window.innerWidth : 1024;
+      if (w < 640) {
+        const cardWidth = Math.max(260, Math.min(340, Math.floor(w * 0.86)));
+        setLayout({ cardWidth, gap: MOBILE_GAP });
+        return;
+      }
+      setLayout({ cardWidth: DESKTOP_CARD_WIDTH, gap: DESKTOP_GAP });
+    };
+
+    computeLayout();
+    window.addEventListener("resize", computeLayout, { passive: true });
+    return () => window.removeEventListener("resize", computeLayout);
+  }, []);
 
   const goTo = (newIndex, animate = true) => {
     setAnimated(animate);
@@ -143,7 +160,8 @@ export default function TestimonialsSectionHome2() {
     startTimer();
   };
 
-  const translateX = `calc(-${index * STEP}px + 50vw - ${CARD_WIDTH / 2}px)`;
+  const step = layout.cardWidth + layout.gap;
+  const translateX = `calc(-${index * step}px + 50vw - ${layout.cardWidth / 2}px)`;
 
   return (
     <section className="relative w-full py-16 md:py-20 overflow-hidden" style={{ backgroundColor: "rgba(15, 15, 20, 0.85)"  }}>
@@ -208,7 +226,7 @@ export default function TestimonialsSectionHome2() {
         <div
           className="flex"
           style={{
-            gap: `${GAP}px`,
+            gap: `${layout.gap}px`,
             transform: `translateX(${translateX})`,
             transition: animated
               ? "transform 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94)"
@@ -219,7 +237,7 @@ export default function TestimonialsSectionHome2() {
           {extendedReviews.map((review, i) => (
             <div
               key={i}
-              style={{ width: `${CARD_WIDTH}px`, flexShrink: 0, minHeight: "280px" }}
+              style={{ width: `${layout.cardWidth}px`, flexShrink: 0, minHeight: "280px" }}
             >
               <ReviewCard review={review} />
             </div>
