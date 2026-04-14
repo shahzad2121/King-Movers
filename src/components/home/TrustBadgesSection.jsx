@@ -11,7 +11,7 @@ const BADGES = [
 
 function BadgeCard({ src, alt }) {
   return (
-    <div className="shrink-0 w-44 md:w-56 h-28 md:h-36 flex items-center justify-center">
+    <div className="shrink-0 w-28 sm:w-40 md:w-56 h-20 sm:h-24 md:h-36 flex items-center justify-center">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={src}
@@ -28,8 +28,8 @@ export default function TrustBadgesSection() {
     <section className="relative w-full bg-background border-y border-foreground/8 overflow-hidden">
       <div className="flex">
         {/* Fixed left strip */}
-        <div className="shrink-0 w-44 md:w-56 bg-primary/10 border-r-2 border-primary flex items-center justify-center py-10 md:py-14 z-10">
-          <p className="font-serif font-bold text-center leading-snug uppercase tracking-wider text-base md:text-lg">
+        <div className="shrink-0 w-28 sm:w-40 md:w-56 bg-primary/10 border-r-2 border-primary flex items-center justify-center py-6 sm:py-9 md:py-14 z-10">
+          <p className="font-serif font-bold text-center leading-snug uppercase tracking-wider text-xs sm:text-sm md:text-lg">
             <span className="text-foreground">Best</span>
             <br />
             <span className="text-foreground">Customer</span>
@@ -39,9 +39,9 @@ export default function TrustBadgesSection() {
         </div>
 
         {/* Scrolling badges */}
-        <div className="flex-1 overflow-hidden py-8 md:py-12">
+        <div className="flex-1 overflow-hidden py-5 sm:py-7 md:py-12">
           <div
-            className="flex gap-10 md:gap-12 w-max"
+            className="flex gap-6 sm:gap-8 md:gap-12 w-max"
             style={{ animation: "trustBadgesScroll 30s linear infinite" }}
           >
             {[...BADGES, ...BADGES].map((badge, i) => (

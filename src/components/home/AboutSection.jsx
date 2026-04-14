@@ -51,10 +51,24 @@ export default function AboutSection() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-linear-to-b from-[#1b102b] via-[#140b22] to-[#0b0715] py-16 px-6 md:px-16"
+      className="relative w-full overflow-hidden bg-linear-to-b from-[#1b102b] via-[#140b22] to-[#0b0715] py-16 px-6 md:px-16"
       aria-label="About King Moving Services professional movers and relocation company"
     >
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+      {/* Decorative bottom-right figure */}
+      <div className="absolute bottom-0 right-2 pointer-events-none select-none hidden md:block" aria-hidden>
+        <div className="relative w-[140px] h-[233px] md:w-[160px] md:h-[266px] lg:w-[180px] lg:h-[300px]">
+          <Image
+            src="/images/professional_pack.webp"
+            alt=""
+            fill
+            className="object-contain object-bottom"
+            sizes="180px"
+            priority={false}
+          />
+        </div>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
         {/* LEFT: Stacked Images */}
         <div ref={imagesRef} className="relative w-full md:w-[45%] h-[480px] shrink-0">
           {/* Corner bracket top-left - primary */}
@@ -64,7 +78,7 @@ export default function AboutSection() {
           <div className="absolute top-0 left-0 w-[82%] h-[55%] rounded-2xl overflow-hidden shadow-lg z-10">
             <div className="relative w-full h-full">
               <Image
-                src="/images/service-6.jpg"
+                src="/images/0.jpg"
                 alt="International and long-distance moving services with King Moving Services"
                 fill
                 className="object-cover"
@@ -77,7 +91,7 @@ export default function AboutSection() {
           <div className="absolute bottom-0 right-0 w-[75%] h-[58%] rounded-2xl overflow-hidden shadow-lg z-20">
             <div className="relative w-full h-full">
               <Image
-                src="/images/service-5.jpg"
+                src="/images/hero/home-3-people-highfigh.jpeg"
                 alt="King Moving Services fleet and moving trucks for residential and commercial moves"
                 fill
                 className="object-cover"
