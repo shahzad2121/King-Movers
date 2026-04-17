@@ -8,18 +8,22 @@ import { MapPin } from "lucide-react";
 gsap.registerPlugin(ScrollTrigger);
 
 const CITIES = [
-  "Scottsdale",
   "Phoenix",
+  "Scottsdale",
   "Tempe",
   "Mesa",
   "Chandler",
   "Gilbert",
   "Glendale",
   "Peoria",
-  "Paradise Valley",
-  "Fountain Hills",
-  "Cave Creek",
   "Surprise",
+  "Goodyear",
+  "Avondale",
+  "Buckeye",
+  "Queen Creek",
+  "San Tan Valley",
+  "Casa Grande",
+  "Maricopa",
 ];
 
 export default function ServiceAreaSection() {
@@ -60,11 +64,10 @@ export default function ServiceAreaSection() {
           Service Area
         </p>
         <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground tracking-tight mb-3">
-          We Move <span className="text-primary">Across Arizona</span>
+          Arizona Moves, <span className="text-primary">Done Right</span>
         </h2>
         <p className="text-muted-foreground text-base leading-relaxed">
-          Based in Scottsdale, we serve the entire Greater Phoenix metro area and beyond — local and
-          long-distance moves throughout Arizona.
+          Headquartered in Scottsdale, we support the full Greater Phoenix area and deliver dependable statewide moving services for both local and long-distance relocations.
         </p>
       </div>
 
@@ -73,10 +76,15 @@ export default function ServiceAreaSection() {
 
         {/* Cities */}
         <div ref={listRef}>
-          <h3 className="font-semibold text-foreground text-lg mb-5 flex items-center gap-2">
+          <h3 className="font-semibold text-foreground text-lg mb-3 flex items-center gap-2">
             <MapPin className="w-5 h-5 text-primary shrink-0" />
-            Cities We Serve
+            Cities We Serve — And More
           </h3>
+
+          <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
+            We proudly serve customers throughout Arizona and beyond. While our main service area includes the cities listed below, we also provide <span className="font-medium text-foreground">statewide delivery  to all 50 states and can arrange out-of-state pickups upon request.</span>
+          </p>
+
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {CITIES.map((city) => (
               <div
@@ -88,6 +96,13 @@ export default function ServiceAreaSection() {
               </div>
             ))}
           </div>
+
+          <p className="mt-4 text-sm font-medium text-foreground">
+            Long-distance move pickups available in       
+            Tucson, Flagstaff, and Prescott
+           
+          </p>
+
           <p className="mt-5 text-sm text-muted-foreground">
             Not on the list?{" "}
             <a href="/contact-us" className="text-primary font-medium hover:underline">

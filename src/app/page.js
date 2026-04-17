@@ -7,7 +7,7 @@ import CounterSection from "@/components/home/CounterSection";
 import TrustBadgesSection from "@/components/home/TrustBadgesSection";
 import HeroSection from "@/components/home/HeroSection";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
-import HeroQuoteBar from "@/components/home3/HeroQuoteBar";
+import HeroVideoEmbed from "@/components/home/HeroVideoEmbed";
 import ServiceAreaSection from "@/components/home/ServiceAreaSection";
 
 export const metadata = {
@@ -19,7 +19,7 @@ export default function Home2Page() {
   return (
     <main className="overflow-hidden">
       <HeroSection />
-      <HeroQuoteBar />
+      <HeroVideoEmbed />
       <AboutSection />
       <MovingServices />
       <WhyChooseUs />

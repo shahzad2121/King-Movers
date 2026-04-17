@@ -122,18 +122,15 @@ export default function AboutSection() {
           {/* Description — SEO-friendly about copy */}
           <div ref={descRef} className="text-white/80 text-base leading-relaxed max-w-xl space-y-5 mb-8">
             <p>
-              As an experienced <strong className="font-semibold text-white/95">moving company</strong>, King Moving
-              Services helps families and businesses with{" "}
-              <strong className="font-semibold text-white/95">local moving</strong>,{" "}
-              <strong className="font-semibold text-white/95">long-distance relocation</strong>, and{" "}
-              <strong className="font-semibold text-white/95">office and commercial moving</strong> throughout Scottsdale
-              and across Arizona. Our crews are trained and insured, with careful packing, loading, and delivery from
-              the first box to the final walkthrough.
+              Kings Moving Services makes moving simple. From local and long-distance home moves to office and retail
+              relocations, our experienced movers handle it all. With affordable, high-quality moving and trucking
+              services, relocating your family or business becomes convenient and stress-free.
             </p>
             <p>
-              Choose full-service packing and unpacking, dedicated moving crews, or a customized plan that fits your
-              budget. We focus on transparent pricing, on-time delivery, and customer satisfaction for every interstate
-              move and in-state relocation. Contact us for a <strong className="font-semibold text-white/95">free moving quote</strong> and see why customers trust King Moving Services for stress-free relocation.
+              From customer service representatives to the movers themselves, our staff is carefully selected and trained
+              to deliver efficient, timely, and well-planned moves. Every move receives our white glove treatment, from
+              your doorstep to your destination, with flexible scheduling and responsive support when last-minute needs
+              come up. Contact us for a <strong className="font-semibold text-white/95">free moving quote</strong>.
             </p>
           </div>
 

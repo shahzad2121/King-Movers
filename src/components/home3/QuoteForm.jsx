@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { submitFormSubmit } from "@/lib/formsubmit";
+import { FORMSUBMIT_ACTION } from "@/components/contact-us/contactData";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -101,7 +102,7 @@ export default function QuoteForm() {
             action="#"
             method="POST"
             className="space-y-5"
-            data-formsubmit-action="https://formsubmit.co/info@kingsmovingservices.com"
+            data-formsubmit-action={FORMSUBMIT_ACTION}
             onSubmit={async (e) => {
               e.preventDefault();
               const form = e.currentTarget;

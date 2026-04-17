@@ -39,10 +39,10 @@ const BadgeCheckIcon = () => (
 // Feature cards data per service
 const featuresBySlug = {
   "home-shifting": [
-    { Icon: BoxIcon, title: "Professional Packing", desc: "Professional packing ensures safe, efficient, and damage-free item transport." },
-    { Icon: ClockIcon, title: "Trained Moving Crew", desc: "Professional packing ensures safe, efficient, and damage-free item transport." },
-    { Icon: ShieldIcon, title: "Secure Storage Options", desc: "Secure storage options ensure your belongings stay safe, accessible, and secure." },
-    { Icon: HeadphonesIcon, title: "Customer Support", desc: "Customer support ensures prompt assistance and answers for a seamless process." },
+    { Icon: BoxIcon, title: "Full & Partial Packing", desc: "Choose full packing, partial packing, or unpacking support. We use proper materials and techniques to keep your items safe in transit." },
+    { Icon: ClockIcon, title: "Trained Movers, Timely Service", desc: "Our moving crews are carefully selected and trained to deliver efficient, well-planned moves while keeping your timeline on track." },
+    { Icon: ShieldIcon, title: "Protection You Can Trust", desc: "From blankets and bubble wrap to stretch wrap and careful loading, we take every precaution to prevent scratches, damage, or breakage." },
+    { Icon: HeadphonesIcon, title: "Responsive Customer Support", desc: "Our customer service team gathers your move details and builds a plan around your needs, with clear communication from start to finish." },
   ],
   "office-corporate-shifting": [
     { Icon: BoxIcon, title: "Office Equipment Handling", desc: "We carefully handle desks, IT equipment, and sensitive office items with precision." },
@@ -51,10 +51,10 @@ const featuresBySlug = {
     { Icon: HeadphonesIcon, title: "Dedicated Support", desc: "A dedicated coordinator is assigned to manage your office move from start to finish." },
   ],
   "international-relocation": [
-    { Icon: BoxIcon, title: "International Packing", desc: "We use certified crating and packing standards for safe international transit." },
-    { Icon: ClockIcon, title: "Customs & Documentation", desc: "Our team handles all paperwork and customs requirements for a smooth border crossing." },
-    { Icon: ShieldIcon, title: "Freight Options", desc: "Choose between sea and air freight options based on your timeline and budget." },
-    { Icon: HeadphonesIcon, title: "Global Support", desc: "We work with trusted partners worldwide to ensure seamless door-to-door delivery." },
+    { Icon: BoxIcon, title: "Detailed Packing & Inventory", desc: "We pack and label every shipment carefully to help your items move safely through long-distance and complex transport routes." },
+    { Icon: ClockIcon, title: "Planned Logistics", desc: "Our team coordinates scheduling, routing, and milestones in advance so your move stays organized and predictable." },
+    { Icon: ShieldIcon, title: "Protection First", desc: "Fragile and high-value items receive extra care with proven packing methods designed to reduce movement and prevent damage." },
+    { Icon: HeadphonesIcon, title: "Dedicated Service Guidance", desc: "You get direct support throughout the process, with clear updates and practical guidance at each stage of your move." },
   ],
   "vehicle-transportation": [
     { Icon: BoxIcon, title: "Car & Motorcycle Transport", desc: "We safely transport cars, motorcycles, and specialty vehicles over any distance." },
@@ -72,10 +72,10 @@ const featuresBySlug = {
 
 const whyChoosePointsBySlug = {
   "home-shifting": [
-    "Our goal is to adapt to your specific needs, ensuring a smooth and personalized experience.",
-    "We believe in managing tight schedules and providing quality service at competitive prices.",
-    "Ensuring your new home shifting space feels like home as quickly as possible.",
-    "Our fleet of vehicles is designed to accommodate goods and secure transportation.",
+    "Our staff is carefully selected and trained to provide efficient, timely, and well-planned moves.",
+    "We customize every move plan around your household, timeline, and budget — no one-size-fits-all process.",
+    "Our smart planning and streamlined operations help keep your move affordable without compromising quality.",
+    "We stay flexible and do our best to accommodate last-minute needs when moving day changes unexpectedly.",
   ],
   "office-corporate-shifting": [
     "We plan every office move in detail to eliminate disruptions to your business operations.",
@@ -84,10 +84,10 @@ const whyChoosePointsBySlug = {
     "Transparent pricing and clear timelines keep your relocation on track and on budget.",
   ],
   "international-relocation": [
-    "We have extensive experience managing complex cross-border and international moves.",
-    "Our partners worldwide ensure consistent handling standards at every destination.",
-    "We take care of documentation and customs so you never face unexpected delays.",
-    "Flexible freight options let you choose the best balance of cost and delivery speed.",
+    "We build a clear move plan up front so complex relocations feel manageable, not overwhelming.",
+    "Our team uses proven packing and handling methods designed for long-distance and multi-stage transport.",
+    "You receive practical guidance and responsive communication throughout each phase of the move.",
+    "We focus on safe delivery, careful handling, and efficient coordination from origin to destination.",
   ],
   "vehicle-transportation": [
     "We use vetted and licensed carriers to ensure your vehicle is in safe hands.",
@@ -105,16 +105,16 @@ const whyChoosePointsBySlug = {
 
 const descriptionsBySlug = {
   "home-shifting": {
-    p1: "Local home shifting can often feel like a daunting task, even when the distance is short. Whether you are moving to a new apartment across town or relocating your family to a nearby neighbourhood, the process involves several key elements, including packing, transportation, and unpacking. At its core, local home shifting is about transitioning from one residence.",
-    p2: "Our local home shifting service is designed to make this process seamless, stress-free, and tailored to your specific needs. We understand the challenges associated with moving, even locally, and we address them with professional expertise and meticulous planning.",
+    p1: "Kings Moving Services makes moving simple. From local and long-distance home moves to office and retail relocations, our experienced movers handle it all. With affordable, high-quality moving and trucking services, relocating your family or business becomes convenient and stress-free.",
+    p2: "Our customer service team gathers the details of your move and customizes a plan that fits your unique needs. No two moves are the same, and we make sure yours is handled with care and precision from first contact to final delivery.",
   },
   "office-corporate-shifting": {
-    p1: "Relocating an office requires careful coordination, minimal disruption, and experienced handling of equipment and furniture. Even a short move across a business park involves significant logistics — from IT teardown to furniture reassembly. We specialise in smooth, planned corporate transitions.",
-    p2: "Our office moving service is built around your business schedule. We work after hours or on weekends when needed, assign a dedicated project coordinator, and provide clear timelines so your team can plan with confidence.",
+    p1: "Office and retail relocations need speed, planning, and reliable execution. From a single workstation to a full office floor, our experienced movers handle equipment, furniture, and packed inventory with care while keeping disruption to your operations as low as possible.",
+    p2: "Our team works with your schedule and customizes a move plan around your business needs. With organized logistics, efficient crews, and clear communication, we help your team transition quickly and get back to work with confidence.",
   },
   "international-relocation": {
-    p1: "Moving internationally is one of the most complex logistical challenges you can face. From customs documentation to freight selection, every step requires expert knowledge and trusted partners at both origin and destination.",
-    p2: "Our international relocation service handles every detail — packaging to international standards, coordinating air or sea freight, managing customs clearance, and arranging final delivery. We make global moves feel manageable.",
+    p1: "Long-route and international-style moves involve many moving parts, and poor planning can quickly create delays and extra stress. We make the process simpler with organized coordination, careful packing, and a move plan tailored to your shipment, timing, and destination requirements.",
+    p2: "From first inventory to final delivery, our team focuses on clear communication, safe handling, and efficient logistics. You get practical guidance at every step, so your relocation stays structured, predictable, and easier to manage.",
   },
   "vehicle-transportation": {
     p1: "Transporting a vehicle across the country or to a new city requires more than just a truck — it demands proper carriers, full insurance, and a team that understands how to handle your asset with care.",
@@ -127,11 +127,11 @@ const descriptionsBySlug = {
 };
 
 const conclusionsBySlug = {
-  "home-shifting": "Local home shifting doesn't have to be stressful. With our professional and reliable services, you can look forward to a smooth transition to your new home. Let us handle the complexities of your move so you can focus on the excitement of starting fresh in a new place.",
-  "office-corporate-shifting": "An office relocation is a major undertaking, but with the right partner it doesn't have to disrupt your business. Let our experienced team handle the logistics so your staff can stay focused on what matters.",
-  "international-relocation": "International moves are complex, but you don't have to navigate them alone. Our experienced team and worldwide network ensure your belongings arrive safely, on time, and without the paperwork headaches.",
-  "vehicle-transportation": "Your vehicle deserves the same care you'd give it yourself. With our fully insured, tracked, and professionally managed transport service, you can trust that it will arrive exactly as it left.",
-  "furniture-moving": "Furniture moving doesn't have to mean scratches, stress, or reassembly nightmares. Our trained crews handle every piece with care so you can settle into your new space without the worry.",
+  "home-shifting": "Moving your home should feel exciting, not overwhelming. With experienced movers, careful protection, and a plan built around your needs, we make your transition smooth, affordable, and stress-free.",
+  "office-corporate-shifting": "Commercial moving is easier with the right team behind you. We combine smart planning, efficient crews, and reliable communication to keep your business move organized and on schedule.",
+  "international-relocation": "Complex relocations become manageable when every step is planned with care. Our team helps you move with confidence through clear guidance, safe handling, and dependable execution.",
+  "vehicle-transportation": "Your vehicle is handled with professional care from pickup to delivery. With reliable carriers, transparent updates, and full protection standards, you can move forward with confidence.",
+  "furniture-moving": "Protecting furniture is all about method and attention to detail. Our trained crews wrap, move, and reassemble each piece carefully so you can settle in without damage-related stress.",
 };
 
 export default function ServiceDetailContent({ service }) {
@@ -182,7 +182,15 @@ export default function ServiceDetailContent({ service }) {
           Why Choose Us for {service.title}?
         </h2>
         <p className="text-muted-foreground text-base leading-relaxed mb-6">
-          Choosing the right moving service is critical to the success of your relocation. With our team, you benefit from years of experience, a customer-focused approach, and commitment to excellence. We prioritize the safety of your belongings and your peace of mind, making us the trusted choice for countless clients.
+          We are a company you can have confidence in. Our team is carefully selected, trained for efficient and
+          well-planned moves, and ready to accommodate last-minute needs whenever possible. We keep your move
+          cost-effective through smart planning and streamlined processes, while delivering white glove treatment from
+          your doorstep to your destination.
+        </p>
+        <p className="text-muted-foreground text-base leading-relaxed mb-6">
+          Need extra muscle without a full-service relocation? We also provide labor and truck support, including
+          professional load and unload services for homes, offices, containers, and trucks, completed safely and
+          efficiently to keep your move on track.
         </p>
 
         <ul className="flex flex-col gap-4">

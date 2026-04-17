@@ -137,7 +137,7 @@ export default function Footer() {
             
 
               <div className=" flex flex-wrap gap-2">
-                <span className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/20 px-3 py-1 text-[11px] font-medium text-primary">
+                <span className="inline-flex items-center gap-2 rounded-full border border-primary bg-primary/80 px-3 py-1 text-[11px] font-medium text-white">
                   <span className="h-1.5 w-1.5 rounded-full bg-accent" />
                   Licensed &amp; Insured
                 </span>
@@ -145,7 +145,7 @@ export default function Footer() {
                   <span className="h-1.5 w-1.5 rounded-full bg-white" />
                   7+ Years Experience
                 </span>
-                <span className="inline-flex items-center gap-2 rounded-full border border-primary/50 bg-primary/20 px-3 py-1 text-[11px] font-medium text-primary">
+                <span className="inline-flex items-center gap-2 rounded-full border border-primary bg-primary/80 px-3 py-1 text-[11px] font-medium text-white">
                   <span className="h-1.5 w-1.5 rounded-full bg-accent" />
                   100&apos;s of Moves Completed
                 </span>
@@ -218,7 +218,7 @@ export default function Footer() {
 
         <div className="my-8 border-t border-white/20" />
 
-        <div className="footer-bottom-bar flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+        <div className="footer-bottom-bar pb-10 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm text-white/75">© {new Date().getFullYear()} {CONTACT_INFO.company}</p>
           <div className="flex flex-wrap items-center gap-4 sm:justify-end">
             <Link href="/terms" className="text-sm text-white/80 underline-offset-2 hover:underline">
@@ -227,12 +227,12 @@ export default function Footer() {
             <Link href="/privacy" className="text-sm text-white/80 underline-offset-2 hover:underline">
               Privacy Policy
             </Link>
-            <Link
+            {/* <Link
               href="/#quote"
               className="inline-flex items-center justify-center rounded-full bg-white px-6 py-2.5 text-sm font-medium text-primary transition-colors hover:bg-white/90"
             >
               Get a Quote
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
