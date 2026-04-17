@@ -1,5 +1,5 @@
-/** FormSubmit.co endpoint (AJAX submissions use /ajax + this path in lib/formsubmit.js) */
-export const FORMSUBMIT_ACTION = "https://formsubmit.co/info@kingsmovingservices.com";
+/** FormSubmit.co endpoint — web lead inquiries (AJAX: lib/formsubmit.js) */
+export const FORMSUBMIT_ACTION = "https://formsubmit.co/leads@kingsmovingservices.com";
 
 export const CONTACT_INFO = {
   officePhone: "888-998-1004 Ext. 101",

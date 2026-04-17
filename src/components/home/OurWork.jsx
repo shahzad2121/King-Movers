@@ -4,7 +4,6 @@ const items = [
   {
     id: "top-left",
     title: "Local Move",
-    tag: "Local Shifting",
     img: "/images/international-move00.jpg",
     position: "top-left",
   },
@@ -18,21 +17,20 @@ const items = [
   {
     id: "top-right",
     title: "Table Move",
-    tag: "Table Move",
+    tag: "Shrink Wrapping",
     img: "/images/international-move2.jpg",
     position: "top-right",
   },
   {
     id: "bottom-left",
-    title: "Blanketed Move",
+    title: "Pads and Blanketing",
     tag: "Furniture Move",
-    img: "/images/Blanketed.jpg",
+    img: "/images/Padded-and-blanketed.jpg",
     position: "bottom-left",
   },
   {
     id: "bottom-right",
     title: "Piano Move",
-    tag: "Local Shifting",
     img: "/images/Piano.jpeg",
     position: "bottom-right",
   },
@@ -41,7 +39,7 @@ const items = [
 const Caption = ({ title, tag }) => (
   <div className="flex items-center justify-between px-0.5 mt-2">
     <span className="font-serif text-lg font-semibold text-foreground tracking-tight">{title}</span>
-    <span className="text-sm text-muted-foreground font-normal">{tag}</span>
+    <span className="text-sm  font-semibold text-primary">{tag}</span>
   </div>
 );
 

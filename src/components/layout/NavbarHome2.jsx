@@ -177,12 +177,12 @@ export default function NavbarHome2() {
                 </ul>
 
                 <div className="flex items-center gap-3 ml-auto">
-                  <Link
+                  {/* <Link
                     href="/#quote"
                     className="hidden md:inline-flex items-center justify-center bg-background text-primary font-semibold px-4 py-2 rounded text-sm hover:bg-background/90 transition-colors no-underline shrink-0"
                   >
                     Request a Quote
-                  </Link>
+                  </Link> */}
                   <button
                     type="button"
                     onClick={() => setMenuOpen(true)}

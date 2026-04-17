@@ -9,19 +9,21 @@ gsap.registerPlugin(ScrollTrigger);
 const steps = [
   {
     number: "01",
-    title: "Get Free Quote",
+    title: "Plan Your Move",
     description:
-      "Request a free moving quote online or by phone. We assess your needs and provide a transparent, no-obligation estimate.",
+      "Start by outlining your moving needs. We help you organize details and prepare for a smooth moving experience from the beginning.",
     offset: "mt-0",
+    image: "/images/pad-pencil.jpg",
+    imageAlt: "Planning your move with pad and pencil",
   },
   {
     number: "02",
     title: "Professional Packing",
     description:
-      "Our team packs your belongings safely using quality materials. We handle fragile items with care and label everything clearly.",
+      "Our team carefully packs and professionally stacks your items using quality materials to ensure safety during transport.",
     offset: "mt-16",
-    image: "/images/professional_pack.webp",
-    imageAlt: "Professional packing",
+    image: "/images/stacked-boxes.jpg",
+    imageAlt: "Professionally stacked moving boxes",
   },
   {
     number: "03",
@@ -34,58 +36,14 @@ const steps = [
   },
   {
     number: "04",
-    title: "Delivery & Unpacking",
+    title: "Delivery & Unloading",
     description:
-      "We deliver to your new location and can help with unpacking and reassembling. Your move, our priority from start to finish.",
+      "We deliver to your new location and unload your belongings with care. We also help reassemble beds and tables. Your move, our priority from start to finish.",
     offset: "mt-16",
     image: "/images/moving.jpg",
     imageAlt: "Moving crew unloading items",
   },
 ];
-
-const iconClass = "w-12 h-12 text-primary shrink-0";
-
-function QuoteIcon() {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" className={iconClass} fill="none" viewBox="0 0 48 48" stroke="currentColor" strokeWidth="1.5">
-      <rect x="12" y="8" width="24" height="32" rx="2" strokeLinecap="round" strokeLinejoin="round" />
-      <path strokeLinecap="round" strokeLinejoin="round" d="M16 20h16M16 26h12M16 32h8" />
-      <path strokeLinecap="round" strokeLinejoin="round" d="M18 8V6a1 1 0 011-1h4l4 3v0" />
-    </svg>
-  );
-}
-
-function PackingIcon() {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" className={iconClass} fill="none" viewBox="0 0 48 48" stroke="currentColor" strokeWidth="1.5">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M8 16l8-8h16l8 8v24H8V16z" />
-      <path strokeLinecap="round" strokeLinejoin="round" d="M8 16h32M16 8v8M24 16v16M32 8v8" />
-    </svg>
-  );
-}
-
-function TruckIcon() {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" className={iconClass} fill="none" viewBox="0 0 48 48" stroke="currentColor" strokeWidth="1.5">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 32h4l4-8h16l4 8h4" />
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 32v4a2 2 0 002 2h2" />
-      <path strokeLinecap="round" strokeLinejoin="round" d="M38 32v4a2 2 0 01-2 2h-2" />
-      <path strokeLinecap="round" strokeLinejoin="round" d="M14 24V14a2 2 0 012-2h16a2 2 0 012 2v10" />
-      <circle cx="16" cy="38" r="3" strokeLinecap="round" strokeLinejoin="round" />
-      <circle cx="32" cy="38" r="3" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-function DeliveryIcon() {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" className={iconClass} fill="none" viewBox="0 0 48 48" stroke="currentColor" strokeWidth="1.5">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M24 6L6 20v22h12V28h12v14h12V20L24 6z" />
-    </svg>
-  );
-}
-
-const STEP_ICONS = [QuoteIcon, PackingIcon, TruckIcon, DeliveryIcon];
 
 export default function WorkingProcessHome2() {
   const sectionRef = useRef(null);
@@ -172,20 +130,13 @@ export default function WorkingProcessHome2() {
                 className="w-36 h-36 rounded-full flex items-center justify-center border-2 border-dashed border-primary bg-primary/10 shadow-[0_0_0_1px_rgba(86,26,140,0.1)]"
               >
                 {/* Inner circle — white with primary ring, icons in primary */}
-                <div className="w-32 h-32 rounded-full bg-white flex items-center justify-center shadow-md ring-2 ring-primary/20">
-                  {i === 0 ? (
-                    (() => {
-                      const Icon = STEP_ICONS[i];
-                      return <Icon />;
-                    })()
-                  ) : (
-                    <img
-                      src={step.image}
-                      alt={step.imageAlt ?? step.title}
-                      className="w-32 h-32 rounded-full object-contain"
-                      loading="lazy"
-                    />
-                  )}
+                <div className="w-32 h-32 rounded-full bg-white flex items-center justify-center shadow-md ring-2 ring-primary/20 overflow-hidden">
+                  <img
+                    src={step.image}
+                    alt={step.imageAlt ?? step.title}
+                    className="w-32 h-32 rounded-full object-cover"
+                    loading="lazy"
+                  />
                 </div>
               </div>
 
