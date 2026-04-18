@@ -52,17 +52,8 @@ export default function AboutCtaSection({ sectionRef, contentRef }) {
           Want instant support?
         </h2>
 
-        <div className="mt-10 flex w-full max-w-5xl flex-col gap-4 md:mt-12 md:flex-row md:items-stretch md:justify-center md:gap-5">
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`${btnLayout} about-page-cta-whatsapp`}
-          >
-            <WhatsAppMark className="h-6 w-6 shrink-0 text-white md:h-7 md:w-7" />
-            <span className="leading-snug text-white">Get Support on WhatsApp</span>
-          </a>
-
+        <div className="mt-10 flex w-full max-w-4xl flex-col gap-4 md:mt-12 md:flex-row md:items-stretch md:justify-center md:gap-5">
+        
           <a href="tel:+18889981004" className={`${btnOnDark} bg-primary`}>
             <AboutIcon type="phone" className="h-3 w-3 shrink-0 md:h-4 md:w-4 text-white" />
             <span className="leading-snug">
