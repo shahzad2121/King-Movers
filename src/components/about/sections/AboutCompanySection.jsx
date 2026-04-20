@@ -1,9 +1,9 @@
 import Image from "next/image";
+import { CONTACT_INFO } from "@/components/contact-us/contactData";
 
 const GOOGLE_REVIEWS_URL =
   "https://www.google.com/search?q=King+Moving+Services+Scottsdale+Arizona+reviews";
-const WHATSAPP_URL =
-  "https://api.whatsapp.com/send?phone=18889981004&text=Hi%20King%20Moving%20Services%2C%20I%27d%20like%20to%20ask%20about%20a%20move.";
+const WHATSAPP_URL = `https://api.whatsapp.com/send?phone=${CONTACT_INFO.whatsappPhoneDigits}&text=Hi%20King%20Moving%20Services%2C%20I%27d%20like%20to%20ask%20about%20a%20move.`;
 
 function GoogleIcon({ className }) {
   return (

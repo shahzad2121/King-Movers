@@ -51,7 +51,7 @@ export default function AboutHeroSection({ sectionRef, bgRef, contentRef }) {
 
           <h1 className="text-4xl md:text-5xl lg:text-[3.6rem] font-bold text-white leading-[1.1] max-w-3xl mb-6">
             Your Trusted Moving Partner,{" "}
-            <span className="text-accent">Built on 7 Years</span> of Proven
+            <span className="text-accent">Built on 8 Years</span> of Proven
             Experience
           </h1>
 

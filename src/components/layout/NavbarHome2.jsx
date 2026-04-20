@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Facebook, Linkedin, Mail, Phone, X } from "lucide-react";
+import { CONTACT_INFO } from "@/components/contact-us/contactData";
 
 const SCROLL_THRESHOLD = 50;
 const SCROLL_DELTA = 6;
@@ -125,17 +126,24 @@ export default function NavbarHome2() {
               {/* Row 1: Contact, Email, Social icons — desktop only */}
               <div className="hidden md:flex items-center justify-between gap-4 py-2 px-4 border-b border-foreground/8 bg-surface/50">
                 <div className="flex items-center gap-6 py-5 text-sm flex-wrap">
-                  <a href="tel:+18889981004" className="flex items-center gap-2 text-primary font-medium hover:underline">
+                  <a href={CONTACT_INFO.officePhoneHref} className="flex items-center gap-2 text-primary font-medium hover:underline">
                     <Phone className="w-4 h-4 shrink-0" />
-                    Office: 888-998-1004 Ext. 101
+                    Office: {CONTACT_INFO.officePhone}
                   </a>
-                  <a href="tel:+14804471200" className="flex items-center gap-2 text-primary font-medium hover:underline">
+                  <span className="flex flex-wrap items-center gap-x-1.5 gap-y-1 text-primary font-medium">
                     <Phone className="w-4 h-4 shrink-0" />
-                    Direct: 480-447-1200
-                  </a>
-                  <a href="mailto:info@kingsmovingservices.com" className="flex items-center gap-2 text-primary font-medium hover:underline">
+                    <span className="text-foreground/80 font-normal">Direct:</span>
+                    <a href={CONTACT_INFO.directPhoneHref} className="hover:underline">
+                      {CONTACT_INFO.directPhone}
+                    </a>
+                    <span className="text-foreground/60 font-normal">or</span>
+                    <a href={CONTACT_INFO.directPhone2Href} className="hover:underline whitespace-nowrap">
+                      {CONTACT_INFO.directPhone2DisplaySpaced}
+                    </a>
+                  </span>
+                  <a href={CONTACT_INFO.emailHref} className="flex items-center gap-2 text-primary font-medium hover:underline">
                     <Mail className="w-4 h-4 shrink-0" />
-                    info@kingsmovingservices.com
+                    {CONTACT_INFO.email}
                   </a>
                 </div>
                 <div className="flex items-center gap-2 shrink-0">
@@ -266,31 +274,37 @@ export default function NavbarHome2() {
         {/* Footer: phone numbers + CTA */}
         <div className="p-5 border-t border-foreground/10 space-y-3 bg-surface/40">
           <a
-            href="tel:+18889981004"
+            href={CONTACT_INFO.officePhoneHref}
             className="flex items-center gap-3 text-sm font-medium text-foreground hover:text-primary transition-colors"
           >
             <span className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
               <Phone className="w-4 h-4 text-primary" />
             </span>
-            Office: 888-998-1004 Ext. 101
+            Office: {CONTACT_INFO.officePhone}
           </a>
-          <a
-            href="tel:+14804471200"
-            className="flex items-center gap-3 text-sm font-medium text-foreground hover:text-primary transition-colors"
-          >
-            <span className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+          <div className="flex gap-3 text-sm font-medium text-foreground">
+            <span className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0 h-fit">
               <Phone className="w-4 h-4 text-primary" />
             </span>
-            Direct: 480-447-1200
-          </a>
+            <div className="min-w-0 leading-snug">
+              <span className="text-foreground/70 font-normal">Direct:</span>{" "}
+              <a href={CONTACT_INFO.directPhoneHref} className="hover:text-primary transition-colors">
+                {CONTACT_INFO.directPhone}
+              </a>
+              <span className="text-foreground/55"> or </span>
+              <a href={CONTACT_INFO.directPhone2Href} className="hover:text-primary transition-colors whitespace-nowrap">
+                {CONTACT_INFO.directPhone2DisplaySpaced}
+              </a>
+            </div>
+          </div>
           <a
-            href="mailto:info@kingsmovingservices.com"
+            href={CONTACT_INFO.emailHref}
             className="flex items-center gap-3 text-sm font-medium text-foreground hover:text-primary transition-colors"
           >
             <span className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
               <Mail className="w-4 h-4 text-primary" />
             </span>
-            info@kingsmovingservices.com
+            {CONTACT_INFO.email}
           </a>
 
           <Link

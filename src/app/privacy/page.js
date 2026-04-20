@@ -154,8 +154,10 @@ export default function PrivacyPage() {
           <h3>Help</h3>
           <p>
             If you are experiencing issues, reply with “HELP” or contact us at{" "}
-            <a href={CONTACT_INFO.officePhoneHref}>{CONTACT_INFO.officePhone}</a>. You can also
-            visit <a href="https://kingsmovingservice.com/">kingsmovingservice.com</a>.
+            <a href={CONTACT_INFO.officePhoneHref}>{CONTACT_INFO.officePhone}</a>,{" "}
+            <a href={CONTACT_INFO.directPhoneHref}>{CONTACT_INFO.directPhone}</a>, or{" "}
+            <a href={CONTACT_INFO.directPhone2Href}>{CONTACT_INFO.directPhone2DisplaySpaced}</a>. You
+            can also visit <a href="https://kingsmovingservice.com/">kingsmovingservice.com</a>.
           </p>
           <p>
             If you do not wish to receive SMS messages, do not check the SMS consent box on our
@@ -167,9 +169,10 @@ export default function PrivacyPage() {
             <li>Message and data rates may apply.</li>
             <li>You can opt out at any time by texting “STOP.”</li>
             <li>
-              For assistance, text “HELP” to (888) 998-1004 or visit our{" "}
-              <a href="/privacy">Privacy Policy</a> and{" "}
-              <a href="/terms">Terms &amp; Conditions</a> pages.
+              For assistance, text “HELP” to (888) 998-1004, {CONTACT_INFO.directPhone}, or{" "}
+              {CONTACT_INFO.directPhone2DisplaySpaced}, or visit our{" "}
+              <a href="/privacy">Privacy Policy</a> and <a href="/terms">Terms &amp; Conditions</a>{" "}
+              pages.
             </li>
             <li>Message frequency may vary.</li>
           </ul>
@@ -180,8 +183,10 @@ export default function PrivacyPage() {
           <p>
             For privacy-related questions, contact us at{" "}
             <a href={CONTACT_INFO.emailHref}>{CONTACT_INFO.email}</a>, call{" "}
-            <a href={CONTACT_INFO.directPhoneHref}>{CONTACT_INFO.directPhone}</a>, or write to{" "}
-            {CONTACT_INFO.addressLine1}, {CONTACT_INFO.addressLine2}.
+            <a href={CONTACT_INFO.officePhoneHref}>{CONTACT_INFO.officePhone}</a> (office) or{" "}
+            <a href={CONTACT_INFO.directPhoneHref}>{CONTACT_INFO.directPhone}</a> /{" "}
+            <a href={CONTACT_INFO.directPhone2Href}>{CONTACT_INFO.directPhone2DisplaySpaced}</a>{" "}
+            (direct), or write to {CONTACT_INFO.addressLine1}, {CONTACT_INFO.addressLine2}.
           </p>
         </section>
       </LegalPageShell>
