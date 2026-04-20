@@ -25,7 +25,6 @@ export default function ServicesPage() {
      ctaText="Get a Free Quote"
      ctaLink="/#quote"
      />
-    <HeroQuoteBar/>
     <TrustBadgesSection/>
     <ServicesSection/>
     <OurWork/>

@@ -95,10 +95,6 @@ export default function FaqPageClient() {
           </div>
         </div>
       </section>
-
-      <div className="bg-background">
-        <QuoteForm />
-      </div>
     </div>
   );
 }

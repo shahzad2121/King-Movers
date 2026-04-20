@@ -158,9 +158,6 @@ export default function BlogPageClient() {
         </div>
       </section>
 
-      <div className="bg-background">
-        <QuoteForm />
-      </div>
     </div>
   );
 }
