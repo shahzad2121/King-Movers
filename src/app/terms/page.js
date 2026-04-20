@@ -93,9 +93,11 @@ export default function TermsPage() {
         <section>
           <h2>10. Contact</h2>
           <p>
-            Questions about these terms? Reach us at{" "}
-            <a href={CONTACT_INFO.emailHref}>{CONTACT_INFO.email}</a> or{" "}
-            <a href={CONTACT_INFO.directPhoneHref}>{CONTACT_INFO.directPhone}</a>.
+            Questions about these terms? Email{" "}
+            <a href={CONTACT_INFO.emailHref}>{CONTACT_INFO.email}</a> or call our office at{" "}
+            <a href={CONTACT_INFO.officePhoneHref}>{CONTACT_INFO.officePhone}</a>, or reach us
+            direct at <a href={CONTACT_INFO.directPhoneHref}>{CONTACT_INFO.directPhone}</a> or{" "}
+            <a href={CONTACT_INFO.directPhone2Href}>{CONTACT_INFO.directPhone2DisplaySpaced}</a>.
           </p>
         </section>
       </LegalPageShell>

@@ -6,7 +6,7 @@ import { Mail, MapPin, Phone, Clock3 } from "lucide-react";
 import AboutCtaSection from "@/components/about/sections/AboutCtaSection";
 
 import { submitFormSubmit } from "@/lib/formsubmit";
-import { CONTACT_INFO, FORMSUBMIT_ACTION } from "@/components/contact-us/contactData";
+import { CONTACT_INFO, FORMSUBMIT_CONTACT_ACTION } from "@/components/contact-us/contactData";
 
 function InfoCard({ icon: Icon, title, children }) {
   return (
@@ -159,11 +159,18 @@ export default function ContactPageClient() {
             <div className="contact-info-card">
               <InfoCard icon={Phone} title="Phone">
                 <a href={CONTACT_INFO.officePhoneHref} className="block hover:text-primary">
-                  {CONTACT_INFO.officePhone}
+                  Office: {CONTACT_INFO.officePhone}
                 </a>
-                <a href={CONTACT_INFO.directPhoneHref} className="mt-1 block hover:text-primary">
-                  Direct: {CONTACT_INFO.directPhone}
-                </a>
+                <p className="mt-2 text-[15px] leading-relaxed text-foreground/72 md:text-base">
+                  <span className="text-foreground/55">Direct: </span>
+                  <a href={CONTACT_INFO.directPhoneHref} className="hover:text-primary">
+                    {CONTACT_INFO.directPhone}
+                  </a>
+                  <span className="text-foreground/45"> or </span>
+                  <a href={CONTACT_INFO.directPhone2Href} className="hover:text-primary whitespace-nowrap">
+                    {CONTACT_INFO.directPhone2DisplaySpaced}
+                  </a>
+                </p>
               </InfoCard>
             </div>
             <div className="contact-info-card">
@@ -194,14 +201,18 @@ export default function ContactPageClient() {
           <div ref={formColRef} className="rounded-2xl border border-primary/15 bg-surface p-5 md:p-7">
             <h2 className="text-3xl font-bold text-foreground md:text-4xl">Send us a message</h2>
             <p className="mt-2 text-[15px] leading-relaxed text-foreground/72 md:text-base">
-              Tell us about your move and our team will contact you quickly.
+              Tell us about your move and our team will contact you quickly. Submissions are sent to{" "}
+              <a href={CONTACT_INFO.emailHref} className="font-medium text-primary hover:underline">
+                {CONTACT_INFO.email}
+              </a>
+              .
             </p>
 
             <form
-              action="#"
+              action={FORMSUBMIT_CONTACT_ACTION}
               method="POST"
               className="mt-6 space-y-4"
-              data-formsubmit-action={FORMSUBMIT_ACTION}
+              data-formsubmit-action={FORMSUBMIT_CONTACT_ACTION}
               onSubmit={async (e) => {
                 e.preventDefault();
                 if (submitting) return;

@@ -10,8 +10,8 @@ gsap.registerPlugin(ScrollTrigger);
 const counters = [
   {
     start: 5,
-    end: 7,
-    suffix: "+",
+    end: 8,
+    suffix: "",
     title: "Years of Experience",
     sub: "Trusted moving experience",
     Icon: ClockIcon,

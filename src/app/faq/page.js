@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function FaqPage() {
   return (
-    <div className="overflow-hidden">
+    <div className="min-w-0">
       <FaqPageClient />
     </div>
   );

@@ -10,6 +10,7 @@ import { Autoplay, Pagination, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
+import { CONTACT_INFO } from "@/components/contact-us/contactData";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,12 +24,11 @@ const HERO_SLIDES = [
     alt: "King Moving Services licensed residential and commercial moving company crew",
   },
   {
-    img: "/images/service.jpg",
+    img: "/images/inventory-management.png",
     alt: "Full-service packing loading and moving logistics for homes and businesses",
   },
 ];
 const CTA_LABEL = "Get a Free Quote";
-const PHONE = "480-447-1200";
 
 const HERO_BADGES = [
   { src: "/images/angi-kings-moving.png", alt: "Angi Certified" },
@@ -246,23 +246,45 @@ export default function HeroSection() {
             ))}
           </div>
 
-          <div ref={ctaRef} className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-            <a
-              href="#quote"
-              className="font-hero-body inline-flex items-center bg-primary text-white text-sm sm:text-base font-medium px-6 sm:px-8 py-3.5 sm:py-4 rounded-full w-fit hover:bg-primary/90 transition-all hover:-translate-y-0.5"
-              style={{ letterSpacing: "-0.01em" }}
-            >
-              {CTA_LABEL}
-            </a>
-            <a
-              href={`tel:${PHONE}`}
-              className="font-hero-body inline-flex items-center gap-2 text-white lg:text-foreground font-semibold text-sm sm:text-base hover:text-accent lg:hover:text-primary transition-colors"
-            >
-              <svg className="w-5 h-5 text-accent lg:text-primary shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z" />
-              </svg>
-              {PHONE}
-            </a>
+          <div ref={ctaRef} className="flex flex-col gap-3 sm:gap-4">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+              <a
+                href="#quote"
+                className="font-hero-body inline-flex items-center bg-primary text-white text-sm sm:text-base font-medium px-6 sm:px-8 py-3.5 sm:py-4 rounded-full w-fit hover:bg-primary/90 transition-all hover:-translate-y-0.5"
+                style={{ letterSpacing: "-0.01em" }}
+              >
+                {CTA_LABEL}
+              </a>
+              <div className="font-hero-body flex flex-col gap-2 text-sm sm:text-base">
+                <a
+                  href={CONTACT_INFO.officePhoneHref}
+                  className="inline-flex items-center gap-2 font-semibold text-white lg:text-foreground hover:text-accent lg:hover:text-primary transition-colors"
+                >
+                  <svg className="w-5 h-5 text-accent lg:text-primary shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z" />
+                  </svg>
+                  <span>
+                    Office: {CONTACT_INFO.officePhone}
+                  </span>
+                </a>
+                <span className="inline-flex flex-wrap items-center gap-x-2 gap-y-1 font-semibold text-white lg:text-foreground sm:pl-7">
+                  <span className="text-white/75 lg:text-foreground/60 font-medium">Direct:</span>
+                  <a
+                    href={CONTACT_INFO.directPhoneHref}
+                    className="hover:text-accent lg:hover:text-primary transition-colors"
+                  >
+                    {CONTACT_INFO.directPhone}
+                  </a>
+                  <span className="font-medium text-white/75 lg:text-foreground/55">or</span>
+                  <a
+                    href={CONTACT_INFO.directPhone2Href}
+                    className="hover:text-accent lg:hover:text-primary transition-colors whitespace-nowrap"
+                  >
+                    {CONTACT_INFO.directPhone2DisplaySpaced}
+                  </a>
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

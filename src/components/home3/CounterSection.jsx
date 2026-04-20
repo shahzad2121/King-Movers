@@ -11,9 +11,9 @@ const COUNTER_ACCENT = "var(--accent)";
 
 const counters = [
   {
-    start: 8,
-    end: 10,
-    suffix: "+",
+    start: 5,
+    end: 8,
+    suffix: "",
     title: "Years of Experience",
     sub: "Trusted moving experience",
   },

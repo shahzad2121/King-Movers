@@ -5,7 +5,7 @@ import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { submitFormSubmit } from "@/lib/formsubmit";
-import { FORMSUBMIT_ACTION } from "@/components/contact-us/contactData";
+import { FORMSUBMIT_QUOTE_ACTION } from "@/components/contact-us/contactData";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -124,7 +124,7 @@ export default function OnlineQuote() {
             action="#"
             method="POST"
             className="space-y-3 sm:space-y-4"
-            data-formsubmit-action={FORMSUBMIT_ACTION}
+            data-formsubmit-action={FORMSUBMIT_QUOTE_ACTION}
             onSubmit={async (e) => {
               e.preventDefault();
               if (submitting) return;

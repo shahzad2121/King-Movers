@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { submitFormSubmit } from "@/lib/formsubmit";
-import { FORMSUBMIT_ACTION } from "@/components/contact-us/contactData";
+import { FORMSUBMIT_QUOTE_ACTION } from "@/components/contact-us/contactData";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -124,7 +124,7 @@ export default function HeroQuoteBar() {
                 action="#"
                 method="POST"
                 className="w-full xl:flex-1"
-                data-formsubmit-action={FORMSUBMIT_ACTION}
+                data-formsubmit-action={FORMSUBMIT_QUOTE_ACTION}
                 onSubmit={async (e) => {
                   e.preventDefault();
                   if (submitting) return;

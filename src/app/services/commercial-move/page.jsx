@@ -10,6 +10,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import TestimonialsSectionHome2 from "@/components/home/TestimonialsSectionHome2";
 import HeroQuoteBar from "@/components/home3/HeroQuoteBar";
+import { CONTACT_INFO } from "@/components/contact-us/contactData";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -295,7 +296,7 @@ export default function CommercialMovePage() {
           <p className="text-white/90 text-lg md:text-xl max-w-3xl leading-relaxed mb-8">
             Reliable, insured commercial movers that keep your business running. We plan every relocation around your schedule — after-hours, weekends, or phased — with careful handling, transparent pricing, and a dedicated coordinator so your team is back to work fast.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex flex-wrap gap-4 justify-center items-center">
             <a
               href="#quote"
               className="inline-block bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors font-sans"
@@ -303,11 +304,21 @@ export default function CommercialMovePage() {
               Get a Free Quote
             </a>
             <a
-              href="tel:+14804471200"
+              href={CONTACT_INFO.officePhoneHref}
               className="inline-block px-8 py-4 text-lg font-semibold rounded-lg border-2 border-white text-white hover:bg-white/10 transition-colors font-sans"
             >
-              📞 480-447-1200
+              📞 Office: {CONTACT_INFO.officePhone}
             </a>
+            <div className="inline-flex flex-wrap items-center justify-center gap-x-3 gap-y-2 px-8 py-4 text-lg font-semibold rounded-lg border-2 border-white text-white font-sans hover:bg-white/10 transition-colors">
+              <span className="text-white/85 text-base font-medium">Direct:</span>
+              <a href={CONTACT_INFO.directPhoneHref} className="hover:underline">
+                {CONTACT_INFO.directPhone}
+              </a>
+              <span className="text-white/70 font-normal">or</span>
+              <a href={CONTACT_INFO.directPhone2Href} className="hover:underline whitespace-nowrap">
+                {CONTACT_INFO.directPhone2DisplaySpaced}
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -550,7 +561,9 @@ export default function CommercialMovePage() {
             ))}
           </div>
           <p data-anim-item className="text-white/70 mt-6 font-sans text-sm">
-            Don't see your business type? We work with all commercial clients — call 480-447-1200 for a custom quote tailored to your move.
+            Don&apos;t see your business type? We work with all commercial clients — call{" "}
+            {CONTACT_INFO.officePhone} (office) or {CONTACT_INFO.directPhone} /{" "}
+            {CONTACT_INFO.directPhone2DisplaySpaced} (direct) for a custom quote tailored to your move.
           </p>
         </div>
 
@@ -613,7 +626,7 @@ export default function CommercialMovePage() {
           <p data-anim-item className="text-white/90 text-lg md:text-xl mb-8 font-sans leading-relaxed">
             Reliable, insured, and transparent — we take commercial moves seriously because your business depends on it. Get your free, binding estimate today. We'll survey your office, answer every question, and build a move plan around your schedule with zero pressure.
           </p>
-          <div data-anim-item className="flex flex-wrap gap-4 justify-center">
+          <div data-anim-item className="flex flex-wrap gap-4 justify-center items-center">
             <Link
               href="/contact-us"
               className="inline-block px-10 py-4 text-lg font-bold rounded-lg font-sans bg-accent text-foreground hover:opacity-90 transition-opacity"
@@ -621,11 +634,21 @@ export default function CommercialMovePage() {
               Request a Free Estimate
             </Link>
             <a
-              href="tel:+14804471200"
+              href={CONTACT_INFO.officePhoneHref}
               className="inline-block px-10 py-4 text-lg font-bold border-2 border-white text-white rounded-lg font-sans hover:bg-white/10 transition-colors"
             >
-              📞 Call 480-447-1200
+              📞 Office: {CONTACT_INFO.officePhone}
             </a>
+            <div className="inline-flex flex-wrap items-center justify-center gap-x-3 gap-y-2 px-10 py-4 text-lg font-bold rounded-lg border-2 border-white text-white font-sans hover:bg-white/10 transition-colors">
+              <span className="text-white/85 text-base font-semibold">Direct:</span>
+              <a href={CONTACT_INFO.directPhoneHref} className="hover:underline">
+                {CONTACT_INFO.directPhone}
+              </a>
+              <span className="text-white/70 font-normal">or</span>
+              <a href={CONTACT_INFO.directPhone2Href} className="hover:underline whitespace-nowrap">
+                {CONTACT_INFO.directPhone2DisplaySpaced}
+              </a>
+            </div>
           </div>
           <p data-anim-item className="text-white/70 mt-6 text-sm font-sans">
             Available Mon–Sun, 8AM–8PM · No pressure, no obligation

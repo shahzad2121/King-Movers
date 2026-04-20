@@ -39,7 +39,7 @@ export default function FaqAccordionItem({ id, question, answer, isOpen, onToggl
         }`}
       >
         <div className="overflow-hidden">
-          <p className="faq-answer pb-6 pl-0 pr-2 text-[15px] leading-[1.8] text-foreground/75 md:text-[17px] md:pr-10 md:pl-1 lg:pb-7">
+          <p className="faq-answer whitespace-pre-line pb-6 pl-0 pr-2 text-[15px] leading-[1.8] text-foreground/75 md:text-[17px] md:pr-10 md:pl-1 lg:pb-7">
             {answer}
           </p>
         </div>

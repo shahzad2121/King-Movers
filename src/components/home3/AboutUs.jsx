@@ -166,7 +166,7 @@ export default function AboutUs() {
                     letterSpacing="2.8"
                   >
                     <textPath href="#aboutCirclePath">
-                      7 Years Experience · 2019–2026 · 7 Years Experience ·
+                      8 Years Experience · 2018–2026 · 8 Years Experience ·
                     </textPath>
                   </text>
                 </svg>
@@ -205,7 +205,7 @@ export default function AboutUs() {
 
             {/* Description */}
             <p ref={descRef} className="font-hero-body text-[15px] leading-[1.85] text-foreground/75 mb-7 max-w-2xl">
-              Since 2019, King Moving Services has helped people move with confidence. From local relocations to long-distance moves, our crew handles packing, loading, transport, and setup with care—so your move feels organized, safe, and stress-free.
+              Since 2018, King Moving Services has helped people move with confidence. From local relocations to long-distance moves, our crew handles packing, loading, transport, and setup with care—so your move feels organized, safe, and stress-free.
             </p>
 
             {/* Checklist */}
