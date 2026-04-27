@@ -84,12 +84,12 @@ export default function PageHeroSection({
         className="relative z-10 text-center text-white px-6 max-w-3xl"
       >
         {badge && (
-          <p className="text-sm md:text-base uppercase tracking-[0.2em] text-white/80 mb-4 font-medium">
+          <p className="font-hero-body text-sm md:text-base uppercase tracking-[0.2em] text-white/80 mb-4 font-medium">
             {badge}
           </p>
         )}
 
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
+        <h1 className="font-hero-heading text-4xl md:text-6xl font-semibold leading-tight mb-6 tracking-[-0.03em]">
           {title}
           {highlight && (
             <>
@@ -102,7 +102,7 @@ export default function PageHeroSection({
         </h1>
 
         {description && (
-          <p className="text-lg md:text-xl mb-8 text-gray-200 max-w-2xl mx-auto">
+          <p className="font-hero-body text-lg md:text-xl mb-8 text-gray-200 max-w-2xl mx-auto leading-relaxed">
             {description}
           </p>
         )}

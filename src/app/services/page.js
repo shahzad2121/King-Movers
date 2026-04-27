@@ -3,6 +3,8 @@ import ServicesSection from "@/components/home3/ServicesSection";
 import ServiceHero from "@/components/services/ServiceHero";
 import ServicesPageContent from "@/components/services/ServicesPageContent";
 import OurWork from "@/components/home/OurWork";
+import CratingCareSection from "@/components/services/CratingCareSection";
+import LoadingCareSection from "@/components/services/LoadingCareSection";
 import WorkProcess from "@/components/home3/WorkProcess";
 import TrustBadgesSection from "@/components/home/TrustBadgesSection";
 import PageHeroSection from "@/components/ui/PageHeroSection";
@@ -28,6 +30,8 @@ export default function ServicesPage() {
     <TrustBadgesSection/>
     <ServicesSection/>
     <OurWork/>
+    <CratingCareSection />
+    <LoadingCareSection />
     {/* <WorkProcess/> */}
     </>
   )

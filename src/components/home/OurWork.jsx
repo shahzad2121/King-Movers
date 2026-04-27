@@ -1,40 +1,55 @@
 "use client";
 
-const items = [
-  {
-    id: "top-left",
+const topRowItems = {
+  topLeft: {
+    id: "local-move",
     title: "Local Move",
+    tag: "Home Relocation",
     img: "/images/international-move00.jpg",
-    position: "top-left",
   },
-  {
-    id: "center",
+  center: {
+    id: "international-move",
     title: "House Hold Items",
     tag: "International Move",
     img: "/images/international-move.jpg",
-    position: "center",
   },
-  {
-    id: "top-right",
+  topRight: {
+    id: "table-move",
     title: "Table Move",
     tag: "Shrink Wrapping",
     img: "/images/international-move2.jpg",
-    position: "top-right",
   },
-  {
-    id: "bottom-left",
+  bottomLeft: {
+    id: "padding",
     title: "Pads and Blanketing",
     tag: "Furniture Move",
     img: "/images/Padded-and-blanketed.jpg",
-    position: "bottom-left",
   },
-  {
-    id: "bottom-right",
+  bottomRight: {
+    id: "piano-move",
     title: "Piano Move",
+    tag: "Special Item",
     img: "/images/Piano.jpeg",
-    position: "bottom-right",
   },
-];
+  thirdLeft: {
+    id: "artwork-packing",
+    title: "Packing ArtWork",
+    tag: "",
+    img: "/images/services/Mover_Packing_artwork.jpg",
+  },
+  thirdCenter: {
+    id: "table-protection",
+    title: "Protecting a Table Top",
+    tag: "",
+    img: "/images/services/Protecting_a_table_top.jpg",
+  },
+  thirdRight: {
+    id: "bed-packing",
+    title: "Packing Bed",
+    tag: "",
+    img: "/images/services/Bed-2.jpg",
+  },
+};
 
 const Caption = ({ title, tag }) => (
   <div className="flex items-center justify-between px-0.5 mt-2">
@@ -44,76 +59,122 @@ const Caption = ({ title, tag }) => (
 );
 
 export default function WorkGallery() {
-  const topLeft    = items.find(i => i.position === "top-left");
-  const center     = items.find(i => i.position === "center");
-  const topRight   = items.find(i => i.position === "top-right");
-  const bottomLeft = items.find(i => i.position === "bottom-left");
-  const bottomRight= items.find(i => i.position === "bottom-right");
-
   return (
     <section className="bg-surface font-sans py-12 md:py-14">
       <div className="max-w-[1400px] mx-auto px-6 md:px-8">
 
         {/* Heading */}
         <h1
-          className="font-serif text-center font-bold text-foreground mb-10 md:mb-12"
-          style={{ fontSize: "clamp(40px, 5vw, 72px)", letterSpacing: "-0.03em" }}
+          className="font-serif text-center font-semibold text-foreground mb-8 md:mb-10"
+          style={{ fontSize: "clamp(32px, 4vw, 52px)", letterSpacing: "-0.02em" }}
         >
           Our Work Gallery
         </h1>
 
-        {/* Mosaic Grid — fixed row height = side card (280 + caption) so no gap between top/bottom items */}
-        <div
-          className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-5 md:gap-4 md:grid-cols-[1fr_1.9fr_1fr] md:grid-rows-[324px_324px]"
-        >
-
-          {/* TOP LEFT */}
+        {/* Original mosaic layout with center feature image */}
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-5 md:gap-4 md:grid-cols-[1.2fr_1.7fr_1.2fr] md:grid-rows-[324px_324px]">
           <div className="group flex flex-col md:col-1 md:row-1">
             <div className="rounded-2xl overflow-hidden h-[220px] sm:h-[240px] md:h-[280px]">
-              <img src={topLeft.img} alt={topLeft.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"/>
+              <img
+                src={topRowItems.topLeft.img}
+                alt={topRowItems.topLeft.title}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
             </div>
-            <Caption title={topLeft.title} tag={topLeft.tag} />
+            <Caption title={topRowItems.topLeft.title} tag={topRowItems.topLeft.tag} />
           </div>
 
-          {/* CENTER — spans 2 rows (324 + gap + 324) so it aligns with side columns */}
           <div className="group flex flex-col sm:col-span-2 md:col-2 md:row-[1/3]">
-            <div
-              className="rounded-2xl overflow-hidden h-[260px] sm:h-[360px] md:min-h-[620px] md:h-[calc(100%-44px)]"
-            >
-              <img src={center.img} alt={center.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"/>
+            <div className="rounded-2xl overflow-hidden h-[260px] sm:h-[360px] md:min-h-[620px] md:h-[calc(100%-44px)]">
+              <img
+                src={topRowItems.center.img}
+                alt={topRowItems.center.title}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
             </div>
-            <Caption title={center.title} tag={center.tag} />
+            <Caption title={topRowItems.center.title} tag={topRowItems.center.tag} />
           </div>
 
-          {/* TOP RIGHT */}
           <div className="group flex flex-col md:col-3 md:row-1">
             <div className="rounded-2xl overflow-hidden h-[220px] sm:h-[240px] md:h-[280px]">
-              <img src={topRight.img} alt={topRight.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"/>
+              <img
+                src={topRowItems.topRight.img}
+                alt={topRowItems.topRight.title}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
             </div>
-            <Caption title={topRight.title} tag={topRight.tag} />
+            <Caption title={topRowItems.topRight.title} tag={topRowItems.topRight.tag} />
           </div>
 
-          {/* BOTTOM LEFT */}
           <div className="group flex flex-col md:col-1 md:row-2">
             <div className="rounded-2xl overflow-hidden h-[220px] sm:h-[240px] md:h-[280px]">
-              <img src={bottomLeft.img} alt={bottomLeft.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"/>
+              <img
+                src={topRowItems.bottomLeft.img}
+                alt={topRowItems.bottomLeft.title}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
             </div>
-            <Caption title={bottomLeft.title} tag={bottomLeft.tag} />
+            <Caption title={topRowItems.bottomLeft.title} tag={topRowItems.bottomLeft.tag} />
           </div>
 
-          {/* BOTTOM RIGHT */}
           <div className="group flex flex-col md:col-3 md:row-2">
             <div className="rounded-2xl overflow-hidden h-[220px] sm:h-[240px] md:h-[280px]">
-              <img src={bottomRight.img} alt={bottomRight.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"/>
+              <img
+                src={topRowItems.bottomRight.img}
+                alt={topRowItems.bottomRight.title}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
             </div>
-            <Caption title={bottomRight.title} tag={bottomRight.tag} />
+            <Caption title={topRowItems.bottomRight.title} tag={topRowItems.bottomRight.tag} />
           </div>
 
+        </div>
+
+        {/* Protection steps row for portrait images */}
+        <div className="mt-8">
+          <div className="text-center mb-4">
+            <p className="text-sm font-semibold tracking-wide uppercase text-primary">
+              Protection Steps
+            </p>
+            <p className="text-foreground/65 text-sm md:text-base">
+              How we prep sensitive items before loading and transport.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5 md:gap-4">
+            <div className="group flex flex-col">
+              <div className="rounded-2xl overflow-hidden h-[340px] md:h-[400px] bg-white/60 border border-foreground/8 flex items-center justify-center">
+                <img
+                  src={topRowItems.thirdLeft.img}
+                  alt={topRowItems.thirdLeft.title}
+                  className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                />
+              </div>
+              <Caption title={topRowItems.thirdLeft.title} tag={topRowItems.thirdLeft.tag} />
+            </div>
+
+            <div className="group flex flex-col">
+              <div className="rounded-2xl overflow-hidden h-[340px] md:h-[400px] bg-white/60 border border-foreground/8 flex items-center justify-center">
+                <img
+                  src={topRowItems.thirdCenter.img}
+                  alt={topRowItems.thirdCenter.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                />
+              </div>
+              <Caption title={topRowItems.thirdCenter.title} tag={topRowItems.thirdCenter.tag} />
+            </div>
+
+            <div className="group flex flex-col">
+              <div className="rounded-2xl overflow-hidden h-[340px] md:h-[400px] bg-white/60 border border-foreground/8 flex items-center justify-center">
+                <img
+                  src={topRowItems.thirdRight.img}
+                  alt={topRowItems.thirdRight.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                />
+              </div>
+              <Caption title={topRowItems.thirdRight.title} tag={topRowItems.thirdRight.tag} />
+            </div>
+          </div>
         </div>
       </div>
     </section>
