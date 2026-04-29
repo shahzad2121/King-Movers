@@ -133,9 +133,11 @@ export default function WorkGallery() {
         {/* Protection steps row for portrait images */}
         <div className="mt-8">
           <div className="text-center mb-4">
-            <p className="text-sm font-semibold tracking-wide uppercase text-primary">
+            <h2 className="font-serif text-xl font-semibold text-primary tracking-tight"
+            style={{ fontSize: "clamp(30px, 3.6vw, 48px)", letterSpacing: "-0.02em" }}
+            >
               Protection Steps
-            </p>
+            </h2>
             <p className="text-foreground/65 text-sm md:text-base">
               How we prep sensitive items before loading and transport.
             </p>
