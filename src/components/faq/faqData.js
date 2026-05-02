@@ -85,42 +85,36 @@ export const FAQ_BY_TAB = {
     },
     {
       id: "moving-1",
-      question: "Do you put up shelves and curtains?",
-      answer:
-        "We’re happy to help with basic reinstall tasks many customers need, including shelves, curtain rods, TV mounting, and reconnecting simple appliances. Tell us during booking what you need so we can plan time and tools accordingly.",
-    },
-    {
-      id: "moving-2",
       question: "What happens if my items are damaged?",
       answer:
         "We treat every item with care and use proven loading and protection methods. If something rare does go wrong, we work with you under our stated valuation and claims process—repair or replacement depends on coverage and the agreement for your move.",
     },
     {
-      id: "moving-3",
+      id: "moving-2",
       question: "What time do you start a move?",
       answer:
         "We know timing matters. Crews typically arrive early in the day so we can complete loading and travel on schedule—your coordinator will confirm your exact arrival window before move day.",
     },
     {
-      id: "moving-4",
+      id: "moving-3",
       question: "Do you have covered trucks?",
       answer:
         "Yes. Our fleet uses enclosed trucks to shield your belongings from sun, dust, and weather. Equipment and tie-downs are used so items stay secure from pickup through delivery.",
     },
     {
-      id: "moving-5",
+      id: "moving-4",
       question: "What should I do with fragile items?",
       answer:
         "The Department of Transportation requires that fragile items—such as glass tables, artwork, and stone objects—be properly wrapped before loading. If you prefer not to pack these yourself, we can offer crating services for an additional charge.",
     },
     {
-      id: "moving-6",
+      id: "moving-5",
       question: "I’m too busy to pack before the move! What can I do?",
       answer:
         "No problem! We offer a Full Packing Service where we’ll handle all your packing—both fragile and non-fragile items. Prices are based on the volume of goods, and we’ll bring all necessary packing materials. Sit back and relax while we take care of everything!",
     },
     {
-      id: "moving-7",
+      id: "moving-6",
       question: "What if I have furniture that needs disassembling?",
       answer:
         "Don't worry! Our team will disassemble any furniture that needs to be taken apart—bed frames, tables, bookshelves, etc. This service is included in your estimate.",
