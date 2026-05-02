@@ -126,7 +126,7 @@ const steps = [
   {
     num: "05",
     title: "Delivery, Reassembly & You're Done",
-    desc: "We unload, reassemble furniture, and place everything exactly where you want it. You don't lift a finger — we leave your new home set up and ready so you can start living in it.",
+    desc: "We unload, reassemble furniture, and place your belongings where you want them in each room. You don't lift a finger — we leave you ready to unpack and settle in.",
   },
 ];
 
@@ -380,7 +380,7 @@ export default function LocalMovePage() {
             {[
               ["Free Binding Quote — Upfront & Honest", "We assess your home and give you a clear, binding price. The number we quote is the number you pay — no last-minute add-ons, no surprise fees."],
               ["Careful Packing by Trained Professionals", "Our crews pack your home using quality boxes, heavy blankets, bubble wrap, and shrink wrap. Every item is handled carefully — from dishes to flat-screen TVs."],
-              ["Furniture Disassembly & Reassembly", "Beds, desks, shelving units, and large furniture are taken apart safely for transport and fully reassembled at your new home. You don't need to lift a tool."],
+              ["Furniture Disassembly & Reassembly", "Beds, desks, freestanding shelving units, and large furniture are taken apart safely for transport and fully reassembled at your new home. You don't need to lift a tool."],
               ["Damage Protection on Every Move", "We wrap and pad all furniture to prevent scratches and damage. We're fully insured, and we take full responsibility for the safe delivery of your belongings."],
               ["Right-Sized Truck & Trained Crew", "We match the right truck and crew size to your move — no overcrowding, no under-staffing. Efficient work means your move stays on schedule and your quote stays fair."],
               ["Same-Day & Scheduled Moves Available", "Need to move this weekend? We offer same-day and next-day local moves when our schedule allows, plus fully scheduled moves for maximum flexibility."],

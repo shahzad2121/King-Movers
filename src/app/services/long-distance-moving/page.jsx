@@ -126,7 +126,7 @@ const steps = [
   {
     num: "05",
     title: "Delivery, Reassembly & You're Done",
-    desc: "We unload, reassemble every piece of furniture, and place items exactly where you want them. We don't leave until you're happy. Nothing is left in a driveway or dumped in a hallway.",
+    desc: "We unload, reassemble every piece of furniture, and place your belongings where you want them in each room. We don't leave until you're happy. Nothing is left in a driveway or dumped in a hallway.",
   },
 ];
 
@@ -399,7 +399,7 @@ export default function LongDistanceMovingPage() {
             {[
               ["Free Binding Quote — No Price Surprises", "We assess your home and give you a written, binding price. What we quote is what you pay — guaranteed. No weight adjustments at delivery, no mystery fees."],
               ["Careful Packing by Trained Professionals", "Our crew packs your entire home — or specific rooms — using heavy-duty blankets, double-boxing for fragiles, and proper labeling by room. Full-service packing means you don't touch a single box."],
-              ["Furniture Disassembly & Reassembly", "All beds, shelving, and large furniture are safely disassembled before loading and fully reassembled at your new home. We bring the tools — you don't need to worry about a thing."],
+              ["Furniture Disassembly & Reassembly", "All beds, freestanding shelving units, and large furniture are safely disassembled before loading and fully reassembled at your new home. We bring the tools — you don't need to worry about a thing."],
               ["Protective Wrapping on Every Piece", "Every item of furniture is wrapped in heavy moving blankets and secured with shrink wrap before going on the truck. Fragile and high-value items get extra padding and custom care."],
               ["Dedicated Move Coordinator", "One real person manages your move from booking to delivery. They know your inventory, your timeline, and your concerns — and they're reachable throughout the entire process."],
               ["Reliable, On-Time Delivery", "We plan your route and delivery window carefully and communicate it clearly. If anything changes, we'll tell you immediately. We don't leave you wondering where your belongings are."],
