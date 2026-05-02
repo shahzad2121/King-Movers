@@ -81,7 +81,7 @@ export const FAQ_BY_TAB = {
       id: "moving-0",
       question: "Can you dismantle beds and cupboards?",
       answer:
-        "Absolutely. Our crew carefully disassembles large pieces—bed frames, wardrobes, shelving units—and reassembles them in your new home so everything fits through doorways safely and is set up where you want it.",
+        "Absolutely. Our crew carefully disassembles large pieces—bed frames, wardrobes, freestanding shelving units—and reassembles them in your new home so everything fits through doorways safely and is placed where you want it. We do not install wall-mounted shelves, curtain rods, or similar fixtures.",
     },
     {
       id: "moving-1",
